@@ -1,0 +1,20 @@
+User-Agent: *
+Disallow: /custom/domain*
+Disallow: /custom/log
+Disallow: /custom/plugin
+Disallow: /custom/profile
+Disallow: /custom/sugar_files
+Disallow: /custom/wordpress_files
+Disallow: /custom/tmp
+Disallow: /listing_reports.php
+Disallow: /layout
+Disallow: /includes/code/captcha.php
+Disallow: /banner_reports.php
+Allow : /custom/domain*/sitemap*
+Allow : /custom/domain*/tmp*.js
+Allow : /custom/domain*/tmp*.css
+Allow : /custom/domain*/theme*
+Allow : /custom/domain*/image_files/*
+Allow : /custom/domain*/content_files/*
+Allow: /
+Crawl-delay: 10

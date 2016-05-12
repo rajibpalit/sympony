@@ -1,0 +1,14 @@
+{
+    "type" : "jdbc",
+    "jdbc" : [
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 100,
+            "sql" : "SELECT EC.id AS '_id', EC.available AS 'available', BI.image AS 'image', EC.name AS 'name' FROM Editor_Choice AS EC LEFT JOIN( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS image FROM Image) AS BI ON BI.id = EC.image_id",
+            "index" : "%elastic_index%",
+            "type" : "badge"
+        }
+    ]
+}

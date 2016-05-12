@@ -1,0 +1,60 @@
+{% import "::blocks/utility/summary.html.twig" as Utility -%}
+
+{# item \Elastica\Result                                                           #}
+{# levelFeatures \ArcaSolutions\EventBundle\Entity\Internal\EventLevelFeatures     #}
+
+{% set data           = extractDataFromResult(item) -%}
+
+{# itemLevelInfo \ArcaSolutions\EventBundle\Entity\Internal\EventLevelFeatures #}
+{% set itemLevelInfo  = levelFeatures['event'][data.level] -%}
+
+{% set detailURL      = itemLevelInfo.hasDetail ? url('event_detail', {'friendlyUrl': data.friendlyUrl, "_format" : "html"}) : "" -%}
+
+{% set itemLocations  = ( data.locationId is not empty ? data.locationId|split(" ")|sort|reverse : null ) -%}
+
+<div style="width: 30vw">
+    <h2>
+        <a href="{{ detailURL }}">{{ data.title }}</a>
+        {% if data.distance and data.distance < 40000 %}<span>({{ parseDistanceUnit(data.distance) }})</span>{% endif %}
+    </h2>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-md-8 col-sm-12">
+                {% if itemLevelInfo.hasSummaryDescription -%}
+                    <p class="summary-desc">{{ (data.description[:100]|striptags) }}... <a href="{{ detailURL }}">{{ "(Read More)"|trans }}</a></p>
+                {% endif -%}
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <span> <a href="tel:{{ data.phone|regexFilter('/[^\\d]/') }}" class="text-primary">{{ data.phone }}</a> </span>
+                        {{ Utility.address( null, data.address.location, data.address.street, null, data.address.zipcode, itemLocations, pageLocations ) }}
+                    </div>
+                    <div class="col-sm-6">
+                        {% if itemLevelInfo.hasEventTime and data.date.start is not null -%}
+                            <div class="date">
+
+                                <small>{{ "When"|trans }} </small>
+                                <mark class="text-uppercase">{{ data.date.start|date("D") }}</mark>
+                                {{ data.date.start|date("m/d/Y") }}
+
+                                {% if data.time.start %}
+                                    <em><strong>{{ data.time.start|date(getTimeFormat()) }}</strong></em>
+                                {% endif %}
+
+                                {% if data.time.end is not null -%}
+                                    {{ "To:"|trans }}
+                                    {{ data.time.end|date(getTimeFormat()) }}
+                                {% endif -%}
+
+                            </div>
+                        {% endif -%}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 hidden-sm">
+                {{ Utility.image( data.thumbnail, data.title ) }}
+            </div>
+        </div>
+    </div>
+</div>

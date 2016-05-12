@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentDealViewAllCategories(true), "Browse All %module% Categories"|trans({"%module%" : "Deal"|trans}) ) }}
+{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            <section id="allcategories">
+                {{ customContentDealViewAllCategories() }}
+                <br>
+
+                <h1 class="theme-title theme-title-centered">{{ "Explore All Deals Categories"|trans }}</h1>
+
+                {% include "::blocks/all-categories.html.twig" -%}
+
+                {{ customContentDealViewAllCategoriesBottom() }}
+            </section>
+        </div>
+    </main>
+{% endblock -%}

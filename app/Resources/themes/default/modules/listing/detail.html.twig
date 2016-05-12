@@ -1,0 +1,663 @@
+{% extends '::base.html.twig' -%}
+
+{# use it to shows address -#}
+{% import "::blocks/utility/summary.html.twig" as Utility -%}
+{% import "::blocks/utility/detail.html.twig" as UtilityDetail -%}
+
+{% block SEO -%}
+    {{ generateListingSEO( item ) }}
+{% endblock -%}
+
+{% block topbanner -%} {# No banners for this page -#} {% endblock -%}
+
+{# enables autocomplete in phpstorm -#}
+{# @var item \ArcaSolutions\ListingBundle\Entity\Listing -#}
+{# @var level \ArcaSolutions\ListingBundle\Entity\Internal\ListingLevelFeatures -#}
+{# @var country \ArcaSolutions\CoreBundle\Entity\Location1 -#}
+{# @var region \ArcaSolutions\CoreBundle\Entity\Location2 -#}
+{# @var state \ArcaSolutions\CoreBundle\Entity\Location3 -#}
+{# @var city \ArcaSolutions\CoreBundle\Entity\Location4 -#}
+{# @var neighborhood \ArcaSolutions\CoreBundle\Entity\Location5 -#}
+{# @var item \ArcaSolutions\ListingBundle\Entity\Listing #}
+{# @var level \ArcaSolutions\ListingBundle\Entity\Internal\ListingLevelFeatures #}
+
+{% block subheader -%}
+    <div class="top-search {{ item.coverImage.id != 0 ? 'top-coverimage' : 'top-mainimage' }}">
+        {# General Background Image -#}
+        {{ UtilityDetail.coverImage(item.coverImage) }}
+
+        <div class="well well-translucid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-4 col-sm-12 text-center-sm">
+                        <h6 class="search-title">{{ 'Explore Listings'|trans }}</h6>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-12">
+                        <div id="search-responsive" class="search-collapse collapse">
+                            <div class="well well-translucid form-inline text-center">
+                                {{ include("::blocks/search/search-fields.html.twig") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock -%}
+
+{% block body -%}
+
+    {# Adding requirements -#}
+    {{ addJSFile('assets/js/lib/jquery.magnific-popup.min.js') }}
+    {{ addJSTwig("::js/detailpopup.js.twig") }}
+
+    <!-- Main Content Begin -->
+    <main>
+
+        <div class="container well well-light">
+
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <!-- Detail Begin -->
+                    <article class="detail">
+                        <h1>{{ item.title }}</h1>
+
+                        <ul class="breadcrumb">
+                            {% for category in categories if 'y' == category.enabled -%}
+                                {% if isSample -%}
+                                    {% set link = 'javascript:void(0);' -%}
+                                {% else -%}
+                                    {% set link = path('global_search_1',{a0: category.friendlyUrl}) -%}
+                                {% endif -%}
+                                <li>
+                                    <a href="{{ link }}">
+                                        <span>{{ category.title }}</span>
+                                    </a>
+                                </li>
+                            {% endfor -%}
+                        </ul>
+                        <!-- Descriptions and Images -->
+                        <section id="overview">
+
+                            <!-- If there is a Main Image and NO cover image -->
+                            {% if gallery is not empty and 'y' == gallery[0].imageDefault and item.coverImage.id == 0 -%}
+                                {% if isSample -%}
+                                    {% set url = gallery[0].image.url -%}
+                                    {% set url_filtered = url -%}
+                                {% else -%}
+                                    {% set url = asset(imagePath(gallery[0].image), 'domain_images') -%}
+                                    {% set url_filtered = url | imagine_filter('main_image') -%}
+                                {% endif -%}
+                                <div class="main-image">
+                                    <a href="{{ url }}"
+                                       class="image-link" title="{{ gallery[0].imageCaption }}">
+                                        <img src="{{ url_filtered }}"
+                                             alt="{{ gallery[0].imageCaption }}" class="img-responsive center-block">
+                                    </a>
+                                </div>
+                            {% endif -%}
+
+                            {% if level.hasLongDescription and item.longDescription -%}
+                                <h2>{{ 'About'|trans }}</h2>
+                                <p class="pre-line">{{ item.longDescription }}</p>
+                            {% endif -%}
+
+                            {% if extra_fields is not empty -%}
+                                <hr>
+                                <h2>{{ 'Additional Information'|trans }}</h2>
+                                {% for extra in extra_fields if 'y' == extra.enabled and 'custom_' in extra.field -%}
+                                    {# @var extra \ArcaSolutions\ListingBundle\Entity\ListingtemplateField -#}
+                                    {% set value = attribute(item, camelize(extra.field)) -%}
+                                    {% if value is not empty -%}
+                                        <p>
+                                            <b>{{ extra.label }}</b>
+                                            <span class="pre-line">
+                                                {% if value == 'y' or value == 'n' -%}
+                                                    {{ value == 'y' ? 'Yes'|trans : 'No'|trans }}
+                                                {% else -%}
+                                                    {{ value }}
+                                                {% endif -%}
+                                            </span>
+                                        </p>
+                                    {% endif -%}
+                                {% endfor -%}
+                            {% endif -%}
+
+                            {% if gallery is not empty -%}
+                                <div class="image-gallery">
+                                    <div class="row text-center-sm">
+                                        {% if 'y' == gallery[0].imageDefault and item.coverImage.id != 0 -%}
+                                            {% if isSample -%}
+                                                {% set url = gallery[0].image.url -%}
+                                                {% set url_filtered = url -%}
+                                            {% else -%}
+                                                {% set url = asset(imagePath(gallery[0].image), 'domain_images') -%}
+                                                {% set url_filtered = url | imagine_filter('small') -%}
+                                            {% endif -%}
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="{{ url }}"
+                                                   class="image-link" title="{{ gallery[0].imageCaption }}">
+                                                    <img src="{{ url_filtered }}"
+                                                         alt="{{ gallery[0].imageCaption }}"
+                                                         class="img-responsive center-block">
+                                                </a>
+                                            </div>
+                                        {% endif -%}
+                                        {% for photo in gallery if 'n' == photo.imageDefault -%}
+                                            {% if isSample -%}
+                                                {% set url = photo.image.url -%}
+                                                {% set url_filtered = url -%}
+                                            {% else -%}
+                                                {% set url = asset(imagePath(photo.image), 'domain_images') -%}
+                                                {% set url_filtered = url | imagine_filter('small') -%}
+                                            {% endif -%}
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="{{ url }}"
+                                                   class="image-link" title="{{ photo.imageCaption }}">
+                                                    <img src="{{ url_filtered }}"
+                                                         alt="{{ photo.imageCaption }}"
+                                                         class="img-responsive center-block">
+                                                </a>
+                                            </div>
+                                        {% endfor -%}
+                                    </div>
+                                </div>
+                            {% endif -%}
+
+                            {% if level.hasVideo and item.videoSnippet -%}
+                                <div class="video-snipped">
+                                    {% if item.videoDescription -%}
+                                        <h3>{{ item.videoDescription }}</h3>
+                                    {% endif -%}
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        {% if isSample -%}
+                                            <img src="{{ asset("assets/images/preview-video.png") }}">
+                                        {% else -%}
+                                            {{ item.videoSnippet|raw }}
+                                        {% endif -%}
+                                    </div>
+                                </div>
+                            {% endif -%}
+
+                        </section>
+
+                        <!-- Contact Info and Address -->
+                        <section id="contact">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <h4>{{ 'Contact'|trans }}</h4>
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+
+                                            {{ Utility.address(null, null, item.address, item.address2, item.zipCode, locationsIDs, locationsObjs) }}
+                                            {% if level.hasLocationReference and item.locations is defined -%}
+                                                <p>{{ item.locations|nl2br }}</p>
+                                            {% endif -%}
+
+                                            <p>{{ getDirectionsLink(item) }}</p>
+
+                                            {% if item.claimDisable == 'n' and item.account is null -%}
+                                                {% set claimLabel = getClaimCustomText() %}
+                                                <p>
+                                                    <a href="{{ path('listing_claim',{friendlyUrl: item.friendlyUrl}) }}"
+                                                       rel="nofollow" class="claim-option">
+                                                        {{ claimLabel }}
+                                                    </a>
+                                                </p>
+                                            {% endif -%}
+
+                                        </div>
+
+                                        <div class="col-sm-6">
+
+                                            {% if level.hasFax and item.fax is not empty -%}
+                                                <p>{{ 'Fax'| trans }}: {{ item.fax }}</p>
+                                            {% endif -%}
+
+                                            {% if level.hasURL and item.url is not empty -%}
+                                                <p><a href="{{ item.url }}"
+                                                      target="_blank">{{ 'Visit Website'|trans }}</a></p>
+                                            {% endif -%}
+
+                                            {% if level.hasAdditionalFiles and item.attachmentFile is not empty -%}
+                                                {% if isSample -%}
+                                                    {% set link = 'javascript:void(0);' -%}
+                                                {% else -%}
+                                                    {% set link = asset(item.attachmentFile, 'domain_extrafiles') -%}
+                                                {% endif -%}
+
+                                                <p>
+                                                    <a href="{{ link }}"
+                                                       rel="nofollow" class="claim-option"
+                                                       title="{{ item.attachmentCaption }}" target="_blank">
+                                                        {{ item.attachmentCaption ? item.attachmentCaption : 'Click here to see more info!'|trans }}
+                                                    </a>
+                                                </p>
+                                            {% endif -%}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Features -->
+                        {% if (level.hasFeatureInformation and item.features is not empty) or (badges is not empty and level.hasBadges) -%}
+                            <section id="features">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <h4>{{ 'Features'|trans }}</h4>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        {% if level.hasFeatureInformation and item.features -%}
+                                            <div class="list-columns-4">
+                                                <ul class="list-unstyled">
+                                                    {% for features in item.features|nl2br|split('<br />') -%}
+                                                        <li>{{ features }}</li>
+                                                    {% endfor -%}
+                                                </ul>
+                                            </div>
+                                        {% endif -%}
+                                        <!-- Listing Badges -->
+                                        {% if level.hasBadges and badges is not empty -%}
+                                            <div class="list-badges">
+                                                <ul id="listingBadges" class="list-unstyled">
+                                                    {% for badge in badges -%}
+                                                        <li>
+                                                            <img
+                                                                src="{{ asset(imagePath(badge.image), 'domain_images') }}"
+                                                                alt="{{ badge.name }}"
+                                                                data-toggle="tooltip" data-placement="top"
+                                                                title="{{ badge.name }}">
+                                                        </li>
+                                                    {% endfor -%}
+                                                </ul>
+                                            </div>
+                                        {% endif -%}
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif -%}
+
+                        <!-- Hours -->
+                        {% if level.hasHoursOfWork and item.hoursWork is not empty -%}
+                            <section id="hours">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <h4>{{ 'Hours'|trans }}</h4>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="pre-line">{{ item.hoursWork }}</div>
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif -%}
+
+                        <!-- deal -->
+                        {# @var deal \ArcaSolutions\DealBundle\Entity\Promotion #}
+                        {% if deal is not empty -%}
+                            <section id="deal">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <h4>{{ 'Deal'|trans }}</h4>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                {% include '::/blocks/themebox/vertical.html.twig' with {item: deal, module: 'deal', isSample: isSample} -%}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif -%}
+
+                        <!-- Checkins -->
+                        {% if checkins is not empty -%}
+                            <section id="checkins">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <h4>{{ 'Check ins'|trans }}</h4>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            {# @var checkin \ArcaSolutions\WebBundle\Entity\Checkin #}
+                                            {% for checkin in checkins -%}
+                                                {# shows it if we have more than seven checkins -#}
+                                                {% if loop.last and loop.index > 8 -%}
+                                                    <div
+                                                        class="col-md-3 col-md-offset-9 col-sm-4 col-sm-offset-8 col-xs-6 col-xs-offset-6">
+                                                        <a href="{{ path('listing_checkin',{friendlyUrl: item.friendlyUrl}) }}">{{ 'See all Check ins'|trans }}</a>
+                                                    </div>
+                                                {% else -%}
+                                                    {# checkins box -#}
+                                                    {% if isSample -%}
+                                                        {% set link = 'javascript:void(0);' -%}
+                                                    {% else -%}
+                                                        {% set link = '/profile/' ~ checkin.profile.friendlyUrl -%}
+                                                    {% endif -%}
+
+                                                    <div class="col-md-3 col-sm-4 col-xs-6" data-toggle="tooltip"
+                                                         data-placement="left" title="{{ checkin.quickTip }}">
+                                                        <div class="checkin-box">
+                                                            <a href="{{ link }}">
+                                                                {% if checkin.profile.imageId != 0 and checkin.profile.profileImage -%}
+                                                                    <img
+                                                                        src="{{ asset(imagePath(checkin.profile.profileImage), 'domain_images') | imagine_filter('small') }}"
+                                                                        alt="{{ checkin.profile.firstName }} {{ checkin.profile.lastName }}"
+                                                                        class="img-circle img-profile">
+                                                                {% else -%}
+                                                                    <img
+                                                                        src="{{ asset('assets/images/user-image.png') }}"
+                                                                        alt="{{ title }}"
+                                                                        class="img-circle img-profile">
+                                                                {% endif -%}
+                                                            </a>
+
+                                                            <p>
+                                                                <a href="{{ link }}">
+                                                                    {{ checkin.profile.firstName }} {{ checkin.profile.lastName }}
+                                                                </a>
+                                                            </p>
+                                                            <small class="text-info">
+                                                                {{ checkin.added|localized_date('dd MMM, hh:mm a') }}
+                                                            </small>
+                                                        </div>
+                                                    </div>
+
+                                                {% endif -%}
+
+                                            {% endfor -%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif -%}
+
+
+                        <!-- Reviews -->
+                        {% if (level.hasReview and reviews_active) and reviews is not empty -%}
+                            <section id="reviews">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <h4>{{ 'Reviews'|trans }}</h4>
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <div class="row">
+                                            <div class="col-sm-6 break-sm text-center-sm">
+                                                <span class="rate">
+                                                   <span class="rate-stars">
+                                                       <span class="stars-rating large">
+                                                           <span class="rate-{{ item.avgReview }}"></span>
+                                                       </span>
+                                                   </span>
+                                                </span>
+                                            </div>
+                                            <span class="break-sm"></span>
+
+                                            <div class="col-sm-6 text-right text-center-sm">
+                                                {{ "{0}No Reviews|{1}%count% Review|]1,Inf[%count% Reviews"|transchoice(reviews_total[1], {"%count%":reviews_total[1]}) }}
+                                            </div>
+                                        </div>
+
+                                        {% for review in reviews -%}
+                                            {# review \ArcaSolutions\WebBundle\Entity\Review #}
+                                            {% set link = '' -%}
+                                            {% if isSample -%}
+                                                {% set link = 'javascript:void(0);' -%}
+                                            {% elseif review.profile.accountId != 0 -%}
+                                                {% set link = absolute_url('/profile/' ~ review.profile.friendlyUrl) -%}
+                                            {% endif -%}
+                                            <div class="review-box">
+                                                <div class="review-top">
+                                                    <div class="media">
+                                                        <div class="media-left text-center break-sm">
+                                                            {% if review.profile.accountId != 0 -%}
+                                                                <a rel="nofollow" href="{{ link }}">
+                                                                    {% if review.profile.imageId != 0 and review.profile.profileImage -%}
+                                                                        <img
+                                                                            src="{{ asset(imageProfile(review.profile), 'profile_images') | imagine_filter('small') }}"
+                                                                            alt="{{ review.profile.firstName }} {{ review.profile.lastName }}"
+                                                                            class="img-circle img-profile">
+                                                                    {% else -%}
+                                                                        <img
+                                                                            src="{{ asset('assets/images/user-image.png') }}"
+                                                                            alt="{{ title }}"
+                                                                            class="img-circle img-profile">
+                                                                    {% endif -%}
+                                                                </a>
+                                                                <a rel="nofollow" href="{{ link }}">
+                                                                    {{ review.profile.firstName }} {{ review.profile.lastName }}
+                                                                </a>
+                                                            {% else -%}
+                                                                <img
+                                                                    src="{{ asset('assets/images/user-image.png') }}"
+                                                                    alt="{{ title }}"
+                                                                    class="img-circle img-profile">
+                                                                {{ review.reviewerName }}
+                                                            {% endif -%}
+
+                                                            <br>
+                                                            {{ review.reviewerLocation }}
+                                                        </div>
+                                                        <div class="media-body">
+                                                           <span class="rate">
+                                                               <span class="rate-stars">
+                                                                   <span class="stars-rating">
+                                                                       <span class="rate-{{ review.rating }}"></span>
+                                                                   </span>
+                                                               </span>
+                                                           </span>
+                                                            <h5 class="media-title">{{ review.reviewTitle }}</h5>
+
+                                                            <p><q>{{ review.review }}</q></p>
+
+                                                            <p>
+                                                                <span>{{ review.added|localized_date('MMMM yyyy') }}</span>
+                                                            </p>
+
+                                                            {% if review.response -%}
+                                                                <div class="reply">{{ review.response }}</div>
+                                                            {% endif -%}
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="review-bottom">
+                                                    <p>{{ 'Did you find this review helpful?'|trans }}</p>
+                                                    <button type="button"
+                                                            class="btn btn-circle"
+                                                            data-type="like"
+                                                            data-id="{{ review.id }}">
+                                                        <i class="fa fa-thumbs-o-up"></i>
+                                                    </button>
+                                                    <span class="count like">{{ review.like }}</span>
+                                                    <button type="button"
+                                                            class="btn btn-circle"
+                                                            data-type="dislike"
+                                                            data-id="{{ review.id }}">
+                                                        <i class="fa fa-thumbs-o-down"></i>
+                                                    </button>
+                                                    <span class="count dislike">{{ review.dislike }}</span>
+                                                </div>
+                                            </div>
+                                        {% endfor -%}
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <button type="button"
+                                                        class="btn btn-success btn-block reviewButtonTrigger"
+                                                        data-info="{{ encrypt( {module: 'listing', id: item.id} ) }}">
+                                                    {{ 'Rate it'|trans }}
+                                                </button>
+                                            </div>
+                                            <div class="col-sm-6 text-right text-center-sm">
+                                                {% if isSample -%}
+                                                    {% set link = 'javascript:void(0);' -%}
+                                                {% else -%}
+                                                    {% set link = path("listing_review", {"friendlyUrl" : item.friendlyUrl}) -%}
+                                                {% endif -%}
+                                                <a rel="nofollow" class="see-all break-sm" href="{{ link }}">
+                                                    {{ 'See all reviews'|trans }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif -%}
+                    </article>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+
+                    <div class="details-sidebar">
+
+                        <!-- Listing Information -->
+                        <div class="well">
+                            <div class="rate">
+                                {% if level.hasReview and reviews_active -%}
+
+                                    <span class="rate-stars">
+                                        <button type="button" class="star-rating reviewButtonTrigger"
+                                                data-info="{{ encrypt( {module: 'listing', id: item.id} ) }}">
+                                            <span class="stars-rating large">
+                                                <span class="rate-{{ item.avgReview }}"></span>
+                                            </span>
+                                        </button>
+                                    </span>
+                                    <p class="min-p">
+                                        {% if reviews_total[1] > 0 -%}
+                                            <a href="#reviews" class="text-success text-underline">
+                                                {{ "{0}No Reviews|{1}%count% Review|]1,Inf[%count% Reviews"|transchoice(reviews_total[1], {"%count%":reviews_total[1]}) }}
+                                            </a>
+                                        {% else -%}
+                                            {{ 'Be the first to review this item!'|trans }}
+                                        {% endif -%}
+
+                                    </p>
+                                    <button class="btn btn-success btn-block reviewButtonTrigger"
+                                            data-info="{{ encrypt( {module: 'listing', id: item.id} ) }}">
+                                        {{ 'Rate it'|trans }}
+                                    </button>
+                                    <hr>
+                                {% endif -%}
+                            </div>
+
+                            {% if level.hasPhone and item.phone is not empty -%}
+                                <div class="info">
+
+                                    <small>{{ 'Contact'|trans }}</small>
+                                    <br>
+
+                                    {% if level.hasPhone and item.phone is not empty -%}
+                                        <p class="large">
+                                            <a rel="nofollow" href="tel:{{ item.phone|spaceless }}"
+                                               class="text-primary">{{ item.phone }}</a>
+                                        </p>
+                                    {% endif -%}
+                                </div>
+                                <hr>
+                            {% endif -%}
+
+                            {% if (level.hasClickToCall and 'on' == clicktocall_enabled) or (level.hasEmail and item.email is not empty) -%}
+                                <div class="row">
+                                    {% if level.hasClickToCall and 'on' == clicktocall_enabled -%}
+                                        <div
+                                            class="{% if level.hasEmail and item.email is not empty -%} col-md-6 {% else -%} col-sm-12 {% endif -%}">
+                                            {% if isSample -%}
+                                                <a rel="nofollow" class="btn btn-info btn-social"
+                                                   href="javascript:void(0);">
+                                                    {{ 'Click to call'|trans }}
+                                                </a>
+                                            {% else -%}
+                                                <a rel="nofollow" class="btn btn-info btn-social"
+                                                   data-toggle="modal"
+                                                   data-target="#modalClicktoCall"
+                                                   href="{{ path('listing_clickcall',{id: item.id}) }}">
+                                                    {{ 'Click to call'|trans }}
+                                                </a>
+                                            {% endif -%}
+
+                                        </div>
+                                    {% endif -%}
+
+                                    {% if level.hasEmail and item.email is not empty -%}
+                                        <div
+                                            class="{% if level.hasClickToCall and 'on' == clicktocall_enabled -%} col-md-6 {% else -%} col-sm-12 {% endif -%}">
+                                            {% if isSample -%}
+                                                <a rel="nofollow" class="btn btn-info btn-social"
+                                                   href="javascript:void(0);">
+                                                    {{ 'Send e-mail'|trans }}
+                                                </a>
+                                            {% else -%}
+                                                <a rel="nofollow" class="btn btn-info btn-social sendEmailButton"
+                                                   data-action="{{ path('listing_sendmail',{id: item.id}) }}">
+                                                    {{ 'Send e-mail'|trans }}
+                                                </a>
+                                            {% endif -%}
+                                        </div>
+                                    {% endif -%}
+                                </div>
+
+                            {% endif -%}
+                            <br>
+                            {{ bookmarkButton(item, 'listing') }}
+                            <br>
+
+                            {% include "::blocks/sociallikes.html.twig" -%}
+                        </div>
+
+
+                        {% if map is not null -%}
+                            <div class="map">
+                                {{ google_map(map) }}
+                            </div>
+                        {% endif -%}
+
+                        {% if level.hasFacebookPage -%}
+                            <div class="hidden-print hidden-xs">
+                                {% if isSample -%}
+                                    <img src="{{ asset("assets/images/preview-facebook.png") }}">
+                                {% else -%}
+                                    {{ facebookFanPage(item.facebookPage) }}
+                                {% endif -%}
+                            </div>
+                        {% endif -%}
+
+                        {{ facebookComments() }}
+
+                        {% import "::blocks/utility/banners.html.twig" as banners -%}
+                        {{ banners.detail("listing") }}
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    {% if not isSample -%}
+        {% include '::blocks/modals/modal-bootstrap-template.html.twig' with {id: 'modalClicktoCall'} -%}
+
+        {% include '::blocks/modals/modal-bootstrap-template.html.twig' with {id: 'modalLogin'} -%}
+    {% endif -%}
+
+    {# Adding requirements -#}
+
+    {{ addJSFile("assets/js/lib/js.cookie.js") }}
+    {{ addJSTwig("::modules/listing/js/summary.js.twig") }}
+
+    {% if not isSample -%}
+        {{ addJSFile("assets/js/utility/modal.js") }}
+        {{ addJSFile("assets/js/review/like-deslike.js") }}
+        {{ addJSFile("assets/js/modal/click.to.call.js") }}
+        {{ addJSFile("assets/js/modal/send.email.js") }}
+        {{ addJSTwig("::js/reviews.js.twig") }}
+    {% endif -%}
+
+{% endblock -%}
+

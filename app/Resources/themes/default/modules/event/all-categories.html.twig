@@ -1,0 +1,23 @@
+{% extends "::base.html.twig" -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentEventViewAllCategories(true), "Browse All %module% Categories"|trans({"%module%" : "Event"|trans}) ) }}
+{% endblock -%}
+
+{% block body -%}
+
+<main>
+    <div class="container well well-light">
+        <section id="allcategories">
+            {{ customContentEventViewAllCategories() }}
+            <br>
+            <h1 class="theme-title theme-title-centered">{{ "Explore All Events Categories"|trans }}</h1>
+
+            {% include "::blocks/all-categories.html.twig" -%}
+
+            {{ customContentEventViewAllCategoriesBottom() }}
+        </section>
+    </div>
+</main>
+
+{% endblock -%}

@@ -1,0 +1,35 @@
+{# @var user \ArcaSolutions\WebBundle\Entity\Accountprofilecontact #}
+<div id="navbarLogin" class="navbar-inverse">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+                {# Default state #}
+                {% if user %}
+                    {# When logged #}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false">
+                            {{ 'Welcome'|trans }} {{ user.firstName }} {{ user.lastName }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/profile/">{{ 'Profile'|trans }}</a></li>
+                            <li><a href="{{ path("web_faq") }}">{{ 'Faq'|trans }}</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/profile/edit.php">{{ 'Account Preferences'|trans }}</a></li>
+                            <li><a href="/profile/logout.php">{{ 'Log Off'|trans }}</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li><a href="/profile/add.php">{{ 'Sign Up'|trans }}</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/profile/login.php">{{ 'Login'|trans }}</a></li>
+                {% endif %}
+
+                <li><a href="/sponsors" class="btn btn-success">{{ 'Sponsor Area'|trans }}</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>

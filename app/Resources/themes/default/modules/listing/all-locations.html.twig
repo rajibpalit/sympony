@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentListingViewAllLocations(true), "Browse All %module% Locations"|trans({"%module%" : "Listing"|trans}) ) }}
+{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            <section id="alllocations">
+                {{ customContentListingViewAllLocations() }}
+                <br>
+
+                <h1 class="theme-title theme-title-centered">{{ "Explore All Listings Locations"|trans }}</h1>
+
+                {% include "::blocks/all-locations.html.twig" -%}
+
+                {{ customContentListingViewAllLocationsBottom() }}
+            </section>
+        </div>
+    </main>
+{% endblock -%}

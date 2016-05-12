@@ -1,0 +1,17 @@
+{% if items|length > 0 %}
+    <div class="col-sm-6 col-xs-12">
+        <h5>{{ "Site Content"|trans }}  </h5>
+
+        <div class="list-columns-2">
+            <ul class="list-unstyled">
+                {% for item in items -%}
+                    <li>
+                        <a href="{{ item.custom == 'y' ? item.link : path(item.link) }}" target="{{ item.custom == 'y' ? '_blank' : '_self' }}">
+                            {{ item.label }}
+                        </a>
+                    </li>
+                {% endfor -%}
+            </ul>
+        </div>
+    </div>
+{% endif %}

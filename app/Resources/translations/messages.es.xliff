@@ -1,0 +1,2161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2015-12-18T16:29:10Z" source-language="en" target-language="es" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="494127690f10beea2800b883d6f8a2d97908505c" resname=" Arca Solutions, Inc.">
+        <source> Arca Solutions, Inc.</source>
+        <target> Arca Solutions, Inc.</target>
+        <jms:reference-file line="12">default/blocks/copyright.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="62994742a26e2d488488e705e6e5a5cdc9a20aaf" resname=" Log in with Facebook">
+        <source> Log in with Facebook</source>
+        <target>Iniciar sesión con Facebook</target>
+        <jms:reference-file line="2">default/blocks/social-login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="912b26140b7aa062f072b8b0d335da705daa1477" resname=" Refine Search">
+        <source> Refine Search</source>
+        <target>Filtro</target>
+        <jms:reference-file line="51">blocks/filters/distance.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="827d8a22f259d15f9897d583e1b37ed8bfa9db64" resname=" Refresh Results">
+        <source> Refresh Results</source>
+        <target>Actualizar</target>
+        <jms:reference-file line="43">blocks/filters/distance.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8926b906d4e42eed7ab08c3bc0445436bfe3055d" resname="%module% Homepage">
+        <source>%module% Homepage</source>
+        <target>%module% Homepage</target>
+        <jms:reference-file line="4">modules/article/index.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/blog/index.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/classified/index.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/deal/index.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/event/index.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/listing/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b83d818a79c2d58512f980ed6153e568841cad34" resname="%pageTitle% | %directoryTitle%">
+        <source>%pageTitle% | %directoryTitle%</source>
+        <target>%pageTitle% | %directoryTitle%</target>
+        <jms:reference-file line="83">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="81">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="87">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="315">CoreBundle/Services/Utility.php</jms:reference-file>
+        <jms:reference-file line="96">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="77">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="102">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="254">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="188">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="18af75e0f80df5ad08e8183a989ccffd387726cd" resname="(Read More)">
+        <source>(Read More)</source>
+        <target>(Leer Más)</target>
+        <jms:reference-file line="32">modules/classified/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="57">modules/classified/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="44">modules/deal/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="54">modules/deal/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="25">modules/event/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="70">modules/event/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="35">modules/listing/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="80">modules/listing/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="28015aaf6eb03310758b2a53503c602964dc7419" resname="(more)">
+        <source>(more)</source>
+        <target>(más)</target>
+        <jms:reference-file line="42">modules/blog/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7cc86550e1c6c76d8b5ec256fce99133c4cf0554" resname="* Phone (000) 000-0000">
+        <source>* Phone (000) 000-0000</source>
+        <target>* Teléfono (000) 000-0000</target>
+        <jms:reference-file line="21">blocks/modals/send-phone.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a408a19568280633ee57be22e417f6266595c54b" resname="-22.3344628">
+        <source>-22.3344628</source>
+        <target>-22.3344628</target>
+        <jms:reference-file line="32">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="43">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="67">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4786bf14f4b87d2bcc28851a1908d890acd36986" resname="-49.068844">
+        <source>-49.068844</source>
+        <target>-49.068844</target>
+        <jms:reference-file line="33">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="44">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="68">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="538c7ea66ef1fdc44ac06b797c51594743003609" resname="000.000.0000">
+        <source>000.000.0000</source>
+        <target>000.000.0000</target>
+        <jms:reference-file line="30">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="31">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="48">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="59">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+        <jms:reference-file line="61">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="50a144aeff1c05ed3d8b8f574f686034f7806540" resname="10% Off - Deal Title">
+        <source>10% Off - Deal Title</source>
+        <target>Nombre de la Oferta</target>
+        <jms:reference-file line="16">DealBundle/Sample/PromotionSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6b21fb791ac05170893860c248401cd24a59b732" resname="About">
+        <source>About</source>
+        <target>Sobre</target>
+        <jms:reference-file line="87">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="66">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="86">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="99">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c858fe5ad1e897eff594f3da4cc6e4a9b046b09" resname="Account Preferences">
+        <source>Account Preferences</source>
+        <target>Preferencias de la cuenta</target>
+        <jms:reference-file line="20">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="55">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="29b9ed39f7d6f9d13ce82e1ce445adc435384161" resname="Add this item to favorites">
+        <source>Add this item to favorites</source>
+        <target>Añadir a Favoritos</target>
+        <jms:reference-file line="4">blocks/bookmark/button.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a9a8e927b18defbd195d5bb1970838c0b30b8c8" resname="Add to favorites ">
+        <source>Add to favorites </source>
+        <target>Añadir a Favoritos</target>
+        <jms:reference-file line="7">blocks/modals/add-favorites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d325348e6e1ff6db8a764316050e2b5040c753b7" resname="Add your phone number (optional)">
+        <source>Add your phone number (optional)</source>
+        <target>Añadir su número de teléfono (opcional)</target>
+        <jms:reference-file line="39">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ecfe29ef8fcfc7c6552fb9793fd0884a7b9c0a8b" resname="Additional Information">
+        <source>Additional Information</source>
+        <target>Informaciones adicionales</target>
+        <jms:reference-file line="105">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="caadd26f90dafad11365663b5fb4ad73aedd6bc0" resname="Additional message">
+        <source>Additional message</source>
+        <target>Informaciones adicionales</target>
+        <jms:reference-file line="20">Form/Type/SendMailType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d70f93df5e8f9b55be44fbeee9d203972e3383d4" resname="Address">
+        <source>Address</source>
+        <target>Dirección</target>
+        <jms:reference-file line="54">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+        <jms:reference-file line="98">default/pages/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="120">default/pages/enquire.html.twig</jms:reference-file>
+        <jms:reference-file line="36">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="40">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="62">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="94bd6477ad05bfc54dce9f20e82a49c4120ddffc" resname="Advertise With Us">
+        <source>Advertise With Us</source>
+        <target>Anunciarse</target>
+        <jms:reference-file line="3">modules/order/index.html.twig</jms:reference-file>
+        <jms:reference-file line="17">modules/order/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a1329a711dc6d445f13bfb4778c283848d1f8fda" resname="Advertisement">
+        <source>Advertisement</source>
+        <target>Publicidad</target>
+        <jms:reference-file line="14">blocks/utility/banners.html.twig</jms:reference-file>
+        <jms:reference-file line="40">blocks/utility/banners.html.twig</jms:reference-file>
+        <jms:reference-file line="68">blocks/utility/banners.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1a4250696c22bbfbb515ff84235050b1d80a18d7" resname="Advertiser">
+        <source>Advertiser</source>
+        <target>Anunciante</target>
+        <jms:reference-file line="52">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="070e30de3e5acb2d9e8665943449ae14fb770f00" resname="All Rights Reserved.">
+        <source>All Rights Reserved.</source>
+        <target>Todos los derechos reservados.</target>
+        <jms:reference-file line="13">default/blocks/copyright.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f8bab4fb7d0330e15636ca0c1eeebc0a79a96b3d" resname="All day long">
+        <source>All day long</source>
+        <target>Todo el día</target>
+        <jms:reference-file line="37">blocks/utility/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="493b1440ab676e9079c787eb71ec59961faddb36" resname="Already voted">
+        <source>Already voted</source>
+        <target>Ya has valorado este artículo</target>
+        <jms:reference-file line="50">WebBundle/Controller/ReviewController.php</jms:reference-file>
+        <jms:reference-file line="83">WebBundle/Controller/ReviewController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f4d22e76a6a038e9652e7fbed0034a065b557e39" resname="An error occurred, try again">
+        <source>An error occurred, try again</source>
+        <target>No se ha podido mantener su solicitud, por favor vuelva a intentarlo.</target>
+        <jms:reference-file line="49">ListingBundle/Controller/ClickCallController.php</jms:reference-file>
+        <jms:reference-file line="203">WebBundle/Controller/ReviewController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7bd1632ecd3c0f85251af31bab4cb6f610de76ab" resname="Any Date">
+        <source>Any Date</source>
+        <target>Cualquier Fecha</target>
+        <jms:reference-file line="29">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4360c2dcd4af965377499b10a52640af435c9258" resname="Article">
+        <source>Article</source>
+        <target>Artículo</target>
+        <jms:reference-file line="4">modules/article/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/article/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="21f4d1da0817cf2dbe5be0583550ea6418ae2ab1" resname="Article Author">
+        <source>Article Author</source>
+        <target>Article Author</target>
+        <jms:reference-file line="44">ArticleBundle/Sample/ArticleSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d7cee3773a4ec8c6386bac150f8e4dd5a5e0cbf6" resname="Article Title">
+        <source>Article Title</source>
+        <target>Nombre del Artículo</target>
+        <jms:reference-file line="37">ArticleBundle/Sample/ArticleSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6d12c8adbefeaeacac0d48274df3a195ca9a1d17" resname="Badge">
+        <source>Badge</source>
+        <target>Clasificaciones</target>
+        <jms:reference-file line="22">blocks/utility/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e311c0c843e0a3b6bd0cbb79b960453cd91d6628" resname="Be the first to review this item!">
+        <source>Be the first to review this item!</source>
+        <target>¡Sea el primero en calificar!</target>
+        <jms:reference-file line="280">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="531">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c4c060daf178260897a3d70ccc4cfaa5e80db3c5" resname="Best of">
+        <source>Best of</source>
+        <target>Lo mejor</target>
+        <jms:reference-file line="81">modules/listing/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0b9d2b2362bc33581ba11fddcb0cf0590ebd3a7a" resname="Blog">
+        <source>Blog</source>
+        <target>Blog</target>
+        <jms:reference-file line="4">modules/blog/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/blog/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c8e9dac72061398caced4e6889452fca21a83b9c" resname="Bookmark this">
+        <source>Bookmark this</source>
+        <target>Añadir a Favoritos</target>
+        <jms:reference-file line="12">blocks/bookmark/button.html.twig</jms:reference-file>
+        <jms:reference-file line="9">blocks/bookmark/link.html.twig</jms:reference-file>
+        <jms:reference-file line="17">js/bookmark/bookmark.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c3d7518da1546caaebd69c2ea6728594ccb7cd0b" resname="Bookmarked">
+        <source>Bookmarked</source>
+        <target>Marcada</target>
+        <jms:reference-file line="10">blocks/bookmark/button.html.twig</jms:reference-file>
+        <jms:reference-file line="7">blocks/bookmark/link.html.twig</jms:reference-file>
+        <jms:reference-file line="14">js/bookmark/bookmark.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="96898848153658c167d5df61eecf1a2d242aad63" resname="Browse All %module% Categories">
+        <source>Browse All %module% Categories</source>
+        <target>Vea todas las Categorias de %module%</target>
+        <jms:reference-file line="4">modules/article/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/blog/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/classified/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/deal/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/event/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/listing/all-categories.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3349fc8c36968cd891ff4f8879baa9c90374893f" resname="Browse All %module% Locations">
+        <source>Browse All %module% Locations</source>
+        <target>Vea todas las Ubicaciones de %module%</target>
+        <jms:reference-file line="4">modules/classified/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/deal/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/event/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/listing/all-locations.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="73a1e66bd0cf50896cf0017ab27d9eff87012b3d" resname="Browse By Date">
+        <source>Browse By Date</source>
+        <target>Búsqueda por Fecha</target>
+        <jms:reference-file line="2">modules/event/event-calendar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ab6ea5a8fc519bb531885bb72a696ab7736e0aa" resname="Browse by category ">
+        <source>Browse by category </source>
+        <target>Búsqueda por Categoría</target>
+        <jms:reference-file line="3">default/blocks/browse-by-category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cfadbd7a577133041a60f331a0e2ad6af20f3f8b" resname="By">
+        <source>By</source>
+        <target>Por</target>
+        <jms:reference-file line="16">blocks/utility/utility.html.twig</jms:reference-file>
+        <jms:reference-file line="59">blocks/utility/utility.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="291a0a58dfa6c640a90c1d868d2af190775ea219" resname="Call">
+        <source>Call</source>
+        <target>Llame</target>
+        <jms:reference-file line="32">ListingBundle/Controller/ClickCallController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6ccb60071be8f00760a3824d9f7d0fad57de789f" resname="Categories">
+        <source>Categories</source>
+        <target>Categorías</target>
+        <jms:reference-file line="78">blocks/filters/category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="48f5cb782eaf09bfac91cbe53cc4029370eb8a51" resname="Category ">
+        <source>Category </source>
+        <target>Categoría </target>
+        <jms:reference-file line="16">ArticleBundle/Sample/ArticlecategorySample.php</jms:reference-file>
+        <jms:reference-file line="16">ClassifiedBundle/Sample/ClassifiedcategorySample.php</jms:reference-file>
+        <jms:reference-file line="16">EventBundle/Sample/EventcategorySample.php</jms:reference-file>
+        <jms:reference-file line="17">ListingBundle/Sample/CategorySample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a356378f8adf3515cc8006b0eeea87437f963c8e" resname="Check ins">
+        <source>Check ins</source>
+        <target>Entradas</target>
+        <jms:reference-file line="318">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9eb4f370516b5e228e3a875b60db4310ee6575ab" resname="Checkin">
+        <source>Checkin</source>
+        <target>Check in</target>
+        <jms:reference-file line="32">default/pages/checkins.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c08c208bdd49a4641a25544ef9a74f21995c2cf4" resname="Checkins">
+        <source>Checkins</source>
+        <target>Check Ins</target>
+        <jms:reference-file line="32">default/pages/checkins.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8f591059a1916319c42f8627d9cd6561a04b3f7c" resname="Checkins of &quot;%title%&quot;">
+        <source>Checkins of "%title%"</source>
+        <target>Checkins de "%title%"</target>
+        <jms:reference-file line="214">Twig/Extension/SeoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4271627f4f0bef6104a95cca7bb21cda4d74503e" resname="City">
+        <source>City</source>
+        <target>Ciudad</target>
+        <jms:reference-file line="17">CoreBundle/Sample/Location4Sample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="020fbb97c8ffa3b0af95354e4f03e9fcfe005570" resname="City, State">
+        <source>City, State</source>
+        <target>Ciudad, Estado</target>
+        <jms:reference-file line="60">Form/Type/ReviewsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="acfbcd1618ec275c709d11d2fe5119ba4abfd141" resname="Claim this listing">
+        <source>Claim this listing</source>
+        <target>Solicitud de la empresa</target>
+        <jms:reference-file line="93">modules/listing/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f3780d470ba749f8bc7670f580d03cb4bc9c015d" resname="Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica formas.">
+        <source>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica formas.</source>
+        <target>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica formas.</target>
+        <jms:reference-file line="20">WebBundle/Sample/CheckinSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a9bf379d1234f54d9594e214a732bfb8df5c3d7" resname="Classified Title">
+        <source>Classified Title</source>
+        <target>Nombre del Clasificado</target>
+        <jms:reference-file line="28">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d8e74020d85ce27d943b5df45867a2cf38f90114" resname="Classifieds">
+        <source>Classifieds</source>
+        <target>Classificados</target>
+        <jms:reference-file line="4">modules/classified/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/classified/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/classified/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1ea741d61753e0814d25232f4d3065b195dfe982" resname="Click here to see more info!">
+        <source>Click here to see more info!</source>
+        <target>¡Haga clic aquí para obtener más información!</target>
+        <jms:reference-file line="232">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="77">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c3b28d2ad8e6d18a31d34bdcd7ce6980c02a1e32" resname="Click to call">
+        <source>Click to call</source>
+        <target>Llamada</target>
+        <jms:reference-file line="13">blocks/modals/modal-click-call.html.twig</jms:reference-file>
+        <jms:reference-file line="567">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="574">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="122">modules/listing/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0dbb9d241397dfd49717b8634a80c60cc6cb1058" resname="Click to see the fax number">
+        <source>Click to see the fax number</source>
+        <target>Haga clic para ver el número de fax</target>
+        <jms:reference-file line="235">blocks/utility/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d917ab9b0a8506e97d3d8d41a9e294532650415e" resname="Click to see the phone number">
+        <source>Click to see the phone number</source>
+        <target>Haga clic para ver el número de teléfono</target>
+        <jms:reference-file line="224">blocks/utility/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a7894e6b8aa7ee8481f4d7ae46cb9fc9445b44ab" resname="Come back soon to check this page">
+        <source>Come back soon to check this page</source>
+        <target>Vuelve pronto para ver esta página</target>
+        <jms:reference-file line="25">default/pages/error-unavailable-item.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b37456c4530be810dc040f50da72eda09addfb0a" resname="Contact">
+        <source>Contact</source>
+        <target>Contacto</target>
+        <jms:reference-file line="142">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="38">modules/classified/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="67">modules/classified/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="158">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="186">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="546">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8a42a57da0aaf5c42c4397859d152c1f1513ec66" resname="Contact Name">
+        <source>Contact Name</source>
+        <target>Nombre de Contacto</target>
+        <jms:reference-file line="37">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="41">EventBundle/Sample/EventSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ad0ccff7c60872356cb74b82694782be79ba338" resname="Contact Us">
+        <source>Contact Us</source>
+        <target>Entre en contacto</target>
+        <jms:reference-file line="19">default/blocks/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="51">default/pages/faq.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="be94ea6835df8cf53840a685bccaec18950faae6" resname="Contact Us ">
+        <source>Contact Us </source>
+        <target>Entre en contacto</target>
+        <jms:reference-file line="5">default/pages/contactus.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5773e8bc844a7850f39e62746ba060ca32cd0687" resname="Contact e-mail">
+        <source>Contact e-mail</source>
+        <target>E-mail de Contacto</target>
+        <jms:reference-file line="53">Form/Type/ReviewsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="373a53a123536391bf2c302db1480f1810e8a1e5" resname="Contractors">
+        <source>Contractors</source>
+        <target>Contratistas</target>
+        <jms:reference-file line="37">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a420abf6e89816696d0724f377c00c6447c28f0a" resname="Copyright">
+        <source>Copyright</source>
+        <target>Derechos de autor</target>
+        <jms:reference-file line="11">default/blocks/copyright.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d523ebbd10146cdfd39dee077f04c9d08468d0bc" resname="Country">
+        <source>Country</source>
+        <target>País</target>
+        <jms:reference-file line="17">CoreBundle/Sample/Location1Sample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d993d77dae41c7bf47ce9ed71627094c053436ab" resname="Custom Date">
+        <source>Custom Date</source>
+        <target>Otra Fecha</target>
+        <jms:reference-file line="45">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b37c3832e05fb5bf560b9517b62e753097c5a43d" resname="Custom Theme">
+        <source>Custom Theme</source>
+        <target>Tema Personalizado</target>
+        <jms:reference-file line="38">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9d1fece7b6dd44fd69bd5af18ca5658fd11b9859" resname="DAY">
+        <source>DAY</source>
+        <target>DÍA</target>
+        <jms:reference-file line="240">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e41b86f67fabb3b2694316c29d4eee8082b88c58" resname="Daily Event">
+        <source>Daily Event</source>
+        <target>Agenda de Eventos</target>
+        <jms:reference-file line="1">recurring/daily/day.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="eb9a4bc1c0c153e4e4b042a79113b815b7e3021d" resname="Date">
+        <source>Date</source>
+        <target>Fecha</target>
+        <jms:reference-file line="22">blocks/filters/date.html.twig</jms:reference-file>
+        <jms:reference-file line="25">blocks/search/search-fields-date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="987b9ced08d4ac5d11d286ca4b54b99a4f69164b" resname="Day">
+        <source>Day</source>
+        <target>Día</target>
+        <jms:reference-file line="15">recurring/yearly/day.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="87078fc0ef8cf02af769e94be31a1b7a01aa958e" resname="Deal">
+        <source>Deal</source>
+        <target>Oferta</target>
+        <jms:reference-file line="17">blocks/filters/deal.html.twig</jms:reference-file>
+        <jms:reference-file line="15">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/deal/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/deal/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/deal/index.html.twig</jms:reference-file>
+        <jms:reference-file line="300">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="19d10c467f903af66a1d2ed5f52f08fb0010a9e9" resname="Did you find this review helpful?">
+        <source>Did you find this review helpful?</source>
+        <target>¿Te ha resultado útil esta calificacione?</target>
+        <jms:reference-file line="215">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="464">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2a9bc8aa6e61387e9732b295bc2fa35f3368e051" resname="Did you not find you answer? Contact us.">
+        <source>Did you not find you answer? Contact us.</source>
+        <target>¿No has encontrado lo que buscas? Póngase en contacto con nosotros.</target>
+        <jms:reference-file line="51">default/pages/faq.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7dda3268bd024de40541fb0a43d44f8d2eb3205d" resname="Dining Guide">
+        <source>Dining Guide</source>
+        <target>Guía de restaurantes</target>
+        <jms:reference-file line="36">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="423208095dd7fc394399b8c356f8f00cd260869b" resname="Distance">
+        <source>Distance</source>
+        <target>Distancia</target>
+        <jms:reference-file line="16">blocks/filters/distance.html.twig</jms:reference-file>
+        <jms:reference-file line="99">modules/classified/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0d01e2e86669e98441ab4dce5520696c318b7098" resname="E-mail">
+        <source>E-mail</source>
+        <target>Email</target>
+        <jms:reference-file line="25">blocks/modals/modal-login.html.twig</jms:reference-file>
+        <jms:reference-file line="53">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+        <jms:reference-file line="105">default/pages/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="116">default/pages/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7b182295d8b6c5c871896a814590213e9ca721a1" resname="E-mail saved">
+        <source>E-mail saved</source>
+        <target>Email guardado</target>
+        <jms:reference-file line="73">WebBundle/Controller/DefaultController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="84add5b2952787581cb9a8851eef63d1ec75d22b" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+        <jms:reference-file line="20">Form/Type/LoginFormType.php</jms:reference-file>
+        <jms:reference-file line="74">WebBundle/Controller/SendMailController.php</jms:reference-file>
+        <jms:reference-file line="30">Form/Type/ContactUsType.php</jms:reference-file>
+        <jms:reference-file line="51">Form/Type/ReviewsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="18f4b5c67af52f94ca6ef6f9b70f6a0d0cd07502" resname="Email: ">
+        <source>Email: </source>
+        <target>Email: </target>
+        <jms:reference-file line="12">default/mailer/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="12">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e6c76f169491091fbc6f1ade7f15940401d54477" resname="Enter a question, keyword, topic...">
+        <source>Enter a question, keyword, topic...</source>
+        <target>Escriba una pregunta o tema.</target>
+        <jms:reference-file line="40">default/pages/faq.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7f2f6a15cf8da2b27e5a4af47b58e7ad71c0b3d9" resname="Error">
+        <source>Error</source>
+        <target>Error</target>
+        <jms:reference-file line="31">WebBundle/Controller/SendMailController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ad8919ace091b14011c6439cfd5e1707b58f5abd" resname="Event">
+        <source>Event</source>
+        <target>Evento</target>
+        <jms:reference-file line="4">modules/event/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/event/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/event/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="072cbaeaf68c934008e8ad01485ab378756803b0" resname="Event Title">
+        <source>Event Title</source>
+        <target>Nombre del Evento</target>
+        <jms:reference-file line="36">EventBundle/Sample/EventSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c5497bca58468ae64aed6c0fd921109217988db3" resname="Events">
+        <source>Events</source>
+        <target>Eventos</target>
+        <jms:reference-file line="24">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="123">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3560d90b708fd3e1f69285334ea051554e90d75b" resname="Every">
+        <source>Every</source>
+        <target>Cada</target>
+        <jms:reference-file line="34">blocks/utility/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1500668dbc19a5352265e64d4ea5631b5b99d03c" resname="Every Day">
+        <source>Every Day</source>
+        <target>Todos los días</target>
+        <jms:reference-file line="2">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="2">recurring/weekly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="4">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a425e517e8774943537316ae181bb7f561764573" resname="Every Year">
+        <source>Every Year</source>
+        <target>Cada año</target>
+        <jms:reference-file line="12">recurring/yearly/day.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3b2eb5131055ad07ac1d08de2f11f900286a51b5" resname="Every day">
+        <source>Every day</source>
+        <target>Cada día</target>
+        <jms:reference-file line="9">recurring/monthly/day.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="349597eb8a3a70423a0c4d4a168a8b7ec9cfb730" resname="Every weekend">
+        <source>Every weekend</source>
+        <target>Cada fin de semana</target>
+        <jms:reference-file line="4">recurring/weekly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="6">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a689a999a5e62055bda8c21b1dbe92c119308def" resname="Expired">
+        <source>Expired</source>
+        <target>Expirado</target>
+        <jms:reference-file line="199">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bcc730b6acfac9b20803aa1cc5d1acbb37aa8fde" resname="Explore All Articles Categories">
+        <source>Explore All Articles Categories</source>
+        <target>Explora todas las categorías de artículos</target>
+        <jms:reference-file line="15">modules/article/all-categories.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2323f4dd01cf81ee1f4cd04b20582e4d7a14f82" resname="Explore All Classifieds Categories">
+        <source>Explore All Classifieds Categories</source>
+        <target>Explora todas las categorías de clasificados</target>
+        <jms:reference-file line="14">modules/classified/all-categories.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bb4920b1c2c4614f4c1dfbcd352de0c367edbe02" resname="Explore All Classifieds Locations">
+        <source>Explore All Classifieds Locations</source>
+        <target>Explora los lugares de Clasificados</target>
+        <jms:reference-file line="14">modules/classified/all-locations.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="db27e0f03888462e36e92a6e3fa2067afbe0e5ed" resname="Explore All Deal Locations">
+        <source>Explore All Deal Locations</source>
+        <target>Explora Todas las Ubicaciones de Ofertas</target>
+        <jms:reference-file line="14">modules/deal/all-locations.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="97547965e70f69a3a7dfbcd6a5ebdc04dd4f0626" resname="Explore All Deals Categories">
+        <source>Explore All Deals Categories</source>
+        <target>Explora las categorías de Ofertas</target>
+        <jms:reference-file line="14">modules/blog/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="14">modules/deal/all-categories.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="34034728ddbadd6fea94de03fac3116e8aadcd69" resname="Explore All Events Categories">
+        <source>Explore All Events Categories</source>
+        <target>Explora todas las categorías de Eventos</target>
+        <jms:reference-file line="14">modules/event/all-categories.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="99e6ffa270703be5c4925d56c05bfc5e11f85d06" resname="Explore All Events Locations">
+        <source>Explore All Events Locations</source>
+        <target>Explora todos los lugares de eventos</target>
+        <jms:reference-file line="14">modules/event/all-locations.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b66e4239f8037f2c9543e82b0ca11f9ef8e35e95" resname="Explore All Listings Categories">
+        <source>Explore All Listings Categories</source>
+        <target>Explora todas las categorías</target>
+        <jms:reference-file line="14">modules/listing/all-categories.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b040238d8fd4eba9d9845a832067cc2507c9eddc" resname="Explore All Listings Locations">
+        <source>Explore All Listings Locations</source>
+        <target>Explora todos los lugares</target>
+        <jms:reference-file line="14">modules/listing/all-locations.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bab1534f992372bfcbec7d19ed755589b74acdae" resname="Explore Articles">
+        <source>Explore Articles</source>
+        <target>Buscar artículos</target>
+        <jms:reference-file line="23">modules/article/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a14c94e69d2d58a7d456d24893c3f5e177ba4cd" resname="Explore Category">
+        <source>Explore Category</source>
+        <target>Explora Categorías</target>
+        <jms:reference-file line="82">blocks/utility/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="30f6d12c6d075eb8ee504a0db8fa621952ddca30" resname="Explore Classifieds">
+        <source>Explore Classifieds</source>
+        <target>Buscar clasificados</target>
+        <jms:reference-file line="25">modules/classified/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e638ce8a31772029d05e5b9561399932a876ac43" resname="Explore Deals">
+        <source>Explore Deals</source>
+        <target>Buscar Ofertas</target>
+        <jms:reference-file line="27">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c464552f1e4b0bd48e29fd7b9108dc70b4b1a07" resname="Explore Listings">
+        <source>Explore Listings</source>
+        <target>Buscar Empresas</target>
+        <jms:reference-file line="31">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="74dccf1bafbfc4e4a1ce38b68e2636e86585549a" resname="Explore all locations">
+        <source>Explore all locations</source>
+        <target>Ver todos los lugares</target>
+        <jms:reference-file line="14">default/blocks/all-locations.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c5593488d37b10df95c0a12d26445305f542fd33" resname="Explore more places">
+        <source>Explore more places</source>
+        <target>Explora más lugares</target>
+        <jms:reference-file line="4">default/blocks/browse-by-location.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e84aa29b31bbce13c2527f189e10dbe4c4b558e5" resname="Explore our Blog">
+        <source>Explore our Blog</source>
+        <target>Vea nuestro Blog</target>
+        <jms:reference-file line="23">modules/blog/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f11042a45ba69cc6af5e35117190a1cc05bb7e45" resname="Faq">
+        <source>Faq</source>
+        <target>Preguntas Frecuentes</target>
+        <jms:reference-file line="18">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="53">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b67fad2e2edf27045555eadaf1e4a848ab242206" resname="Fax">
+        <source>Fax</source>
+        <target>Fax</target>
+        <jms:reference-file line="278">blocks/utility/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="163">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="110">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="214">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="15c115f822598a6566780c8cc27b4522aa0ffb4d" resname="Featured Classifieds">
+        <source>Featured Classifieds</source>
+        <target>Clasificados Destacados</target>
+        <jms:reference-file line="169">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17b3427ace7b21e9c4070e1e9ec194bb8f11bf6e" resname="Featured Events">
+        <source>Featured Events</source>
+        <target>Eventos Destacados</target>
+        <jms:reference-file line="60">modules/event/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ce024eacbd17534547390e43c612f030d708313" resname="Featured Listings">
+        <source>Featured Listings</source>
+        <target>Empresas Destacadas</target>
+        <jms:reference-file line="99">themes/default/index.html.twig</jms:reference-file>
+        <jms:reference-file line="63">modules/listing/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc338f87a058158eb824b53705961801516a9460" resname="Features">
+        <source>Features</source>
+        <target>Características</target>
+        <jms:reference-file line="248">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b6ea992aab4668311bb94778e056dd0285f27621" resname="First Name">
+        <source>First Name</source>
+        <target>Nombre</target>
+        <jms:reference-file line="20">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cca2bfb1727c7ba796bde09db878c883c6ed7264" resname="Follow Us">
+        <source>Follow Us</source>
+        <target>Siguenos</target>
+        <jms:reference-file line="42">default/blocks/contactus.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a2f060b7363f54c9f80d62805d36636dd7ebc33c" resname="Forgot your password?">
+        <source>Forgot your password?</source>
+        <target>¿Olvidaste tu contraseña?</target>
+        <jms:reference-file line="45">blocks/modals/modal-login.html.twig</jms:reference-file>
+        <jms:reference-file line="63">default/pages/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="75f527181b574f84568f33f67adc3b267a6fef9c" resname="Free">
+        <source>Free</source>
+        <target>Gratis</target>
+        <jms:reference-file line="92">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="98">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="130">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="60">blocks/themebox/vertical.html.twig</jms:reference-file>
+        <jms:reference-file line="98">blocks/themebox/vertical.html.twig</jms:reference-file>
+        <jms:reference-file line="102">blocks/themebox/vertical.html.twig</jms:reference-file>
+        <jms:reference-file line="22">modules/classified/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="92">modules/classified/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="179">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="56">modules/deal/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="62">modules/deal/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="65">modules/deal/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="71">modules/deal/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="141d442a7d9083d2d79cf0a902e4124b021ea204" resname="Frequent Asked Questions">
+        <source>Frequent Asked Questions</source>
+        <target>Preguntas más frecuentes</target>
+        <jms:reference-file line="4">default/pages/faq.html.twig</jms:reference-file>
+        <jms:reference-file line="7">default/pages/faq.html.twig</jms:reference-file>
+        <jms:reference-file line="18">default/pages/faq.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d166e844a3f3f87149cc4f866eb998e9a751c72a" resname="Friday">
+        <source>Friday</source>
+        <target>Viernes</target>
+        <jms:reference-file line="40">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b77d514f22608e843dfdd0d84a1398f2d8181096" resname="From %real_value%">
+        <source>From %real_value%</source>
+        <target>De %real_value%</target>
+        <jms:reference-file line="184">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b4f579b44c1ba2a63b430a7ed58f7dfcc800a80c" resname="From: ">
+        <source>From: </source>
+        <target>De: </target>
+        <jms:reference-file line="11">default/mailer/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="11">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0e16b52652e21b054e245c064279b45b68623035" resname="Get Directions">
+        <source>Get Directions</source>
+        <target>Obtener ruta</target>
+        <jms:reference-file line="2">default/blocks/get-directions.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="114083dbfb2587b674176a022b74c1ed7857abcf" resname="Get Location">
+        <source>Get Location</source>
+        <target>Obtener la ubicación</target>
+        <jms:reference-file line="24">blocks/filters/distance.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cf38159944e383489ec9e6fd2b3cf2e053d6c54a" resname="HRS">
+        <source>HRS</source>
+        <target>HRS</target>
+        <jms:reference-file line="241">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9e25a34e635a123f8958bbe26e7c4843278597fb" resname="Hours">
+        <source>Hours</source>
+        <target>Horas</target>
+        <jms:reference-file line="140">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="286">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="339139a85743fd3ba78316ad7db894e4307b6f0c" resname="How can we help you?">
+        <source>How can we help you?</source>
+        <target>¿Cómo podemos ayudar?</target>
+        <jms:reference-file line="37">default/pages/faq.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="aef36502d67b0520654deb764dd055a7e905cfdd" resname="In">
+        <source>In</source>
+        <target>En</target>
+        <jms:reference-file line="35">default/blocks/event-upcoming-widget-carousel.html.twig</jms:reference-file>
+        <jms:reference-file line="7">classified/blocks/popular.html.twig</jms:reference-file>
+        <jms:reference-file line="7">listing/blocks/bestof.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="90819645bc54822f0f1872dc10b5c8968a5a74a4" resname="Is this your listing?">
+        <source>Is this your listing?</source>
+        <target>¿Es ésta su empresa?</target>
+        <jms:reference-file line="93">modules/listing/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ecdda59aea5ee67d7d854c969ccf7f4f4b4a4c54" resname="Item">
+        <source>Item</source>
+        <target>artículo</target>
+        <jms:reference-file line="72">WebBundle/Controller/SendMailController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="57f3e267b15163627dab04eaff8cb558641a296b" resname="Keyword for search">
+        <source>Keyword for search</source>
+        <target>Palabra clave</target>
+        <jms:reference-file line="5">blocks/search/search-fields-date.html.twig</jms:reference-file>
+        <jms:reference-file line="3">blocks/search/search-fields-small.html.twig</jms:reference-file>
+        <jms:reference-file line="3">blocks/search/search-fields.html.twig</jms:reference-file>
+        <jms:reference-file line="38">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d1c69a859a9638b242f2dabf8acf1c0b1450ce6b" resname="Last">
+        <source>Last</source>
+        <target>Ultima</target>
+        <jms:reference-file line="30">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="32">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="863cb39fbe7d70597076af1960b7ae4618d9e1bc" resname="Last Name">
+        <source>Last Name</source>
+        <target>Apellido</target>
+        <jms:reference-file line="25">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e731bb120a8a1831bb1a98e84cb0119b1a652d0d" resname="Link to Detail">
+        <source>Link to Detail</source>
+        <target>Enlace a los detalles</target>
+        <jms:reference-file line="26">modules/article/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="36">modules/article/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="28">modules/blog/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="34">modules/blog/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="14">modules/classified/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="32">modules/classified/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="46">modules/classified/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="27">modules/deal/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="30">modules/deal/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="49">modules/deal/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="17">modules/event/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="38">modules/event/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="57">modules/event/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="17">modules/listing/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="46">modules/listing/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="67">modules/listing/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a1fffaaafb7cc996685bceb829c053cc4f7de43d" resname="List">
+        <source>List</source>
+        <target>Lista</target>
+        <jms:reference-file line="76">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a449cfcd6da83b2fd0daa2df4a9a96fc34009bc2" resname="Listing">
+        <source>Listing</source>
+        <target>Empresa</target>
+        <jms:reference-file line="51">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/listing/all-categories.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/listing/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">modules/listing/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="15fd7cf1484cf2a002b20af850fa0e689cc69abe" resname="Listing Title">
+        <source>Listing Title</source>
+        <target>Nombre del Listado</target>
+        <jms:reference-file line="53">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d219c68101f532de10add2cf42fb9dbeca73d3be" resname="Location">
+        <source>Location</source>
+        <target>Localización</target>
+        <jms:reference-file line="17">blocks/search/search-fields-date.html.twig</jms:reference-file>
+        <jms:reference-file line="15">blocks/search/search-fields.html.twig</jms:reference-file>
+        <jms:reference-file line="59">themes/default/index.html.twig</jms:reference-file>
+        <jms:reference-file line="61">Form/Type/ReviewsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="266d74e3d0be28403faffd9a24a948051565e6b4" resname="Location Name">
+        <source>Location Name</source>
+        <target>Nombre de la Ubicación</target>
+        <jms:reference-file line="39">EventBundle/Sample/EventSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="88b66f2a8f261fc05f4c55fced11104b0a23f948" resname="Location Reference">
+        <source>Location Reference</source>
+        <target>Referencia de Ubicación</target>
+        <jms:reference-file line="69">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e59e8f15f76017b59aaf0246d5a07ba76a7d553e" resname="Locations">
+        <source>Locations</source>
+        <target>Destinos</target>
+        <jms:reference-file line="81">blocks/filters/location.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dab1c4d68eda9cd8e5eca3295fc16d1ec8506b2" resname="Log Off">
+        <source>Log Off</source>
+        <target>Salir</target>
+        <jms:reference-file line="21">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="56">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0a8040aec90c602bfd590839be50ccdf36f104b7" resname="Log in to the Profile Area">
+        <source>Log in to the Profile Area</source>
+        <target>Inicie sesión en el Area Perfil</target>
+        <jms:reference-file line="16">default/pages/login.html.twig</jms:reference-file>
+        <jms:reference-file line="33">default/pages/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e945edc859371f95b025da1b4d7226a9fd12643f" resname="Log in with Facebook">
+        <source>Log in with Facebook</source>
+        <target>Ingresar con Facebook</target>
+        <jms:reference-file line="16">blocks/modals/modal-login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f8ce4aceb58955bd8e263de52e7c78087a87fb70" resname="Log in with Google">
+        <source>Log in with Google</source>
+        <target>Ingresar con Google</target>
+        <jms:reference-file line="19">blocks/modals/modal-login.html.twig</jms:reference-file>
+        <jms:reference-file line="3">default/blocks/social-login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4e5a2893bdcc7d239c1db72e4c4ffbe4bea73174" resname="Login">
+        <source>Login</source>
+        <target>Ingresar</target>
+        <jms:reference-file line="27">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="7">blocks/modals/modal-login.html.twig</jms:reference-file>
+        <jms:reference-file line="41">blocks/modals/modal-login.html.twig</jms:reference-file>
+        <jms:reference-file line="62">blocks/navigation/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="65">default/pages/login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="04e66352aa8f9c4c5f26b71bf380973ada994760" resname="MIN">
+        <source>MIN</source>
+        <target>MIN</target>
+        <jms:reference-file line="242">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="efd197f3fce450112a4bdd0c3db3118a46b8002c" resname="Main navigation">
+        <source>Main navigation</source>
+        <target>Navegación principal</target>
+        <jms:reference-file line="23">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="772d5482c7c5334b1eb1108e0be38927c1e408ad" resname="Map View">
+        <source>Map View</source>
+        <target>Mapa</target>
+        <jms:reference-file line="79">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="57f5f5efbc5990f5230aa95359042338b856707b" resname="Menu">
+        <source>Menu</source>
+        <target>Menu</target>
+        <jms:reference-file line="24">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="68f4145fee7dde76afceb910165924ad14cf0d00" resname="Message">
+        <source>Message</source>
+        <target>Mensaje</target>
+        <jms:reference-file line="75">WebBundle/Controller/SendMailController.php</jms:reference-file>
+        <jms:reference-file line="119">WebBundle/Controller/SendMailController.php</jms:reference-file>
+        <jms:reference-file line="48">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="90d66f27023a46367494ac9544644e279c9da6ba" resname="Message: ">
+        <source>Message: </source>
+        <target>Mensaje:</target>
+        <jms:reference-file line="14">default/mailer/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="14">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="75cacda33309fd817727e2ebcd7d6ae7103fbaac" resname="Mon-Fri">
+        <source>Mon-Fri</source>
+        <target>De lunes a viernes</target>
+        <jms:reference-file line="6">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="6">recurring/weekly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="8">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="932eeb1076c85e522f02e15441fa371e3fd000ac" resname="Monday">
+        <source>Monday</source>
+        <target>Lunes</target>
+        <jms:reference-file line="36">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9c27ddb734627076352a473fbb39e284185f3e17" resname="Multi Language">
+        <source>Multi Language</source>
+        <target>Multilingüe</target>
+        <jms:reference-file line="60">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="81daccf873a8ed4abeded585685793e6bef10d81" resname="Must Read Articles">
+        <source>Must Read Articles</source>
+        <target>Los mejores artículos</target>
+        <jms:reference-file line="58">modules/article/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="709a23220f2c3d64d1e1d6d18c4d5280f8d82fca" resname="Name">
+        <source>Name</source>
+        <target>Nombre</target>
+        <jms:reference-file line="42">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+        <jms:reference-file line="73">WebBundle/Controller/SendMailController.php</jms:reference-file>
+        <jms:reference-file line="40">Form/Type/ReviewsType.php</jms:reference-file>
+        <jms:reference-file line="41">Form/Type/ReviewsType.php</jms:reference-file>
+        <jms:reference-file line="17">Form/Type/SendMailType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2b782f85ff8d3a899735862a62f9dcb5db694d3" resname="Neighborhood">
+        <source>Neighborhood</source>
+        <target>Barrio</target>
+        <jms:reference-file line="17">CoreBundle/Sample/Location5Sample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="26237882cf19f8c7dbc8d78760cf8ebd940faa29" resname="New Classifieds">
+        <source>New Classifieds</source>
+        <target>Nuevos clasificados</target>
+        <jms:reference-file line="58">modules/classified/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1056f00a9447c224c0f6dce9061abe81c8675109" resname="New Contact">
+        <source>New Contact</source>
+        <target>Nuevo contacto</target>
+        <jms:reference-file line="3">default/mailer/contactus.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c26cb107b2443238f53baf120df15213d627b638" resname="New Deals">
+        <source>New Deals</source>
+        <target>Nuevas Ofertas</target>
+        <jms:reference-file line="67">modules/deal/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a180cc6444b21324a8a989a85fdbd31629c13b27" resname="New Inquire">
+        <source>New Inquire</source>
+        <target>Nueva Preguntar</target>
+        <jms:reference-file line="3">default/mailer/enquire.html.twig</jms:reference-file>
+        <jms:reference-file line="38">WebBundle/Controller/EnquireController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8b1489dbf5afd845b3d30d02f3bc29f45424071f" resname="New Review">
+        <source>New Review</source>
+        <target>Nueva Crítica</target>
+        <jms:reference-file line="23">views/js/reviews.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1ed2e7b50fa1dbbf1693d1c38adf270c04db10c6" resname="New message">
+        <source>New message</source>
+        <target>Mensaje nuevo</target>
+        <jms:reference-file line="29">WebBundle/Controller/ContactusController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6ed05e720ccc3ef269db1b38201da8b873acc895" resname="Newsletter">
+        <source>Newsletter</source>
+        <target>Newsletter</target>
+        <jms:reference-file line="4">default/blocks/newsletter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bc981983e7f547dc62e19a1e383acfe00782a6d5" resname="Next">
+        <source>Next</source>
+        <target>Próximo</target>
+        <jms:reference-file line="77">default/blocks/pagination.html.twig</jms:reference-file>
+        <jms:reference-file line="81">default/blocks/pagination.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="816c52fd2bdd94a63cd0944823a6c0aa9384c103" resname="No">
+        <source>No</source>
+        <target>No</target>
+        <jms:reference-file line="114">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f9d82afb4773c9069ae0fa6dde76a9501bbfdd10" resname="No results containing all your search terms were found">
+        <source>No results containing all your search terms were found</source>
+        <target>No se han encontrado resultados para todos los términos de búsqueda</target>
+        <jms:reference-file line="159">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d9e172ae2327193b044d7b882bcadfba380ee232" resname="OK!">
+        <source>OK!</source>
+        <target>Listo!</target>
+        <jms:reference-file line="19">blocks/modals/add-favorites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="507b1a3da0b11742ff6f991f6604c5d229b81bb5" resname="Offered By">
+        <source>Offered By</source>
+        <target>Presentado por</target>
+        <jms:reference-file line="91">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3ff47991b865aac4b8bd11e4a2a4fc29a80f4104" resname="Offered by">
+        <source>Offered by</source>
+        <target>Presentado por</target>
+        <jms:reference-file line="39">modules/deal/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="42">modules/deal/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5838f5a2c1ddccc1450f44ce03e5b35040439d10" resname="Only items with deals">
+        <source>Only items with deals</source>
+        <target>Sólo ofertas</target>
+        <jms:reference-file line="23">blocks/filters/deal.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a291d5a123fdaca48e54c00eb124ed9a8899c2c9" resname="Open Search">
+        <source>Open Search</source>
+        <target>Buscar</target>
+        <jms:reference-file line="29">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fbe10903428087af6475d90a697070c88db435a5" resname="Order eDirectory">
+        <source>Order eDirectory</source>
+        <target>Ordena ahora eDirectory</target>
+        <jms:reference-file line="88">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9db2a670e134d0064bfc9d233d3cfcd7cb25eba8" resname="Original value">
+        <source>Original value</source>
+        <target>Valor Original</target>
+        <jms:reference-file line="47">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8be3c943b1609fffbfc51aad666d0a04adf83c9d" resname="Password">
+        <source>Password</source>
+        <target>Contraseña</target>
+        <jms:reference-file line="30">blocks/modals/modal-login.html.twig</jms:reference-file>
+        <jms:reference-file line="25">Form/Type/LoginFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="77064d5265236e0ac252f3fc4a5ba7b274b6a583" resname="Phone">
+        <source>Phone</source>
+        <target>Teléfono</target>
+        <jms:reference-file line="52">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+        <jms:reference-file line="154">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="104">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="170">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="108">default/pages/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="112">default/pages/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ab25d61bb12492027e2633997eea946c0f65a6b7" resname="Phone Number">
+        <source>Phone Number</source>
+        <target>Número de teléfono</target>
+        <jms:reference-file line="38">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="42ce412704f67b9df00928b0e063b05895c1b7f6" resname="Phone: ">
+        <source>Phone: </source>
+        <target>Teléfono:</target>
+        <jms:reference-file line="13">default/mailer/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="13">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ed212fa164b940b935ec0a25b32878a0917c7268" resname="Placeholder">
+        <source>Placeholder</source>
+        <target>Ejemplo</target>
+        <jms:reference-file line="75">ArticleBundle/Sample/ArticleSample.php</jms:reference-file>
+        <jms:reference-file line="59">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="57">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="72">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="92">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fb9119fe6854f2bc0ee81147df17c96c58aa76a1" resname="Please correct it and try again.">
+        <source>Please correct it and try again.</source>
+        <target>Por favor, corrija y vuelva a intentarlo</target>
+        <jms:reference-file line="61">WebBundle/Controller/ContactusController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="258796d3af657a3be70cede379dc3a41d6f52aa0" resname="Please enter the text you see in the image at the left into the textbox. This is required to prevent automated submission of contact requests.">
+        <source>Please enter the text you see in the image at the left into the textbox. This is required to prevent automated submission of contact requests.</source>
+        <target>Introduzca el texto que se encuentra en la siguiente imagen. Esto es necesario para evitar la entrada automatizada o spam.</target>
+        <jms:reference-file line="37">blocks/modals/modal-send-email.html.twig</jms:reference-file>
+        <jms:reference-file line="72">default/pages/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="83">default/pages/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c419c9a3825c3e4584b67049513fdc6899fbc16c" resname="Please, wait...">
+        <source>Please, wait...</source>
+        <target>Por favor, espere ...</target>
+        <jms:reference-file line="37">default/blocks/newsletter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="acf5bea7a03c144b42b1b1363b7f5084078fe868" resname="Popular CLassifieds">
+        <source>Popular CLassifieds</source>
+        <target>Clasificados Populares</target>
+        <jms:reference-file line="78">modules/classified/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d67276610e3390c5821607a6b5bbb05fd3298e18" resname="Popular Deals">
+        <source>Popular Deals</source>
+        <target>Ofertas Populares</target>
+        <jms:reference-file line="148">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fa516ce9106f138aa6c3cb2cd995d1339369aff9" resname="Popular Posts">
+        <source>Popular Posts</source>
+        <target>Más Vistos</target>
+        <jms:reference-file line="56">modules/blog/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="68976b9fcb59d26469e60db142fae66c0c4d9c73" resname="Powered by">
+        <source>Powered by</source>
+        <target>Distribuido por</target>
+        <jms:reference-file line="19">default/blocks/copyright.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="50f94286ba30706a19070d3ec0a0c8d34d6cf6eb" resname="Previous">
+        <source>Previous</source>
+        <target>Previo</target>
+        <jms:reference-file line="22">default/blocks/pagination.html.twig</jms:reference-file>
+        <jms:reference-file line="26">default/blocks/pagination.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3e8248e32edfca0c629622b5b669c2d9ce4d0917" resname="Price">
+        <source>Price</source>
+        <target>Precio</target>
+        <jms:reference-file line="188">modules/classified/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ba77ca9b55ae7c9dd0477e0f48755697905205d" resname="Print Deal">
+        <source>Print Deal</source>
+        <target>Imprimir</target>
+        <jms:reference-file line="67">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff4fc0276e960c348647b647235f68200887c9d2" resname="Profile">
+        <source>Profile</source>
+        <target>Perfil</target>
+        <jms:reference-file line="17">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="52">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a16c5bbe4bf996740f257aa1e81bd57e4c52c8dd" resname="Range">
+        <source>Range</source>
+        <target>Intervalo</target>
+        <jms:reference-file line="30">blocks/filters/distance.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="282b0da01657fc6e50cac0961942e734426c3f93" resname="Rate It">
+        <source>Rate It</source>
+        <target>Opina</target>
+        <jms:reference-file line="15">blocks/modals/modal-write-review.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0435b9bbda17cd224893bf257b10d71abbb93ed8" resname="Rate it">
+        <source>Rate it</source>
+        <target>¡Calificar!</target>
+        <jms:reference-file line="237">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="286">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="487">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="537">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6437b7bf655854909262d5f53fbe3bc7a6665b48" resname="Rating">
+        <source>Rating</source>
+        <target>Valuación</target>
+        <jms:reference-file line="18">blocks/filters/rating.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d4ba278af57a7f151d0e78c762485beca64f4223" resname="Read full article">
+        <source>Read full article</source>
+        <target>Leia o artigo completo</target>
+        <jms:reference-file line="58">modules/article/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bbf0a29b91d6a8ca0e9d1d8850c86ca600e8146e" resname="Real Estate">
+        <source>Real Estate</source>
+        <target>Bienes inmuebles</target>
+        <jms:reference-file line="35">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b4e09ef96884b7890ad07b554ae1258db37fb1a7" resname="Recent Articles">
+        <source>Recent Articles</source>
+        <target>Artículos Recientes</target>
+        <jms:reference-file line="126">themes/default/index.html.twig</jms:reference-file>
+        <jms:reference-file line="80">modules/article/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1e95ea2970c6510cec9178a3584902da49518238" resname="Recent Posts">
+        <source>Recent Posts</source>
+        <target>Entradas Recientes</target>
+        <jms:reference-file line="71">modules/blog/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b79f488b87a49e4a901252a78877e6faa6ccecc9" resname="Redeem Deal">
+        <source>Redeem Deal</source>
+        <target>Canjear Oferta</target>
+        <jms:reference-file line="25">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+        <jms:reference-file line="191">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="192">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="244126e3929c62501756260a0bd27eb2b21f5fa7" resname="Redemeed at">
+        <source>Redemeed at</source>
+        <target>Obtenido </target>
+        <jms:reference-file line="43">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fb414ed70a0a0d089fc5f3238a4d71aef14ac2b1" resname="Refine Search">
+        <source>Refine Search</source>
+        <target>Filtrar Búsqueda</target>
+        <jms:reference-file line="83">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0b8b620262226778e506104daa9a8f74fd96a4ec" resname="Refresh search">
+        <source>Refresh search</source>
+        <target>Actualizar</target>
+        <jms:reference-file line="52">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0f217179940c6d89f5cb2c7002a58d91ab7286c1" resname="Region">
+        <source>Region</source>
+        <target>Región</target>
+        <jms:reference-file line="17">CoreBundle/Sample/Location2Sample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f45f4f845883640490d80b43ab66a4c0c8c94471" resname="Remember my login">
+        <source>Remember my login</source>
+        <target>Recordar mi acceso</target>
+        <jms:reference-file line="37">blocks/modals/modal-login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="97f6a406e58ca54b371a4ca2dfcb5e90c0aeda33" resname="Remove filter">
+        <source>Remove filter</source>
+        <target>Borrar filtros</target>
+        <jms:reference-file line="46">blocks/filters/distance.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="98a238411414e0ae844040feda49832a0c75eb6f" resname="Request a Guided Demo">
+        <source>Request a Guided Demo</source>
+        <target>Solicite una visita guiada</target>
+        <jms:reference-file line="72">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="aa665834bbe4f20c97aeb315c5f2b00be506a3d9" resname="Review Title">
+        <source>Review Title</source>
+        <target>Título de la opinión</target>
+        <jms:reference-file line="46">Form/Type/ReviewsType.php</jms:reference-file>
+        <jms:reference-file line="17">WebBundle/Sample/ReviewSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0886439f60030f130f3035a8f28d2a3e0275c046" resname="Review this">
+        <source>Review this</source>
+        <target>Evalúa este</target>
+        <jms:reference-file line="114">modules/listing/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b83c4cdafef5813f0872892b666e2b04466198c4" resname="Reviews">
+        <source>Reviews</source>
+        <target>Críticas</target>
+        <jms:reference-file line="134">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="380">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ba8206efbd85a47f2401d708630523eca854ddc9" resname="Reviews of &quot;%title%&quot;">
+        <source>Reviews of "%title%"</source>
+        <target>Críticas de "%title%"</target>
+        <jms:reference-file line="55">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="222">Twig/Extension/SeoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="669fee34bddacb48e055344996ec8abb3b1d7e97" resname="SEC">
+        <source>SEC</source>
+        <target>SEG</target>
+        <jms:reference-file line="243">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17063c506b81a46c2eb7716af50cf19d4ed5a6c6" resname="Saturday">
+        <source>Saturday</source>
+        <target>Sábado</target>
+        <jms:reference-file line="41">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="efc007a393f66cdb14d57d385822a3d9e36ef873" resname="Save">
+        <source>Save</source>
+        <target>Guardar</target>
+        <jms:reference-file line="174">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bce06414177f72ab70e6387b6af9f8ceef0d6049" resname="Search">
+        <source>Search</source>
+        <target>Búsqueda</target>
+        <jms:reference-file line="8">default/blocks/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="29">blocks/search/search-fields-date.html.twig</jms:reference-file>
+        <jms:reference-file line="11">blocks/search/search-fields-small.html.twig</jms:reference-file>
+        <jms:reference-file line="19">blocks/search/search-fields.html.twig</jms:reference-file>
+        <jms:reference-file line="2">default/blocks/search-header.html.twig</jms:reference-file>
+        <jms:reference-file line="64">themes/default/index.html.twig</jms:reference-file>
+        <jms:reference-file line="43">default/pages/faq.html.twig</jms:reference-file>
+        <jms:reference-file line="20">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b84a89c53cd15ca1fc2f451ea7e86b233add67b1" resname="Search anything...">
+        <source>Search anything...</source>
+        <target>Mira aquí ...</target>
+        <jms:reference-file line="9">blocks/search/search-fields-date.html.twig</jms:reference-file>
+        <jms:reference-file line="7">blocks/search/search-fields-small.html.twig</jms:reference-file>
+        <jms:reference-file line="7">blocks/search/search-fields.html.twig</jms:reference-file>
+        <jms:reference-file line="46">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8196e42428ffa6afe07409f6492c9f0cec4791df" resname="See All">
+        <source>See All</source>
+        <target>Ver Más</target>
+        <jms:reference-file line="2">modules/event/event-calendar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dbd09ec487ff526b1f87ce37e4349a87b9af7db2" resname="See all Check ins">
+        <source>See all Check ins</source>
+        <target>Ver todas las Entradas</target>
+        <jms:reference-file line="327">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e08bf8c3225dd5916f3d1c2b17450220ede0bde9" resname="See all events">
+        <source>See all events</source>
+        <target>Ver todos los eventos</target>
+        <jms:reference-file line="36">default/blocks/event-upcoming-widget-carousel.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="16518141548869d4d7000daa5b80db6b6c9a125e" resname="See all listings">
+        <source>See all listings</source>
+        <target>Ver todas las empresas</target>
+        <jms:reference-file line="11">listing/blocks/bestof.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fbd07686c31848b33d38e7157c705c5f4492d206" resname="See all reviews">
+        <source>See all reviews</source>
+        <target>Ver todas las críticas</target>
+        <jms:reference-file line="247">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="497">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7e800abeeb771280b60100426450adbaf5d9cddb" resname="See details">
+        <source>See details</source>
+        <target>ver detalles</target>
+        <jms:reference-file line="135">blocks/themebox/horizontal-xs.html.twig</jms:reference-file>
+        <jms:reference-file line="195">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="236">blocks/themebox/vertical.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c510d6c04c0951500c8e43f623e9f8886c378aec" resname="See more">
+        <source>See more</source>
+        <target>ver más</target>
+        <jms:reference-file line="11">classified/blocks/popular.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="23805c8c06a861be9299e479d31c355e4236e6cb" resname="See the Deal">
+        <source>See the Deal</source>
+        <target>Ver la Oferta</target>
+        <jms:reference-file line="56">blocks/themebox/vertical.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9bc2575c3930437e80555f78757b783c842e8e66" resname="Send">
+        <source>Send</source>
+        <target>Enviar</target>
+        <jms:reference-file line="86">default/pages/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="96">default/pages/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d6a487affdd3b85ea13a6807f379716159800aa9" resname="Send E-mail">
+        <source>Send E-mail</source>
+        <target>Enviar Email</target>
+        <jms:reference-file line="51">blocks/modals/modal-send-email.html.twig</jms:reference-file>
+        <jms:reference-file line="78">modules/classified/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="88">modules/event/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="108">modules/event/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="101">modules/listing/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="125">WebBundle/Controller/SendMailController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c55ee3b9a795c8e41942a2602c5a92680145ed41" resname="Send e-mail">
+        <source>Send e-mail</source>
+        <target>Enviar email</target>
+        <jms:reference-file line="201">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="204">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="205">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="121">modules/deal/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="186">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="190">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="587">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="592">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="abcf0fb23d8b019cfab3d99538f2525f98c3919b" resname="Send info about this listing to a phone.">
+        <source>Send info about this listing to a phone.</source>
+        <target>Enviar datos de la empresa a un teléfono</target>
+        <jms:reference-file line="20">blocks/modals/send-phone.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a7e73373a33fda5bbc7eb1420639ae7916a3a371" resname="Send to Phone">
+        <source>Send to Phone</source>
+        <target>Enviar a teléfono</target>
+        <jms:reference-file line="7">blocks/modals/send-phone.html.twig</jms:reference-file>
+        <jms:reference-file line="28">blocks/modals/send-phone.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="853f1c24e87a3f9812cebb55b6ffd080e3fe5b01" resname="Share on Facebook">
+        <source>Share on Facebook</source>
+        <target>Compartir en Facebook</target>
+        <jms:reference-file line="71">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6367aaddaceeb4070ef9d03b60972c427fb0718f" resname="Showing %pageCount% of %totalCount% results">
+        <source>Showing %pageCount% of %totalCount% results</source>
+        <target>Mostrando %pageCount% de %totalCount% resultados</target>
+        <jms:reference-file line="65">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2ba4023df482d96f0966d6c0de681fd0be189927" resname="Sign Up">
+        <source>Sign Up</source>
+        <target>Registro</target>
+        <jms:reference-file line="25">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="60">blocks/navigation/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="38">default/blocks/newsletter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2051088938da71504039b427ff3f01d21326841a" resname="Site Content">
+        <source>Site Content</source>
+        <target>Contenido del sitio</target>
+        <jms:reference-file line="3">blocks/navigation/footer-navigation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="934a28f48b4e6a40037eb7adddde6c51c20ae123" resname="Site Manager">
+        <source>Site Manager</source>
+        <target>Administrador</target>
+        <jms:reference-file line="51">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8fa1a2dcf5b96d9fc2dd37019dfaabf65e404d5f" resname="Site Map">
+        <source>Site Map</source>
+        <target>Sitemap</target>
+        <jms:reference-file line="4">default/pages/sitemap.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1b402fe224d810b643bbec79819a84e7889edc60" resname="Site manager">
+        <source>Site manager</source>
+        <target>Administrador del sitio</target>
+        <jms:reference-file line="6">default/mailer/contactus.html.twig</jms:reference-file>
+        <jms:reference-file line="6">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="76fd56000e689bfed2d9b8b891fa373647b37cba" resname="Sold Out">
+        <source>Sold Out</source>
+        <target>Agotado</target>
+        <jms:reference-file line="197">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0068fcd8078c77fd4db7112e33f4b38ec72f587c" resname="Sorry, this item isn't currently available.">
+        <source>Sorry, this item isn't currently available.</source>
+        <target>Lo sentimos, este artículo no está disponible actualmente.</target>
+        <jms:reference-file line="18">default/pages/error-unavailable-item.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="38bec90f3ce6804049a6d4a37dafcb6af2d8b40d" resname="Special Events">
+        <source>Special Events</source>
+        <target>Eventos Especiales</target>
+        <jms:reference-file line="82">modules/event/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5020072c2b29b69c0bf052a5f9695d203b889d68" resname="Specials Deals">
+        <source>Specials Deals</source>
+        <target>Ofertas Especiales</target>
+        <jms:reference-file line="54">modules/deal/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d654b27f01fcd2e9f3462d5eb30cdd29ffa60206" resname="Sponsor Area">
+        <source>Sponsor Area</source>
+        <target>Anunciante Área</target>
+        <jms:reference-file line="30">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="65">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="faf0cac5ff814224230a8bb9f60b36fe25ec457f" resname="Start a new search to seek for similar items">
+        <source>Start a new search to seek for similar items</source>
+        <target>Iniciar una nueva búsqueda para encontrar asuntos similares</target>
+        <jms:reference-file line="24">default/pages/error-unavailable-item.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a72502067518684f9deeec70cf119fd26326cd33" resname="State">
+        <source>State</source>
+        <target>Estado</target>
+        <jms:reference-file line="17">CoreBundle/Sample/Location3Sample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8d183dbdcea3b29906090bd83fa6fa37923cc8ec" resname="Subject">
+        <source>Subject</source>
+        <target>Asunto</target>
+        <jms:reference-file line="43">Form/Type/ContactUsType.php</jms:reference-file>
+        <jms:reference-file line="44">Form/Type/ContactUsType.php</jms:reference-file>
+        <jms:reference-file line="19">Form/Type/SendMailType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c1918806bfd43a5be1c50a2841c56e7158979ae2" resname="Submit Review">
+        <source>Submit Review</source>
+        <target>Enviar calificación</target>
+        <jms:reference-file line="58">blocks/modals/modal-write-review.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="6f37d916a2e599e8ddaa028c5c2f49e5e9a1ee97" resname="Subscribe to our monthly newsletter, no spam, just product updates.">
+        <source>Subscribe to our monthly newsletter, no spam, just product updates.</source>
+        <target>Suscríbete a nuestro boletín de noticias, no spam, sólo actualizaciones de productos.</target>
+        <jms:reference-file line="20">default/blocks/newsletter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="861edba00547bc9ce7a08df78d4378766418179f" resname="Suggestions">
+        <source>Suggestions</source>
+        <target>Sugerencias</target>
+        <jms:reference-file line="162">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bd876e2ae611d553214e165790241e7615721505" resname="Sun 8:00 am - 6:00 pm">
+        <source>Sun 8:00 am - 6:00 pm</source>
+        <target>Domingo 8:00 - 18:00</target>
+        <jms:reference-file line="56">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bc5dd045b8623ddfc4bd0bce98ca5fda42accf88" resname="Sunday">
+        <source>Sunday</source>
+        <target>Domingo</target>
+        <jms:reference-file line="35">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="60018f07c1a81369dd51a9a2fd86984cafbea235" resname="Talk to Us">
+        <source>Talk to Us</source>
+        <target>Hable con nosotros</target>
+        <jms:reference-file line="108">default/pages/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="894031ed8d341b5ecab5e23002585055f0b7ee4d" resname="Terms and Conditions">
+        <source>Terms and Conditions</source>
+        <target>Términos y Condiciones</target>
+        <jms:reference-file line="154">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ff35c08539f470c4ed1e79637a51cfa83ab7c0fe" resname="Test Password:">
+        <source>Test Password:</source>
+        <target>Contraseña ensayo:</target>
+        <jms:reference-file line="46">blocks/modals/modal-login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c2cbe72f11f33db2bd3d764751da60deee3f66d7" resname="Thank you for submitting your review!">
+        <source>Thank you for submitting your review!</source>
+        <target>Gracias por enviar su comentario usted!</target>
+        <jms:reference-file line="198">WebBundle/Controller/ReviewController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="30c6474054f105b0223af4108951b6b518e19121" resname="Thank you, we will be in touch shortly.">
+        <source>Thank you, we will be in touch shortly.</source>
+        <target>Gracias, nos pondremos en contacto con usted pronto.</target>
+        <jms:reference-file line="71">WebBundle/Controller/EnquireController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7c5615cacf7a6af548dfd8aaa339c34829500d97" resname="Thanks! This item is in your favorite list now!">
+        <source>Thanks! This item is in your favorite list now!</source>
+        <target>¡Gracias! Este artículo ha sido añadido a su lista de favoritos.</target>
+        <jms:reference-file line="13">blocks/modals/add-favorites.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d3cc3c2b4167e72eef3d8b0b5ff18398c3f07790" resname="The item you are trying to contact does not exist.">
+        <source>The item you are trying to contact does not exist.</source>
+        <target>El artículo que usted está tratando de ponerse en contacto no existe.</target>
+        <jms:reference-file line="32">WebBundle/Controller/SendMailController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="94d5186ba3ec63d1ebcb1e902a2d13ac15f0c527" resname="Themes">
+        <source>Themes</source>
+        <target>Temas</target>
+        <jms:reference-file line="30">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="af2705b83a14dc70328af9cb57e7d27fc897ed80" resname="This deal value">
+        <source>This deal value</source>
+        <target>Valor</target>
+        <jms:reference-file line="49">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="88f3e80d9a76d208962b7249f27682b555bef2f5" resname="This is an automatically generated email, please do not reply">
+        <source>This is an automatically generated email, please do not reply</source>
+        <target>Este es un email generado automáticamente, por favor, no responden.</target>
+        <jms:reference-file line="172">default/mailer/layout-users.html.twig</jms:reference-file>
+        <jms:reference-file line="172">default/mailer/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1b587eeae78d46d4686c27e024508fb42b9d4590" resname="This item was either temporaly suspended or deleted. Here are some suggestions to help you">
+        <source>This item was either temporaly suspended or deleted. Here are some suggestions to help you</source>
+        <target>Este artículo ha sido suspendido o retirado temporalmente. Aquí están algunas sugerencias de lo que puede hacer ahora.</target>
+        <jms:reference-file line="22">default/pages/error-unavailable-item.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1b4785331db3b08cd8e3cfa4bd36216731a79e54" resname="This month">
+        <source>This month</source>
+        <target>Este mes</target>
+        <jms:reference-file line="41">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7b72883e078a6858cf0c79bf3e93e72e765e9ada" resname="This week">
+        <source>This week</source>
+        <target>Esta semana</target>
+        <jms:reference-file line="35">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1921aa118ad7a4dca5f679eaefc3e1777854c777" resname="This weekend">
+        <source>This weekend</source>
+        <target>Este fin de semana</target>
+        <jms:reference-file line="38">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="76031ddf92450ba52c1e3945097079807a9065c2" resname="Thursday">
+        <source>Thursday</source>
+        <target>Jueves</target>
+        <jms:reference-file line="39">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5e58d6ac9f239dd5007bf1f851d97c8d8bb0fcb1" resname="Time left to buy">
+        <source>Time left to buy</source>
+        <target>Tiempo restante para comprar</target>
+        <jms:reference-file line="212">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ae79ea1e9c6391a9ed83a2e18a031b835feec0c9" resname="To">
+        <source>To</source>
+        <target>A</target>
+        <jms:reference-file line="64">blocks/utility/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5808c90e4fa2c5e944046387482bbb0b5209c3ca" resname="To view the lead, follow the link below.">
+        <source>To view the lead, follow the link below.</source>
+        <target>Para ver el plomo, siga el siguiente enlace.</target>
+        <jms:reference-file line="17">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7e7fbc811015943c1c30e7ceeea8b05c76a8ee58" resname="To:">
+        <source>To:</source>
+        <target>A:</target>
+        <jms:reference-file line="46">modules/event/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="132">modules/event/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="24345a14377fd821d3932f4e82f6431640955b0b" resname="Today">
+        <source>Today</source>
+        <target>Hoy</target>
+        <jms:reference-file line="32">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="147ae4f3eebd0a919ec372ae55c42aa28da49d25" resname="Toll Free">
+        <source>Toll Free</source>
+        <target>Llamada gratuita</target>
+        <jms:reference-file line="80">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a4bbec1e64edc0960b5b35a253bc678e37eb4cd5" resname="Try browsing by section">
+        <source>Try browsing by section</source>
+        <target>Trate de navegar por la sección</target>
+        <jms:reference-file line="166">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="677e9f215da6747fbcfd262ad49cf3a238f04149" resname="Try different and more general keywords">
+        <source>Try different and more general keywords</source>
+        <target>Pruebe diferentes palabras clave o más general.</target>
+        <jms:reference-file line="164">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="313885d377b6970997a3673bb799e783878c2625" resname="Try removing filters to broaden your search">
+        <source>Try removing filters to broaden your search</source>
+        <target>Prueba a eliminar los filtros para ampliar su búsqueda.</target>
+        <jms:reference-file line="165">themes/default/results.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="42e43b612a5dfae57ddf5929f0fb945ae83cbf61" resname="Tuesday">
+        <source>Tuesday</source>
+        <target>Martes</target>
+        <jms:reference-file line="37">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3deb7456519697ecf4eefc455516c969a3681bae" resname="Type">
+        <source>Type</source>
+        <target>Tipo</target>
+        <jms:reference-file line="10">blocks/filters/module.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="bc663f2fa4967c1efd7f7f820e752b0b07a0188a" resname="Type a title for your comment">
+        <source>Type a title for your comment</source>
+        <target>Escriba un título para su comentario</target>
+        <jms:reference-file line="47">Form/Type/ReviewsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8c22a90dc3c8ec5c63dfb1fd08b305655580b005" resname="Type you Phone">
+        <source>Type you Phone</source>
+        <target>Deje su teléfono</target>
+        <jms:reference-file line="14">blocks/modals/send-phone.html.twig</jms:reference-file>
+        <jms:reference-file line="31">ListingBundle/Controller/ClickCallController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="19a17d818057e1acb04c78d223d65231e40bdee1" resname="Unavailable Item">
+        <source>Unavailable Item</source>
+        <target>No disponible</target>
+        <jms:reference-file line="3">default/pages/error-unavailable-item.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="96bdb66ba4b3ac136518a8cd97f62b29e7f12c09" resname="Until">
+        <source>Until</source>
+        <target>Hasta</target>
+        <jms:reference-file line="50">blocks/utility/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1d669368227ba228c40d5c1e81700267d7c0bcc0" resname="Upcoming Events">
+        <source>Upcoming Events</source>
+        <target>Próximos eventos</target>
+        <jms:reference-file line="14">default/blocks/event-upcoming-widget.html.twig</jms:reference-file>
+        <jms:reference-file line="104">modules/event/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a144230d8548856647640da53787e8f1761858da" resname="Valid Until">
+        <source>Valid Until</source>
+        <target>Válido hasta</target>
+        <jms:reference-file line="170">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="129">blocks/themebox/vertical.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c8214d35a16e2ce6ecca4a054a7242e2e5ff7fe6" resname="Valid until">
+        <source>Valid until</source>
+        <target>Válido hasta</target>
+        <jms:reference-file line="45">blocks/modals/modal-redeem.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="69bd4ef9fbd0894a22759c3766b859defbdedbc8" resname="View">
+        <source>View</source>
+        <target>Ver</target>
+        <jms:reference-file line="11">default/blocks/smartbanner-android.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="efd83559209cb6aea97c87e4cd323698f9ea2f60" resname="View All">
+        <source>View All</source>
+        <target>Ver todos</target>
+        <jms:reference-file line="30">default/blocks/all-locations.html.twig</jms:reference-file>
+        <jms:reference-file line="4">js/filters/category.js.twig</jms:reference-file>
+        <jms:reference-file line="4">js/filters/location.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="da3aa561ffe80090dfe3acf1349a12a01e78d7ea" resname="View author's website">
+        <source>View author's website</source>
+        <target>Ver el sitio web del autor</target>
+        <jms:reference-file line="43">modules/article/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="598bfa682e75320e7ad072bb743b69d4b6ba30d2" resname="Visit Website">
+        <source>Visit Website</source>
+        <target>Visita la página web</target>
+        <jms:reference-file line="246">blocks/utility/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="249">blocks/utility/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="286">blocks/utility/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="218">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c909c1c780a1370ad7d8af0872b2d6635e819732" resname="Visitor">
+        <source>Visitor</source>
+        <target>Visitante</target>
+        <jms:reference-file line="53">default/blocks/demobar.html.twig</jms:reference-file>
+        <jms:reference-file line="15">WebBundle/Sample/AccountprofilecontactSample.php</jms:reference-file>
+        <jms:reference-file line="19">WebBundle/Sample/CheckinSample.php</jms:reference-file>
+        <jms:reference-file line="19">WebBundle/Sample/ReviewSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="958115f04d0c4f41e39ea44dc883957c34821e01" resname="Voted">
+        <source>Voted</source>
+        <target>Votado</target>
+        <jms:reference-file line="124">WebBundle/Controller/ReviewController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4cab10730723d6249e13afa688b01542596f3f5e" resname="Was this review helpful?">
+        <source>Was this review helpful?</source>
+        <target>¿Fue útil esta reseña?</target>
+        <jms:reference-file line="116">default/pages/reviews.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc005484106a3e61eaadbaf5e6dfa9aa703a971b" resname="We were not able to retrieve your location. Please try again later">
+        <source>We were not able to retrieve your location. Please try again later</source>
+        <target>No se pudo obtener su ubicación. Por favor, vuelva a intentarlo.</target>
+        <jms:reference-file line="60">js/filters/distance.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7e2daa3d100d1cba473ac3aa83f9fc76dc14ee3a" resname="We were unable to get your location.">
+        <source>We were unable to get your location.</source>
+        <target>No se pudo obtener su ubicación.</target>
+        <jms:reference-file line="10">js/summary/results.js.twig</jms:reference-file>
+        <jms:reference-file line="20">js/summary/results.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2e8a57cc5c472f4ac3b071979a38e80db7e59e87" resname="Website">
+        <source>Website</source>
+        <target>Website</target>
+        <jms:reference-file line="169">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="177">modules/event/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="101">modules/event/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="46b8883298d6f6da1c3dfc298d195c2ed831f5b4" resname="Website Notification">
+        <source>Website Notification</source>
+        <target>Notificación</target>
+        <jms:reference-file line="37">default/mailer/layout-users.html.twig</jms:reference-file>
+        <jms:reference-file line="93">default/mailer/layout-users.html.twig</jms:reference-file>
+        <jms:reference-file line="93">default/mailer/layout.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3c4c671d6487513a8b049240c60d016ae1f1087a" resname="Website Role">
+        <source>Website Role</source>
+        <target>Perfil</target>
+        <jms:reference-file line="45">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5656b9b79b0316fc611a9c30d2ffac25228b8371" resname="Wednesday">
+        <source>Wednesday</source>
+        <target>Miércoles</target>
+        <jms:reference-file line="38">Twig/Extension/DayNameExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ca4f9dcf204e2037bfe5884867bead98bd9cbaf8" resname="Welcome">
+        <source>Welcome</source>
+        <target>Bienvenido</target>
+        <jms:reference-file line="13">blocks/login/navbar.html.twig</jms:reference-file>
+        <jms:reference-file line="49">blocks/navigation/navbar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="769bb19e615b7f8e2809e5882e2d05a18f57a531" resname="When">
+        <source>When</source>
+        <target>Cuándo</target>
+        <jms:reference-file line="28">blocks/utility/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="37">modules/event/map-summary.html.twig</jms:reference-file>
+        <jms:reference-file line="123">modules/event/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="525f61b6729229b1a8854a9e50bcaa52ea96b131" resname="Where">
+        <source>Where</source>
+        <target>Dónde</target>
+        <jms:reference-file line="217">modules/classified/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="220">modules/event/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2684e6248671c20e61b8585181572bfb3dbafff" resname="Write a review">
+        <source>Write a review</source>
+        <target>Escribe su opinión</target>
+        <jms:reference-file line="62">default/pages/reviews.html.twig</jms:reference-file>
+        <jms:reference-file line="65">Form/Type/ReviewsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5397e0583f14f6c88de06b1ef28f460a1fb5b0ae" resname="Yes">
+        <source>Yes</source>
+        <target>Sí</target>
+        <jms:reference-file line="114">modules/listing/detail.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="11ae8191c1b35d2094d28b019888cd8cd23a60e0" resname="You already reviewed this.">
+        <source>You already reviewed this.</source>
+        <target>Ya enviaste una reseña</target>
+        <jms:reference-file line="175">WebBundle/Controller/ReviewController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="66dc45a99420e05119f12f16a17fb919e664d75d" resname="You have blocked our access to your Location. You may be able to change the permission settings by clicking the page icon in the address bar, or modifying your browser content settings.">
+        <source>You have blocked our access to your Location. You may be able to change the permission settings by clicking the page icon in the address bar, or modifying your browser content settings.</source>
+        <target>El acceso a su ubicación está bloqueado. Para permitir este sitio para tener acceso a tu ubicación, cambie las preferencias y configuraciones en tu navegador.</target>
+        <jms:reference-file line="11">js/summary/results.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="97492abfaba9a747e777dff1a7cfe7d127c60349" resname="You have chosen not to provide your location.">
+        <source>You have chosen not to provide your location.</source>
+        <target>Usted opta por no compartir su ubicación.</target>
+        <jms:reference-file line="54">js/filters/distance.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="d2314adaf89cb04d2e38f7dfbb20c7e6af61f466" resname="You received a new contact through the Contact form.">
+        <source>You received a new contact through the Contact form.</source>
+        <target>Usted recibió un nuevo contacto a través del formulario de contacto.</target>
+        <jms:reference-file line="7">default/mailer/contactus.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b6d7227f9da85d43b617bfed4d5bc81cf6e18e1e" resname="You received a new lead through the inquire form.">
+        <source>You received a new lead through the inquire form.</source>
+        <target>Usted recibió una nueva iniciativa a través de la forma de preguntar.</target>
+        <jms:reference-file line="7">default/mailer/enquire.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="98b07165420dfc31a6a0c62f6890d461089cfff3" resname="Your First Name">
+        <source>Your First Name</source>
+        <target>Su nombre</target>
+        <jms:reference-file line="21">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a778d11dd1b3bbad541eb42a1a59c2bd717969ba" resname="Your Last Name">
+        <source>Your Last Name</source>
+        <target>Sus apellidos</target>
+        <jms:reference-file line="26">Form/Type/ContactUsType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f48db7e9d3ef7a054e72ceb44729864e1ad32437" resname="Your Name">
+        <source>Your Name</source>
+        <target>Su nombre</target>
+        <jms:reference-file line="26">default/blocks/newsletter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e6d38dbcb164d1afe06afc6cf42563c99db78039" resname="Your browser does not support GeoLocation features. In order to use this feature, please consider updating your browser.">
+        <source>Your browser does not support GeoLocation features. In order to use this feature, please consider updating your browser.</source>
+        <target>Este navegador no soporta herramientas de geolocalización. Considere la posibilidad de actualizar su navegador.</target>
+        <jms:reference-file line="71">js/filters/distance.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="178d4c033992d60985aff9ca1f4e55ec8095d1b1" resname="Your browser geolocation features seem to be unavailable right now. Please try again in a few minutes.">
+        <source>Your browser geolocation features seem to be unavailable right now. Please try again in a few minutes.</source>
+        <target>Parece que las herramientas de geolocalización de su navegador están desactivadas en este momento. Por favor, inténtelo de nuevo más tarde.</target>
+        <jms:reference-file line="21">js/summary/results.js.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f13aa90c24b55d8e3fa689afd6195543a4e9c8cf" resname="Your e-mail">
+        <source>Your e-mail</source>
+        <target>Tu e-mail</target>
+        <jms:reference-file line="32">default/blocks/newsletter.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9ca9957eca5c189afefe37ae3c2747e7a8f3c5fc" resname="Your e-mail has been sent. Thank you.">
+        <source>Your e-mail has been sent. Thank you.</source>
+        <target>Su email ha sido enviado. Gracias.</target>
+        <jms:reference-file line="55">WebBundle/Controller/ContactusController.php</jms:reference-file>
+        <jms:reference-file line="120">WebBundle/Controller/SendMailController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f5778852225648688079a05a10d07ed6fe9a0b5a" resname="Your e-mail, please">
+        <source>Your e-mail, please</source>
+        <target>E-mail, por favor</target>
+        <jms:reference-file line="31">Form/Type/ContactUsType.php</jms:reference-file>
+        <jms:reference-file line="18">Form/Type/SendMailType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a944d4820d2fcbd7cbe534debb4cbf9ce0edaf35" resname="Your review has been submitted for approval.">
+        <source>Your review has been submitted for approval.</source>
+        <target>Su evaluación se ha sometido para aprobación.</target>
+        <jms:reference-file line="197">WebBundle/Controller/ReviewController.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="eeb1bf47a6727b57babf3daaca9e46979f2d149a" resname="Zipcode">
+        <source>Zipcode</source>
+        <target>Código Postal</target>
+        <jms:reference-file line="34">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="38">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="70">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cffa50a32cb13a240d705317bcec65dd1f31b6ad" resname="and">
+        <source>and</source>
+        <target>y</target>
+        <jms:reference-file line="9">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="27">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="9">recurring/weekly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="11">recurring/yearly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="29">recurring/yearly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="115">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="113">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="154">Twig/Extension/SeoExtension.php</jms:reference-file>
+        <jms:reference-file line="175">Twig/Extension/SeoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a9d24446cc1e471bf68005f34aa199e18f46287f" resname="articles">
+        <source>articles</source>
+        <target>artículos</target>
+        <jms:reference-file line="250">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="27e90dfa57c358acfaf470860f6f72c9282ce995" resname="at">
+        <source>at</source>
+        <target>en</target>
+        <jms:reference-file line="53">default/blocks/event-upcoming-widget-carousel.html.twig</jms:reference-file>
+        <jms:reference-file line="124">blocks/themebox/horizontal-xs.html.twig</jms:reference-file>
+        <jms:reference-file line="184">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="205">blocks/themebox/vertical.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="408158643ed564c72fa0921826f8294d71ccbf7c" resname="by">
+        <source>by</source>
+        <target>por</target>
+        <jms:reference-file line="86">blocks/themebox/horizontal-xs.html.twig</jms:reference-file>
+        <jms:reference-file line="192">blocks/themebox/vertical.html.twig</jms:reference-file>
+        <jms:reference-file line="41">modules/article/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fb7c26f5947f0ec3576bfad002ff1cb640e94801" resname="by %artigo_author_name%">
+        <source>by %artigo_author_name%</source>
+        <target>por %artigo_author_name%</target>
+        <jms:reference-file line="73">blocks/themebox/horizontal-xs.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="65c0ec273963aacc69af593b03d1710ff90f75da" resname="classifieds">
+        <source>classifieds</source>
+        <target>clasificados</target>
+        <jms:reference-file line="249">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5e0a761bddef9763999f7131bff708b459b2d657" resname="currently on course">
+        <source>currently on course</source>
+        <target>actualmente en curso</target>
+        <jms:reference-file line="151">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="20f6e8eccba904e796a4ea7049cf94302dbfe2b2" resname="day of the Month">
+        <source>day of the Month</source>
+        <target>día del mes</target>
+        <jms:reference-file line="6">recurring/monthly/day.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4b5d7ce55386995a786c6a23815793eb8cdd6f51" resname="deals">
+        <source>deals</source>
+        <target>ofertas</target>
+        <jms:reference-file line="251">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="73da038ee7d9b4b808d2dab93d18732b304b39bb" resname="directory results">
+        <source>directory results</source>
+        <target>Resultados</target>
+        <jms:reference-file line="103">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b2823601927daa1fe6f5e6e3952c45e7445d3588" resname="eDirectory Cloud Service">
+        <source>eDirectory Cloud Service</source>
+        <target>eDirectory Cloud Service</target>
+        <jms:reference-file line="21">default/blocks/copyright.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3cd5e090419f6920ed73730f741c4ccfeac894ec" resname="eDirectory Default">
+        <source>eDirectory Default</source>
+        <target>eDirectory Estándar</target>
+        <jms:reference-file line="34">default/blocks/demobar.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="82d50d9042decb175894924272dd3b5a14cd3716" resname="events">
+        <source>events</source>
+        <target>eventos</target>
+        <jms:reference-file line="248">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5873f666d03fb3fb39d0db9c71b5e1f769334088" resname="every">
+        <source>every</source>
+        <target>cada</target>
+        <jms:reference-file line="24">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="26">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="79cda0f378aab085a6c0d2fb6ebe756651b9eb45" resname="from today on">
+        <source>from today on</source>
+        <target>desde este día</target>
+        <jms:reference-file line="128">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="80c7c234db4ab92f4912d82f22b9e8b1eeb52d2d" resname="happening between %startDate% and %endDate%">
+        <source>happening between %startDate% and %endDate%</source>
+        <target>entre %startDate% y %endDate%</target>
+        <jms:reference-file line="157">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1f2441598bab23d2e3bcbafb7ddfc05a74e51659" resname="happening from %startDate% on">
+        <source>happening from %startDate% on</source>
+        <target>de %startDate% </target>
+        <jms:reference-file line="154">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="af10ef20dd9060bbeead0afbc55381a66af442ef" resname="in">
+        <source>in</source>
+        <target>en</target>
+        <jms:reference-file line="41">default/blocks/event-upcoming-widget.html.twig</jms:reference-file>
+        <jms:reference-file line="41">blocks/themebox/horizontal-xs.html.twig</jms:reference-file>
+        <jms:reference-file line="57">blocks/themebox/horizontal-xs.html.twig</jms:reference-file>
+        <jms:reference-file line="52">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="139">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="71">blocks/themebox/vertical.html.twig</jms:reference-file>
+        <jms:reference-file line="47">modules/event/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="74">modules/listing/summary.html.twig</jms:reference-file>
+        <jms:reference-file line="106">Entity/Summary/SummaryTitle.php</jms:reference-file>
+        <jms:reference-file line="116">Entity/Summary/SummaryTitle.php</jms:reference-file>
+        <jms:reference-file line="118">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e38ac152519c473c1475268d9d9bb97c23dfc02e" resname="listings">
+        <source>listings</source>
+        <target>listados</target>
+        <jms:reference-file line="247">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3bc20235c1d4231bc3bc8814b896b2735d1535a2" resname="more articles">
+        <source>more articles</source>
+        <target>más artículos</target>
+        <jms:reference-file line="127">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="abb89c4ae045c0152569110359474debcddc6528" resname="more categories">
+        <source>more categories</source>
+        <target>más categorías</target>
+        <jms:reference-file line="3">default/blocks/browse-by-category.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0f82bc4288fb6da584971c917495e493840a54dc" resname="more classifieds">
+        <source>more classifieds</source>
+        <target>más clasificados</target>
+        <jms:reference-file line="170">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="27a7a1028557fa198eacb9efc1777a39d887fa38" resname="more dates">
+        <source>more dates</source>
+        <target>más fechas</target>
+        <jms:reference-file line="20">default/blocks/event-upcoming-widget.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="487ff8a594ce0e7ee85ea0bd02e26d243ce008cb" resname="more deals">
+        <source>more deals</source>
+        <target>más ofertas</target>
+        <jms:reference-file line="149">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ca0fd305856f526863982e01e230e7b258e23bb2" resname="more events">
+        <source>more events</source>
+        <target>más eventos</target>
+        <jms:reference-file line="105">modules/event/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="445b8e57b5cca8a5989745cea7fdd38580a6098b" resname="more listings">
+        <source>more listings</source>
+        <target>más listados</target>
+        <jms:reference-file line="100">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8efd8b13d9e3aafd6b78a9b7efa72a86fcff5d45" resname="more locations">
+        <source>more locations</source>
+        <target>más lugares</target>
+        <jms:reference-file line="26">default/blocks/browse-by-location.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="de04fa0e29f9b35e24905d2e512bedc9bb6e09e4" resname="of">
+        <source>of</source>
+        <target>de</target>
+        <jms:reference-file line="20">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="22">recurring/yearly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="41">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fdc9988d3738adf828a453991d93c2c606680c07" resname="of the Month">
+        <source>of the Month</source>
+        <target>del mes</target>
+        <jms:reference-file line="40">recurring/monthly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5f44849f42077c8777c5e5a452dd9092b5c29d2d" resname="offered by &quot;%name%&quot;">
+        <source>offered by "%name%"</source>
+        <target>Ofrecido por "%name%"</target>
+        <jms:reference-file line="70">Twig/Extension/SeoExtension.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="db3d405b10675998c030223177d42e71b4e7a312" resname="on">
+        <source>on</source>
+        <target>en</target>
+        <jms:reference-file line="48">modules/article/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0c0915cb3310ff2153e2bf7015603384f169a474" resname="or log in using your email address">
+        <source>or log in using your email address</source>
+        <target>O inicia sesión usando su email</target>
+        <jms:reference-file line="15">default/blocks/social-login.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="87e38948d5e85c16362140ded9b90d9171b5fa1b" resname="posts">
+        <source>posts</source>
+        <target>entradas</target>
+        <jms:reference-file line="252">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="59a5c610074c286a10825ef707f885904486b0d0" resname="read more">
+        <source>read more</source>
+        <target>Lea más</target>
+        <jms:reference-file line="51">default/blocks/event-upcoming-widget-carousel.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="79530e4f2052d190e3547dbd8094c8c4961fa844" resname="the Month">
+        <source>the Month</source>
+        <target>Mes</target>
+        <jms:reference-file line="42">recurring/monthly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0bd41b476166955579be9f3d8d37cb7656a715fd" resname="this month">
+        <source>this month</source>
+        <target>este mes</target>
+        <jms:reference-file line="19">default/blocks/event-upcoming-widget.html.twig</jms:reference-file>
+        <jms:reference-file line="140">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dae1e5f83a746e442914086da5374a92358c0d0c" resname="this week">
+        <source>this week</source>
+        <target>esta semana</target>
+        <jms:reference-file line="18">default/blocks/event-upcoming-widget.html.twig</jms:reference-file>
+        <jms:reference-file line="134">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="60ebdc71fda11af21f59b94b265121217c10a9d1" resname="this weekend">
+        <source>this weekend</source>
+        <target>este fin de semana</target>
+        <jms:reference-file line="137">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4374aaee247fb237ce6c97d5c8d64bbe474d16de" resname="to">
+        <source>to</source>
+        <target>hasta</target>
+        <jms:reference-file line="49">blocks/filters/date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dd2bed725678b4f963f27d5e847a4f21db31cd1" resname="today">
+        <source>today</source>
+        <target>este dia</target>
+        <jms:reference-file line="131">Entity/Summary/SummaryTitle.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2177334685e94280e9c2ebd4bc3011a9c0c16f8b" resname="username@company.com">
+        <source>username@company.com</source>
+        <target>nombredeusuario@compania.com</target>
+        <jms:reference-file line="21">Form/Type/LoginFormType.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c4a17003c23c4eaddf41c49b8c7cdab94f7c0f40" resname="view fax">
+        <source>view fax</source>
+        <target>Ver el número de fax</target>
+        <jms:reference-file line="235">blocks/utility/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9b603af2133101a25a7b0370c4d7b0f585f7d204" resname="view phone">
+        <source>view phone</source>
+        <target>ver el número de teléfono</target>
+        <jms:reference-file line="224">blocks/utility/summary.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c0ee32d825d6ddb4025ab74af0609969ecc419c8" resname="week">
+        <source>week</source>
+        <target>semana</target>
+        <jms:reference-file line="35">recurring/monthly/week.html.twig</jms:reference-file>
+        <jms:reference-file line="37">recurring/yearly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2dc909c8d3d836b18c2ef706c163eb4921ff6c86" resname="weekends">
+        <source>weekends</source>
+        <target>fines de semana</target>
+        <jms:reference-file line="4">recurring/monthly/week.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="30603fa9e0f620c305cd627ab0ff138a960c48bd" resname="when">
+        <source>when</source>
+        <target>cuando</target>
+        <jms:reference-file line="21">blocks/search/search-fields-date.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="46148cc3b4d2b3ac8073f14b0cba7f25ffff54bd" resname="where">
+        <source>where</source>
+        <target>donde</target>
+        <jms:reference-file line="13">blocks/search/search-fields-date.html.twig</jms:reference-file>
+        <jms:reference-file line="11">blocks/search/search-fields.html.twig</jms:reference-file>
+        <jms:reference-file line="50">themes/default/index.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cdf41e916eb0eeac092ca17c8f3bb8204d6f5542" resname="www.yoursite.com">
+        <source>www.yoursite.com</source>
+        <target>www.susitio.com</target>
+        <jms:reference-file line="45">ArticleBundle/Sample/ArticleSample.php</jms:reference-file>
+        <jms:reference-file line="40">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="47">EventBundle/Sample/EventSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="63e8afcc1457d066ea6aa5c7be6f9362a5f7e37e" resname="youremail@yoursite.com">
+        <source>youremail@yoursite.com</source>
+        <target>tunombre@susitio.com</target>
+        <jms:reference-file line="39">ClassifiedBundle/Sample/ClassifiedSample.php</jms:reference-file>
+        <jms:reference-file line="46">EventBundle/Sample/EventSample.php</jms:reference-file>
+        <jms:reference-file line="58">ListingBundle/Sample/ListingSample.php</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e0e92cf5b0ff07c266b7a0501888e496667f458c" resname="{0} Less than one day|{1} One day left|]1,Inf] %count% Days left">
+        <source>{0} Less than one day|{1} One day left|]1,Inf] %count% Days left</source>
+        <target>{0} Menos de 1 día|{1} Sólo 1 Día|]1,Inf] Restam %count% dias</target>
+        <jms:reference-file line="165">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="124">blocks/themebox/vertical.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="841aee4975919095522f445b64737b2b7ffca148" resname="{0}No Reviews|{1}%count% Review|]1,Inf[%count% Reviews">
+        <source>{0}No Reviews|{1}%count% Review|]1,Inf[%count% Reviews</source>
+        <target>{0}No hay comentarios|{1}%count% Comentario|]1,Inf[%count% Comentarios</target>
+        <jms:reference-file line="179">blocks/themebox/horizontal.html.twig</jms:reference-file>
+        <jms:reference-file line="160">blocks/themebox/vertical.html.twig</jms:reference-file>
+        <jms:reference-file line="149">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="277">modules/article/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="396">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="528">modules/listing/detail.html.twig</jms:reference-file>
+        <jms:reference-file line="55">default/pages/reviews.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="082f81207721586bdfaf55b16f494c0444f08797" resname="{0}No records found |{1} &lt;b&gt;One&lt;/b&gt; record found |]1,Inf]Found &lt;b&gt;%count%&lt;/b&gt; records">
+        <source><![CDATA[{0}No records found |{1} <b>One</b> record found |]1,Inf]Found <b>%count%</b> records]]></source>
+        <target><![CDATA[{0} No se encontraron resultados | {1} <b>Uno</ b> resultados encontrados |] 1, Inf] Encontrados <b>% count% </ b> resultados]]></target>
+        <jms:reference-file line="56">default/pages/faq.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="2b479230a9a8457bbc1bfa17116d708484bf75ca" resname="{0}SOLD OUT |{1} There is one deal left|]1,Inf[ There are %deals% deals left">
+        <source>{0}SOLD OUT |{1} There is one deal left|]1,Inf[ There are %deals% deals left</source>
+        <target>{0}AGOTADO |{1} Úlitma oferta|]1,Inf[ Hay %deals% ofertas</target>
+        <jms:reference-file line="218">modules/deal/detail.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

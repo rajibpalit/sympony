@@ -1,0 +1,23 @@
+{% extends "::base.html.twig" -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentClassifiedViewAllCategories(true), "Browse All %module% Categories"|trans({"%module%" : "Classifieds"|trans}) ) }}
+{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            <section id="allcategories">
+                {{ customContentClassifiedViewAllCategories() }}
+                <br>
+
+                <h1 class="theme-title theme-title-centered">{{ "Explore All Classifieds Categories"|trans }}</h1>
+
+                {% include "::blocks/all-categories.html.twig" -%}
+
+                {{ customContentClassifiedViewAllCategoriesBottom() }}
+
+            </section>
+        </div>
+    </main>
+{% endblock -%}

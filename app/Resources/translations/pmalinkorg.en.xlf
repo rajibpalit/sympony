@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <body>
+      <trans-unit id="569cce5c0029b">
+        <source>date.format</source>
+        <target>m/d/Y</target>
+      </trans-unit>
+      <trans-unit id="569cce5c002fd">
+        <source>time.format</source>
+        <target>h:i a</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,21 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host:     127.0.0.1
+    database_port:     3306
+    database_name:     pmalink_main
+    database_user:     pmalink
+    database_password:     49nxcY1A
+    database_charset: UTF8
+    elastic_host:     127.0.0.1
+    elastic_port:     9200
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    mailer_port: 465
+    mailer_encryption: ssl
+    locale:     en
+    charset: UTF-8
+    secret:     qwertyuiopasdfghjklzxcvbnm123456
+    alias_members_module: sponsors
+    alias_sitemgr_module: sitemgr

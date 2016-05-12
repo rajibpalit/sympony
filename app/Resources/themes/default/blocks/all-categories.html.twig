@@ -1,0 +1,24 @@
+<div class="well">
+    {% for category in categories if categories -%}
+
+        {% if loop.index0 % 3 == 0 %}<div class="row">{% endif %}
+        <div class="col-md-4">
+            <ul class="list-unstyled">
+                <li>
+                    <b><u><a class="text-primary" href="{{ path("global_search_2", {'a0': routing, 'a1': category.friendlyUrl}) }}">{{ category.title }} <strong>({{ category.active }})</strong></a></u></b>
+                    {% if category.children -%}
+                        <ul>
+                            {% for child in category.children -%}
+                                <li>
+                                    <a class="text-primary" href="{{ path("global_search_2", {'a0': routing, 'a1': child.friendlyUrl}) }}">{{ child.title }}</a> <span>( {{ child.active }} )</span>
+                                </li>
+                            {% endfor -%}
+                        </ul>
+                    {% endif -%}
+                </li>
+            </ul>
+        </div>
+        {% if loop.index0 % 3 == 2 %}</div>{% endif %}
+
+    {% endfor -%}
+</div>

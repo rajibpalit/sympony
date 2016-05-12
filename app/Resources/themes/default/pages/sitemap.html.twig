@@ -1,0 +1,50 @@
+{% extends "::base.html.twig" -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentSitemap(true), "Site Map"|trans ) }}
+{% endblock -%}
+
+{% block subheader -%}
+    {# Page Title and Custom Content -#}
+    <div class="block-container first block-bg-image">
+
+        {{ include("::blocks/background-image.html.twig") }}
+
+        <div class="container">
+            <div class="space-content">
+                <h1>{{ title|trans }}</h1>
+            </div>
+        </div>
+    </div>
+{% endblock -%}
+
+{% block body -%}
+
+    <main>
+        <div class="container well well-light">
+            {{ customContentSitemap() }}
+
+            {% for item in content if content -%}
+                <ul class="list-sitemap">
+                    <li>
+                        {% if item.routing|slice(0,1) != '/' -%}
+                            <a href="{{ path(item.routing) }}">{{ item.title }}</a>
+                        {% else -%}
+                            <a href="{{ item.routing }}">{{ item.title }}</a>
+                        {% endif -%}
+
+                        {% if item.child -%}
+                        <ul>
+                            {% for category in item.child.categories if item.child.categories -%}
+                                <li class="list-columns-4">
+                                    <a href="{{ path('global_search_2', {'a0' : item.child.routing, 'a1': category.friendlyUrl}) }}">{{ category.title }}</a>
+                                </li>
+                            {% endfor -%}
+                        </ul>
+                        {% endif -%}
+                    </li>
+                </ul>
+            {% endfor -%}
+        </div>
+    </main>
+{% endblock -%}

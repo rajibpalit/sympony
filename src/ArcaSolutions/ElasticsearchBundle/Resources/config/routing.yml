@@ -1,0 +1,3 @@
+elasticsearch_rebuild_locations:
+    path:     /rebuildLocations
+    defaults: { _controller: ElasticsearchBundle:Default:rebuildLocations }

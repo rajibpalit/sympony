@@ -1,0 +1,10 @@
+{# @var event \ArcaSolutions\EventBundle\Entity\Event -#}
+
+{# Every day <day>> of <month> -#}
+{% if 'en_US' == location -%}
+    {# ordinalize the day just for english -#}
+    {{ ordinalize(event.day) }} {{ 'day of the Month'|trans }}
+{% else -%}
+    {# non english language -#}
+    {{ 'Every day'|trans }} {{ event.day }}
+{% endif -%}

@@ -1,0 +1,46 @@
+{% extends "::base.html.twig" -%}
+
+{#{% block SEO %}#}
+    {#{{ generateSEOFromContent( customContentMaintenancePage(true), "Under Maintenance"|trans ) }}#}
+{#{% endblock -%}#}
+
+{% block topbanner -%} {# No banners for this page -#} {% endblock -%}
+
+{% block bottombanners -%} {# No banners for this page -#} {% endblock -%}
+
+{# There is no point in showing menus and search bars if they will all lead to this same page #}
+{% block nav -%}
+    <!-- Header and navbar with Responsive features -->
+    <header class="navbar navbar-static-top">
+        <div id="navbarMenu" class="navbar-default">
+            <div class="header-brand">
+                <div class="container">
+
+                    <nav class="navbar">
+
+                        <div class="navbar-brand center-brand">
+                            {# eDirectory Logo -#}
+                            <a href="{{ path('web_homepage') }}" target="_parent" title="{{ title }}">
+                                <img class="brand-logo" alt="{{ title }}" src="{{ utility_getLogoImage()|imagine_filter('logo') }}">
+                            </a>
+                            {# End Logo -#}
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock -%}
+{% block subheader -%}{% endblock -%}
+{% block bottombanners -%}{% endblock -%}
+{% block footer -%}{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            {{ customContentMaintenancePage() }}
+        </div>
+    </main>
+{% endblock -%}

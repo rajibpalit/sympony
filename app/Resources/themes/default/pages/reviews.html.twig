@@ -1,0 +1,149 @@
+{% extends '::base.html.twig' -%}
+
+{% block SEO %}
+    {% if module == "listing" %}
+        {{ generateListingReviewsSEO( review ) }}
+    {% elseif module == "article" %}
+        {{ generateArticleReviewsSEO( review ) }}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock -%}
+
+{% block subheader -%}
+
+    <section class="top-search  top-mainimage">
+        <div class="block-container first block-bg-image">
+
+            {{ include("::blocks/background-image.html.twig") }}
+
+            <div class="well well-translucid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-4 col-sm-12 text-center-sm">
+                            <h1 class="search-title">{{ review.title }}</h1>
+                        </div>
+                        <div class="col-lg-7 col-md-8 col-sm-12">
+                            <div id="search-responsive" class="search-collapse collapse">
+                                <div class="well well-translucid form-inline text-center">
+                                    {{ include("::blocks/search/search-fields.html.twig") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            <section id="reviews">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6 break-sm text-center-sm">
+                               <span class="rate">
+                                   <span class="rate-stars">
+                                       <span class="stars-rating large">
+                                           <span class="rate-{{ review.avgReview }}"></span></span>
+                                   </span>
+                               </span>
+                                {{ "{0}No Reviews|{1}%count% Review|]1,Inf[%count% Reviews"|transchoice(reviews_total[1], {"%count%":reviews_total[1]}) }}
+                            </div>
+                            <span class="break-sm"></span>
+
+                            <div class="col-sm-6 text-right text-center-sm">
+                                <button class="btn btn-success reviewButtonTrigger"
+                                        data-info="{{ encrypt( {module: module, id: review.id} ) }}">
+                                    {{ 'Write a review'|trans }}
+                                </button>
+                            </div>
+                        </div>
+
+                        {% for _review in pagination -%}
+                            {# _review \ArcaSolutions\WebBundle\Entity\Review #}
+                            <div class="review-box">
+                                <div class="review-top">
+                                    <div class="media">
+                                        <div class="media-left text-center break-sm">
+                                            {% if _review.profile.accountId != 0 %}
+                                                {% set url_profile = absolute_url('/profile/' ~ _review.profile.friendlyUrl) %}
+                                                <a href="{{ url_profile }}" title="Profile Detail Page">
+                                                    {% if _review.profile.imageId != 0 and _review.profile.profileImage -%}
+                                                        <img
+                                                            src="{{ asset(imageProfile(_review.profile), 'profile_images') | imagine_filter('small') }}"
+                                                            alt="{{ _review.profile.firstName }} {{ _review.profile.lastName }}"
+                                                            class="img-circle img-profile">
+                                                    {% else -%}
+                                                        <img src="{{ asset('assets/images/user-image.png') }}"
+                                                             alt="{{ title }}" class="img-circle img-profile">
+                                                    {% endif -%}
+                                                </a>
+                                                <a href="{{ url_profile }}" title="Profile Detail Page">
+                                                    {{ _review.profile.firstName }} {{ _review.profile.lastName }}
+                                                </a>
+                                            {% else %}
+                                                <img src="{{ asset('assets/images/user-image.png') }}" alt="{{ title }}"
+                                                     class="img-circle img-profile">
+                                                {{ _review.reviewerName }}
+                                            {% endif %}
+                                            <br>
+                                            {{ _review.reviewerLocation }}
+                                        </div>
+                                        <div class="media-body">
+                                           <span class="rate">
+                                               <span class="rate-stars">
+                                                   <span class="stars-rating">
+                                                       <span class="rate-{{ _review.rating }}"></span></span>
+                                               </span>
+                                           </span>
+                                            <h5 class="media-title">{{ _review.reviewTitle }}</h5>
+
+                                            <p><q>{{ _review.review }}</q></p>
+
+                                            <p><span>{{ _review.added|localized_date('MMMM yyyy') }}</span></p>
+
+                                            {% if _review.response %}
+                                                <div class="reply">{{ _review.response }}</div>{% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-bottom">
+                                    <p>{{ 'Was this review helpful?'|trans }}</p>
+                                    <button type="button" title="Like this review"
+                                            class="btn btn-circle" data-type="like"
+                                            data-id="{{ _review.id }}">
+                                        <i class="fa fa-thumbs-o-up"></i>
+                                    </button>
+                                    <span class="count like">{{ _review.like }}</span>
+                                    <button type="button" title="Thumbs Down to this review"
+                                            class="btn btn-circle" data-type="dislike"
+                                            data-id="{{ _review.id }}">
+                                        <i class="fa fa-thumbs-o-down"></i>
+                                    </button>
+                                    <span class="count dislike">{{ _review.dislike }}</span>
+                                </div>
+                            </div>
+                        {% endfor -%}
+
+                        <nav class="text-center">
+                            {{ knp_pagination_render(pagination, null, {}, {'small': true}) }}
+                        </nav>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    {# Adding requirements -#}
+    {{ addJSFile('assets/js/lib/js.cookie.js') }}
+    {{ addJSFile("assets/js/utility/modal.js") }}
+    {{ addJSFile("assets/js/review/like-deslike.js") }}
+    {{ addJSTwig("::js/reviews.js.twig") }}
+{% endblock -%}

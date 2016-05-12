@@ -1,0 +1,43 @@
+{% if all_days -%}
+    {{ 'Every Day'|trans }}
+{% elseif weekend -%}
+    {{ 'weekends'|trans }}
+{% elseif business_days -%}
+    {{ 'Mon-Fri'|trans }}
+{% else -%}
+    {% for day in days -%}
+        {% if loop.length > 1 and loop.last %} {{ 'and'|trans }} {% endif -%}
+        {{ day|day_name -}}
+        {% if loop.length > 2 and (loop.length - loop.index) > 1 -%}
+            {{ ',' }}
+        {% endif -%}
+    {% endfor -%}
+{% endif -%}
+
+{% if weeks|length <= 4 -%}
+    {% for week in weeks -%}
+        {% if loop.first -%}
+            {{ 'of'|trans }}
+        {% endif -%}
+
+        {% if loop.first and loop.length > 1 -%}
+            {{ 'every'|trans }}
+        {% endif -%}
+
+        {% if loop.length > 1 and loop.last -%} {{ 'and'|trans }} {% endif -%}
+
+        {% if 5 == week -%}
+            {{ 'Last'|trans }}
+        {% else -%}
+            {{ ordinalize(week) }}{% if loop.length > 2 and (loop.length - loop.index) > 1 -%}{{ ',' }}{% endif -%}
+        {% endif -%}
+
+        {% if loop.last -%} {{ 'week'|trans }} {% endif -%}
+    {% endfor -%}
+{% endif -%}
+
+{% if 'en_US' == location -%}
+    {{ 'of the Month'|trans }}
+{% else -%}
+    {{ 'the Month'|trans }}
+{% endif -%}

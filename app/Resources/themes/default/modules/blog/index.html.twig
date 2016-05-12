@@ -1,0 +1,84 @@
+{% extends '::base.html.twig' -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentBlogHome(true), "%module% Homepage"|trans({"%module%" : "Blog"|trans}) ) }}
+{% endblock -%}
+
+{% block topbanner -%}
+    {{ banners.top("blog") }}
+{% endblock -%}
+
+{% block subheader -%}
+
+
+    {% set contentTop =  customContentBlogHome(true) %}
+    {# Top Search -#}
+    <section class="top-search ">
+
+        {# General Background Image -#}
+        {{ include("::blocks/background-image.html.twig") }}
+
+        <div class="well well-translucid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-4 col-sm-12 text-center-sm">
+                        <br>
+
+                        <h1>{{ contentTop.title }} </h1>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-12">
+                        <div id="search-responsive" class="search-collapse collapse">
+                            <div class="well well-translucid form-inline text-center">
+                                {{ addJSTwigParameter("searchBoxModule", "blog") }}
+                                {{ include("::blocks/search/search-fields-small.html.twig") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock -%}
+
+{% block body -%}
+
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+
+    {# Recent Posts -#}
+    <section class="block">
+        <div class="container">
+            {% set contentTop =  customContentBlogHome(true) %}
+            {{ contentTop.content|raw }}
+            <br>
+            <h2 class="theme-title">
+                {{ 'Popular Posts'|trans }}
+            </h2>
+
+            <div class="row">
+                {{ popularPost(3, 'col-sm-4') }}
+            </div>
+        </div>
+    </section>
+
+    {{ banners.middle("blog") }}
+
+    {# All Posts -#}
+    <section class="block">
+        <div class="container">
+            <h2 class="theme-title">
+                {{ 'Recent Posts'|trans }}
+            </h2>
+            {{ recentPost(6, 'col-sm-3', 'col-sm-9', 'horizontal-xs') }}
+            <br>
+            {{ customContentBlogHomeBottom() }}
+        </div>
+    </section>
+
+{% endblock -%}
+
+{% block bottombanners -%}
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+    {{ banners.bottom("blog") }}
+{% endblock -%}

@@ -1,0 +1,136 @@
+//
+// Calendar Events
+// --------------------------------------------------
+
+
+// Table Calendar
+// -------------------------
+.table-calendar {
+	> tbody > tr {
+		> th {
+			text-align: center;
+		}
+		> td {
+			border-top: none;
+			text-align: center;
+			padding: 0;
+			&:hover, &.active, &:hover > a, &.active > a{
+				background-color: @brand-success;
+				color: white;
+				cursor: pointer;
+			}
+			a {
+				padding: @grid-gutter-width/5;
+				display: block;
+				&:hover, &:focus, &.active {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+// List Calendar Date
+// -------------------------
+
+.list-calendar {
+	ul {
+		display: table;
+		width: 100%;
+		margin: 0 0 -7px 0;
+		li {
+			display: table-cell;
+			background-color: @brand-success;
+			text-align: center;
+			color: white;
+			padding:10px;
+			font-size: .8em;
+			b {
+				display: block;
+				color: white;
+				text-transform: uppercase;
+			}
+			&.active, &:hover, &:focus {
+				background-color: @brand-info;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+// Calendar Carousel
+// Calendar list
+.calendar-carousel {
+	margin: @grid-gutter-width 0;
+	padding: 0;
+	width: 100%;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+
+}
+
+.calendar-dates {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	display: inline-block;
+	mark {
+		background-color: rgba(255, 255, 255, 0.95);
+		text-transform: uppercase;
+		padding: 10px 12px 10px 10px;
+		font-weight: 300;
+		display: block;
+		font-size: 1.5em;
+		line-height: 1;
+	}
+	em {
+		color: white;
+		display: block;
+		font-style: normal;
+		font-size: 1.5em;
+		text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    padding: 6px 10px 2px;
+		span {
+			font-weight: 500;
+      font-size: 1.6em;
+      line-height: 1;
+		}
+	}
+	.date-item {
+		border: 1px solid @gray-light;
+		display:inline-block;
+		margin: 0 @grid-gutter-width/2.1; 
+		text-align: center;
+		background-color: lighten(@brand-primary, 30%);
+		white-space: nowrap;
+		padding: 0;
+		.transition(all ease 0.3s);
+		&.active {
+			background-color: @brand-success;
+			text-decoration: none;
+			mark {
+				background-color: rgba(0, 0, 0, 0.15);
+				color: white;
+			}
+		}
+		&:disabled {
+			&, &:hover {
+				cursor: default;
+				border-color: @gray-light;
+			}
+		}
+		&:hover, &:focus {
+			text-decoration: none;
+			border-color: @gray-dark;
+			cursor: pointer;
+		}
+	}
+	
+}
+

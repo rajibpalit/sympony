@@ -1,0 +1,49 @@
+{% if locations -%}
+    <ul class="list-sitemap panel-group panel-locations" id="location">
+        {% for id, location in locations -%}
+            <li class="panel panel-info">
+                <span class="panel-heading">
+                    <span class="pull-right">
+                        {% if location.children -%}<br>{% endif -%}
+                        <a href="{{ path("global_search_2", { "a0" : routing, "a1": location.item.friendlyUrl }) }}">{{ 'Search'|trans }}</a>
+                    </span>
+
+                    <span class="h4">{{ location.item.name }}
+                    </span>
+                    {% if location.children -%}
+                        <br><a class="text-info" data-toggle="collapse" data-parent="location" href="#{{ id }}">{{ 'Explore all locations'|trans }}</a>
+                    {% endif -%}
+                </span>
+                {{ _self.children(location, id, routing, false) }}
+
+            </li>
+        {% endfor -%}
+    </ul>
+{% endif -%}
+
+
+{% macro children(location, id, routing, withViewAll) -%}
+    {% if location.children -%}
+        <ul id="{{ id }}" class="collapse panel-body">
+            {% if withViewAll %}
+                <li class="list-columns-4">
+                    <a href="{{ path("global_search_2", { "a0" : routing, "a1": location.item.friendlyUrl }) }}">{{ "View All"|trans }}</a>
+                </li>
+            {% endif %}
+
+            {% for idc, childLocation in location.children -%}
+                {% set href = childLocation.children ? '#' ~ id ~ '-' ~ idc : (childLocation.item.friendlyUrl ? path("global_search_2", {'a0': routing, 'a1': childLocation.item.friendlyUrl}) : '#') -%}
+                {% set collapse = childLocation.children ? 'data-toggle="collapse" data-parent='~ id -%}
+
+                <li class="list-columns-4">
+                    <a {{ collapse|raw }} href="{{ href }}">{{ childLocation.item.name }}</a>
+
+                    {% if childLocation.children -%}
+                        {{ _self.children(childLocation, id ~ '-' ~ idc, routing, true) }}
+                    {% endif -%}
+
+                </li>
+            {% endfor -%}
+        </ul>
+    {% endif -%}
+{% endmacro -%}

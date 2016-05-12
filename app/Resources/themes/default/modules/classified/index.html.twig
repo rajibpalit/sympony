@@ -1,0 +1,93 @@
+{% extends '::base.html.twig' -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentClassifiedHome(true), "%module% Homepage"|trans({"%module%" : "Classifieds"|trans}) ) }}
+{% endblock -%}
+
+{% block topbanner -%}
+    {{ banners.top("classified") }}
+{% endblock -%}
+
+{% block subheader -%}
+
+    {% set contentTop =  customContentClassifiedHome(true) %}
+
+    {# Top Search -#}
+    <section class="top-search ">
+
+        {# General Background Image -#}
+        {{ include("::blocks/background-image.html.twig") }}
+
+        <div class="well well-translucid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-4 col-sm-12 text-center-sm">
+                        <br>
+
+                        <h1> {{ contentTop.title }} </h1>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-12">
+                        <div id="search-responsive" class="search-collapse collapse">
+                            <div class="well well-translucid form-inline text-center">
+                                {{ addJSTwigParameter("searchBoxModule", "classified") }}
+                                {{ include("::blocks/search/search-fields.html.twig") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock -%}
+
+{% block body -%}
+
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+    {% set contentTop =  customContentClassifiedHome(true) %}
+
+    <main>
+        {# Popular -#}
+        <section class="block">
+            <div class="container">
+
+                {{ contentTop.content|raw }}
+                <br>
+                <h2 class="theme-title">
+                    {{ 'New Classifieds'|trans }}
+                </h2>
+
+                <div class="row">
+                    {{ newClassifieds(3, 'col-sm-4') }}
+                </div>
+            </div>
+        </section>
+
+        {# Category -#}
+        <section class="block">
+            {{ browseByCategoryClassified(6) }}
+        </section>
+
+        {{ banners.middle("classified") }}
+
+        {# Popular Classfieds -#}
+        <section class="block">
+            <div class="container">
+                <h2 class="theme-title">
+                    {{ 'Popular CLassifieds'|trans }}
+                </h2>
+
+                {{ popularClassified(2, 3, 'col-sm-4') }}
+
+                {{ customContentClassifiedHomeBottom() }}
+            </div>
+        </section>
+
+    </main>
+{% endblock -%}
+
+{% block bottombanners -%}
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+    {{ banners.bottom("classified") }}
+{% endblock -%}

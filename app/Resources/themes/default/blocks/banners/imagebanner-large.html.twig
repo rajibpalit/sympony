@@ -1,0 +1,10 @@
+{# banner \ArcaSolutions\BannersBundle\Entity\Banner #}
+<div class="{{ classes|join(" ") }}">
+    {% if banner.showType == 1 %}
+        {{ banner.script|raw }}
+    {% elseif banner.suspendedSitemgr == "n" %}
+        <a href="{{ url }}" {{ target }}>
+            <img src="{{ asset(image, 'domain_images') | imagine_filter('largebanner') }}" alt="{{ banner.caption }}" class="img-responsive center-block">
+        </a>
+    {% endif %}
+</div>

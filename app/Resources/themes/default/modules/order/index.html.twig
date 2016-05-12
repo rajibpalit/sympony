@@ -1,0 +1,228 @@
+{% extends '::base.html.twig' -%}
+
+{% block title -%}{{ "Advertise With Us"|trans }} {% endblock -%}
+
+{% block subheader -%}
+
+    <div class="block-container first block-bg-image">
+
+        {# Background Image -#}
+        <span class="bg-image">
+           <img src="https://ununsplash.imgix.net/31/8jLdwLg6TLKIQfJcZgDb_Freedom_5.jpg?fit=crop&amp;fm=jpg&amp;h=700&amp;q=75" alt="">
+        </span>
+        {# Background Image -#}
+
+        <div class="container">
+            <div class="space-content">
+                 <h1>{{ "Advertise With Us"|trans }} </h1>
+                 <div class="well well-translucid">
+                    {# Custom Content Here -#}
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde adipisci voluptatibus non eos odio quo repellat fuga illo, provident odit cupiditate hic corrupti magnam laborum possimus, fugiat inventore illum ex!</p>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim commodi omnis optio pariatur sapiente quaerat, earum laudantium odio debitis? Magni voluptates voluptatem non, aliquam commodi cupiditate expedita beatae hic aliquid.</p>
+                     {# End Custom Content -#}
+                 </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock -%}
+
+
+
+{% block body -%}
+
+    <main>
+
+        <div class="container well well-light">
+
+            <div id="advertisePlans" class="block">
+                <div>
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li role="presentation" class="active"><a href="#Listings" aria-controls="Listings" role="tab" data-toggle="tab">Listings</a></li>
+                    <li role="presentation"><a href="#Deals" aria-controls="Deals" role="tab" data-toggle="tab">Deals</a></li>
+                    <li role="presentation"><a href="#Events" aria-controls="Events" role="tab" data-toggle="tab">Events</a></li>
+                    <li role="presentation"><a href="#Articles" aria-controls="Articles" role="tab" data-toggle="tab">Articles</a></li>
+                    <li role="presentation"><a href="#Classifieds" aria-controls="Classifieds" role="tab" data-toggle="tab">Classifieds</a></li>
+                    <li role="presentation"><a href="#Banners" aria-controls="Banners" role="tab" data-toggle="tab">Banners</a></li>
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content plans-content">
+                    <div role="tabpanel" class="tab-pane active" id="Listings">
+                        <div class="plans-container">
+                            <div class="plan-box">
+                                <div class="plan-title">Silver</div>
+                                <div class="plan-info">
+                                    <mark>$99 <small>/year</small></mark>
+                                    <small>+ 3% Sales tax ($108.90)</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                    <ul>
+                                        <li>Title / Address</li>
+                                        <li>Ratings and Reviews</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plan-box plan-popular">
+                                <div class="plan-title">Diamond</div>
+                                <div class="plan-info">
+                                    <span class="popular-tag">Most Popular</span>
+                                    <mark>$299 <small>/year</small></mark>
+                                    <small>+ 3% Sales tax ($328.90)</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                    <ul>
+                                        <li>Title / Address</li>
+                                        <li>Ratings and Reviews</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plan-box">
+                                <div class="plan-title">Gold</div>
+                                <div class="plan-info">
+                                    <mark>$199 <small>/year</small></mark>
+                                    <small>+ 3% Sales tax ($218.90)</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                    <ul>
+                                        <li>Title / Address</li>
+                                        <li>Ratings and Reviews</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plan-box">
+                                <div class="plan-title">Bronze</div>
+                                <div class="plan-info">
+                                    <mark>Free</mark>
+                                    <small>no Tax</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Deals">
+                        <div class="plans-container">
+                            <div class="plan-box">
+                                <div class="plan-title">Silver</div>
+                                <div class="plan-info">
+                                    <mark>$99 <small>/year</small></mark>
+                                    <small>+ 3% Sales tax ($108.90)</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                    <ul>
+                                        <li>Title / Address</li>
+                                        <li>Ratings and Reviews</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plan-box plan-popular">
+                                <div class="plan-title">Gold</div>
+                                <div class="plan-info">
+                                    <span class="popular-tag">Most Popular</span>
+                                    <mark>$199 <small>/year</small></mark>
+                                    <small>+ 3% Sales tax ($218.90)</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                    <ul>
+                                        <li>Title / Address</li>
+                                        <li>Ratings and Reviews</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li>Featured</li>
+                                        <li class="text-striketrough">Featured</li>
+                                        <li>Featured</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="plan-box">
+                                <div class="plan-title">Bronze</div>
+                                <div class="plan-info">
+                                    <mark>Free</mark>
+                                    <small>no Tax</small>
+                                </div>
+                                <div class="plan-desc">
+                                    <button type="button" class="btn btn-default btn-block">View Demo</button>
+                                    <button type="button" class="btn btn-highlight btn-block">Sign Up</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="Events">...</div>
+                    <div role="tabpanel" class="tab-pane" id="Articles">...</div>
+                    <div role="tabpanel" class="tab-pane" id="Classifieds">...</div>
+                    <div role="tabpanel" class="tab-pane" id="Banners">...</div>
+                  </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+{% endblock -%}

@@ -1,0 +1,16 @@
+{% extends "::mailer/layout.html.twig" -%}
+
+{% block title -%} {{ "New Contact"|trans }} {% endblock -%}
+
+{% block paragraph -%}
+    {{ "Site manager"|trans ~ "," }}<br/><br/>
+    {{ "You received a new contact through the Contact form."|trans }}<br/>
+{% endblock -%}
+
+{% block secondparagraph -%}
+    {{ "From: "|trans }} {{ firstname }} {{ lastname }}<br>
+    {{ "Email: "|trans }} {{ email }}<br>
+    {{ "Phone: "|trans }} {{ phone }}<br>
+    {{ "Message: "|trans }} <br>
+    {{ message }}
+{% endblock -%}

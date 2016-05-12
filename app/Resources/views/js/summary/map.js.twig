@@ -1,0 +1,15 @@
+<script>
+    $(document).ready(function () {
+        eDirectorySummaryMap = new eDirectory.Search.Map(
+            "{{ path("search_map_summary")|raw }}",
+            {{ mapJsVariable }},
+            {{ mapJsVariable }}_container,
+            {{ clustererJSVariable }},
+            '#summaryViewMapButton',
+            '#mapMarkerSummaryBox',
+            30
+        );
+
+        eDirectorySummaryMap.initialize();
+    });
+</script>

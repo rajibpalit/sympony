@@ -1,0 +1,2 @@
+INSERT INTO `ListingTemplate` (`id`, `layout_id`, `title`, `updated`, `entered`, `status`, `price`, `cat_id`, `editable`, `theme`) VALUES
+(1, 0, 'Listing', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'enabled', '0.00', '', 'n', 'default');

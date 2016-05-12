@@ -1,0 +1,84 @@
+{% extends '::base.html.twig' -%}
+
+{# use it to shows address -#}
+{% import "::blocks/utility/summary.html.twig" as Utility -%}
+{% import "::blocks/utility/detail.html.twig" as UtilityDetail -%}
+
+{% block SEO %}
+    {{ generateBlogSEO( item ) }}
+{% endblock -%}
+
+{% block topbanner -%} {# No banners for this page -#} {% endblock -%}
+
+{# enables autocomplete in phpstorm -#}
+{# item \ArcaSolutions\BlogBundle\Entity\Post -#}
+
+{% block subheader -%}
+    <section class="top-blog top-search top-coverimage">
+        {# General Background Image -#}
+        {{ UtilityDetail.coverImage(item.coverImage) }}
+
+        <div class="well well-translucid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-4 col-sm-6 text-center-sm">
+                        <span class="search-title">{{ 'Explore our Blog'|trans }}</span>
+                    </div>
+                    <div class="col-lg-7 col-md-8 col-sm-6">
+                        <div id="search-responsive" class="search-collapse collapse">
+                            <div class="well well-translucid form-inline text-center">
+                                {{ include("::blocks/search/search-fields-small.html.twig") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container space-content">
+            <div class="well well-translucid text-center">
+                <h1>{{ item.title }}</h1>
+                <p class="large">{{ item.entered|localized_date('dd MMM yyyy') }}</p>
+
+                {% include "::blocks/sociallikes.html.twig" %}
+            </div>
+        </div>
+    </section>
+{% endblock -%}
+
+{% block body -%}
+    {# Adding requirements -#}
+    {{ addJSFile('assets/js/lib/jquery.magnific-popup.min.js') }}
+    {{ addJSTwig("::js/detailpopup.js.twig") }}
+
+    <main>
+
+        <div class="container well well-light">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <!-- Detail Begin -->
+                    <div class="detail blog-detail">
+
+                        <div id="overview">
+                            <div>{{ item.content|raw }}</div>
+                        </div>
+
+                        <div id="blog-tags" class="post-tags">
+                            {% for category in categories if 'y' == category.enabled -%}
+                                <a class="badge" href="{{ path('global_search_1',{a0: category.friendlyUrl}) }}">
+                                    <span>{{ category.title }}</span>
+                                </a>
+                            {% endfor -%}
+                        </div>
+                        {{ banners.detail("blog") }}
+                        <div id="blog-comments">
+                            {# 500px -#}
+                            {{ facebookComments(740) }}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock -%}

@@ -1,0 +1,68 @@
+<?
+    /*
+    * # Admin Panel for eDirectory
+    * @copyright Copyright 2014 Arca Solutions, Inc.
+    * @author Basecode - Arca Solutions, Inc.
+    */
+
+    # ----------------------------------------------------------------------------------------------------
+	# * FILE: /ed-admin/assets/custom-js/support.php
+	# ----------------------------------------------------------------------------------------------------
+
+?>
+	<script type="text/javascript">
+        function JS_submit(value) {
+            $("#rewriteFile").attr("value", value);
+            document.configChecker.submit();
+        }
+        
+        function resetOption(url) {
+            location.href = url;
+        }
+        
+        var blockRefresh = '';
+        function refreshLoc() {
+            if (!blockRefresh) {
+                url = "<?=DEFAULT_URL?>/<?=SITEMGR_ALIAS?>/support/refresh_location.php?domain_id=<?=SELECTED_DOMAIN_ID?>";
+                $.get(url, {'refresh':1}, function (data) {
+                    $('#locationRefreshStatus').html("<p class=\"successMessage\">Location counter updated (listing/event/classified/deal) on domain <?=SELECTED_DOMAIN_ID?>.</p>");
+                    $('#locationRefreshStatus').fadeIn(2000);
+                    blockRefresh = ''
+                });
+                $('#locationRefreshStatus').html('Please wait...');
+                $('#locationRefreshStatus').css('display', 'block');
+                blockRefresh = true;
+            }
+        }
+
+        $(document).ready( function(){
+            $("#reset_flags_button").click( function(){
+                bootbox.confirm('Are you sure you want to reset all cron flags?', function( result ) {
+                    if ( result ) {
+                        $.post("crontab.php", { action : "resetflags" }).done( function(data){
+                            $(".alert").remove();
+                            var message, elementClass;
+
+                            if( data ){
+                                message = "Success! Resetted all flags.";
+                                elementClass = "alert-success";
+                            }
+                            else{
+                                message = "Oops! Coldn't reset some flags. Contact support... yeah...";
+                                elementClass = "alert-danger";
+                            }
+
+                            $("#reset_message_box").prepend( '<div class="alert '+elementClass+'">'+message+'</div>' );
+                        });
+                    }
+                });
+            });
+
+            <?/*     $("#launch_manager_button").click( function(){
+                $.post("<?=DEFAULT_URL."/cron/cron_manager.php"?>", {}).done( function(data){
+                    $(".alert").remove();
+                    $("#reset_message_box").prepend( '<div class="alert alert-info">'+data+'</div>' );
+                });
+            });*/?>
+        });
+    </script>

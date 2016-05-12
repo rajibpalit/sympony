@@ -1,0 +1,28 @@
+{# Branded Copy of eDirectory -#}
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                {% if copyright_text -%}
+                    {# Custom text for copyrights -#}
+                    {{ copyright_text }}
+                {% else -%}
+                    {# Default text for copyrights -#}
+                    {{ 'Copyright'|trans }} &copy; {{ 'now'|date('Y') }}
+                    {{ ' Arca Solutions, Inc.'|trans }}
+                    {{ 'All Rights Reserved.'|trans }}
+                {% endif -%}
+            </div>
+
+            {% if branded == 'on' -%}
+                <div class="col-sm-4 text-right">
+                    {{ 'Powered by'|trans }}
+                    <a href="{{ url_edirectory }}" target="_blank">
+                        {{ 'eDirectory Cloud Service'|trans }} &trade;
+                    </a>
+                </div>
+            {% endif -%}
+
+        </div>
+    </div>
+</div>

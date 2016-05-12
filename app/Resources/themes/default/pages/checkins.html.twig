@@ -1,0 +1,79 @@
+{% extends '::base.html.twig' -%}
+
+{% block SEO %}
+    {{ generateCheckInSEO( checkin ) }}
+{% endblock -%}
+
+{% block subheader -%}
+    <section class="top-search  top-mainimage">
+        <div class="block-container first block-bg-image">
+
+            {{ include("::blocks/background-image.html.twig") }}
+
+
+            <div class="container">
+                <div class="space-content">
+                    <h1>{{ checkin.title }}</h1>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            <section id="checkins">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-12 text-right text-center-sm">
+                                {{ checkins_total[1] }} {{ checkins_total[1] == 1 ? 'Checkin'|trans : 'Checkins'|trans }}
+                            </div>
+                        </div>
+
+                        {% for checkin in pagination -%}
+                            <div class="review-box">
+                                <div class="review-top">
+                                    <div class="media">
+                                        <div class="media-left text-center break-sm">
+                                            <a href="/profile/{{ checkin.profile.friendlyUrl }}"
+                                               title="Profile Detail Page">
+                                                {% if checkin.profile.imageId != 0 and checkin.profile.profileImage -%}
+                                                    <img src="{{ asset(imagePath(checkin.profile.profileImage), 'domain_images') | imagine_filter('small') }}"
+                                                         alt="{{ checkin.profile.firstName }} {{ checkin.profile.lastName }}"
+                                                         class="img-circle">
+                                                {% else -%}
+                                                    {{ utility_getNoImage() }}
+                                                {% endif -%}
+                                            </a>
+
+                                            <a href="/profile/{{ checkin.profile.friendlyUrl }}"
+                                               title="Profile Detail Page">
+                                                {{ checkin.profile.firstName }} {{ checkin.profile.lastName }}
+                                            </a>
+                                            <br>
+                                            {{ checkin.reviewerLocation }}
+                                        </div>
+                                        <div class="media-body">
+                                            <p><q>{{ checkin.quickTip }}</q></p>
+
+                                            <p><span>{{ checkin.added|localized_date('MMMM yyyy') }}</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor -%}
+
+                        <nav class="text-center">
+                            {{ knp_pagination_render(pagination, null, {}, {'small': true}) }}
+                        </nav>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+{% endblock -%}

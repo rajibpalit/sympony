@@ -1,0 +1,66 @@
+{#      Description:                                                    -#}
+{# This macro renders account link w/ images                            -#}
+
+{# account object                                                       -#}
+{#      Accountprofilecontact -#}
+
+{% macro accountLink(account, isSample) %}
+    <span class="pull-right">
+        {# gets from profile -#}
+        {% if account.imageId != 0 -%}
+            <img src="{{ asset(imageProfile(account), 'profile_images') | imagine_filter('small') }}" alt="{{ account.firstName }} {{ account.lastName }}" class="img-circle img-profile">
+        {% else -%}
+            <img src="{{ asset('assets/images/user-image.png') }}" alt="{{ title }}" class="img-circle img-profile">
+        {% endif -%}
+        <br>
+        {{ 'By'|trans }}
+
+        {% if isSample -%}
+            {% set link = 'javascript:void(0);' -%}
+        {% else -%}
+            {% set link = '/profile/' ~ account.friendlyUrl -%}
+        {% endif -%}
+
+        <a href="{{ link }}">{{ account.firstName }} {{ account.lastName }}</a>
+    </span>
+{% endmacro %}
+
+{#      Description:                                                    -#}
+{# This macro renders author info(a different field of account)         -#}
+
+{# item object                                                          -#}
+{#      Module's repository                                             -#}
+
+{% macro authorLink(item, isSample) %}
+    {#- it has author -#}
+
+    {# elasticsearch compatibility #}
+    {% if item.author.name is defined %}
+        {% set name = item.author.name %}
+        {% set url = item.author.url %}
+    {% else %}
+        {% set name = item.author %}
+        {% set url = item.authorUrl %}
+    {% endif %}
+
+    {% if isSample %}
+        {% set url = 'javascript:void(0);' %}
+    {% endif %}
+
+    {% set image = imageProfileByAccountId(item.accountId) %}
+    {% if image -%}
+        <img src="{{ asset(image, 'profile_images') | imagine_filter('small') }}" alt="{{ name }}" class="img-circle img-profile">
+    {% else -%}
+        <img src="{{ asset('assets/images/user-image.png') }}" alt="{{ name }}" class="img-circle img-profile">
+    {% endif -%}
+    <br>
+
+    <span class="pull-right">
+        {{ 'By'|trans }}
+        {% if url %}
+            <a href="{{ url }}"> {{ name }} </a>
+        {% else %}
+            {{ name }}
+        {% endif %}
+    </span>
+{% endmacro %}

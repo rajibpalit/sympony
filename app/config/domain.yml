@@ -1,0 +1,11 @@
+multi_domain:
+    hosts:
+        pmalink.org:
+            id: 1
+            path: custom/domain_1/
+            template: default
+            locale: en_us
+            database: pmalink_domain_1
+            elastic: pmalink_domain_1
+            title: eDirectory
+            branded: 'off'

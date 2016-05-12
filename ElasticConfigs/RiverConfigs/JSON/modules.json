@@ -1,0 +1,59 @@
+{
+    "type" : "jdbc",
+    "jdbc" : [
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 500,
+            "sql" : "SELECT A.`id` AS '_id', A.`abstract` AS 'abstract', A.`account_id` AS 'accountId', A.`author` AS 'author.name', A.`author_url` AS 'author.url', A.`avg_review` AS 'averageReview', CONCAT_WS( ' ', CASE WHEN A.cat_1_id THEN CONCAT('A:', A.cat_1_id) END, CASE WHEN A.cat_2_id THEN CONCAT('A:', A.cat_2_id) END, CASE WHEN A.cat_3_id THEN CONCAT('A:', A.cat_3_id) END, CASE WHEN A.cat_4_id THEN CONCAT('A:', A.cat_4_id) END, CASE WHEN A.cat_5_id THEN CONCAT('A:', A.cat_5_id) END) AS 'categoryId', A.`friendly_url` AS 'friendlyUrl', A.`level` AS 'level', IF(A.`publication_date` = '0000-00-00', NULL, DATE_FORMAT(A.`publication_date`, '%Y-%m-%d')) AS 'publicationDate', ARC.`reviewCount` AS 'reviewCount', A.`fulltextsearch_keyword` AS 'searchInfo.keyword', if(A.`status` = 'A', 1, 0) AS 'status', A.`fulltextsearch_keyword` AS 'suggest.what.input', A.`title` AS 'suggest.what.output', CONCAT(A.`friendly_url`, '|article') AS 'suggest.what.payload', 90 AS 'suggest.what.weight', AI.`thumbnail` AS 'thumbnail', A.`title` AS 'title', A.`number_views` AS 'views' FROM Article AS A LEFT JOIN( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS thumbnail FROM Image ) AS AI ON AI.id = A.image_id LEFT JOIN ( SELECT item_id AS id, COUNT(*) AS reviewCount FROM Review WHERE item_type = 'article' AND approved = 1 GROUP BY item_id ) AS ARC ON ARC.id = A.id",
+            "index" : "%elastic_index%",
+            "type" : "article"
+        },
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 500,
+            "sql" : "SELECT B.id AS '_id', BC.categoryId AS 'categoryId', BCC.commentCount AS 'commentCount', B.content AS 'content', B.friendly_url AS 'friendlyUrl', 10 AS 'level', DATE_FORMAT(B.entered, '%Y-%m-%d %H:%i:%s') AS 'publicationDate', B.fulltextsearch_keyword AS 'searchInfo.keyword', if(B.status = 'A', 1, 0) AS 'status', B.fulltextsearch_keyword AS 'suggest.what.input', B.title AS 'suggest.what.output', CONCAT(B.friendly_url, '|blog') AS 'suggest.what.payload', 90 AS 'suggest.what.weight', BI.thumbnail AS 'thumbnail', B.title AS 'title', B.number_views AS 'views' FROM Post AS B LEFT JOIN( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS thumbnail FROM Image) AS BI ON BI.id = B.image_id LEFT JOIN ( SELECT post_id AS 'itemId', GROUP_CONCAT(DISTINCT CONCAT('B:', category_id) SEPARATOR ' ') AS 'categoryId' FROM Blog_Category GROUP BY itemId ) AS BC ON BC.itemId = B.id LEFT JOIN ( SELECT post_id AS id, COUNT(*) AS commentCount FROM Comments GROUP BY post_id ) AS BCC ON BCC.id = B.id",
+            "index" : "%elastic_index%",
+            "type" : "blog"
+        },
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 500,
+            "sql" : "SELECT C.id AS '_id', C.address2 AS 'address.complement', C.address AS 'address.street', CONCAT_WS(' ', CASE WHEN C.cat_1_id THEN CONCAT('C:', C.cat_1_id) END, CASE WHEN C.cat_2_id THEN CONCAT('C:', C.cat_2_id) END, CASE WHEN C.cat_3_id THEN CONCAT('C:', C.cat_3_id) END, CASE WHEN C.cat_4_id THEN CONCAT('C:', C.cat_4_id) END, CASE WHEN C.cat_5_id THEN CONCAT('C:', C.cat_5_id) END) AS 'categoryId', C.contactname AS 'contactName', C.summarydesc AS 'description', C.email AS 'email', C.friendly_url AS 'friendlyUrl', cast(IFNULL(C.latitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lat', cast(IFNULL(C.longitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lon', C.`level` AS 'level', CONCAT_WS(' ', CASE WHEN C.location_1 THEN CONCAT('L1:', C.location_1) END, CASE WHEN C.location_2 THEN CONCAT('L2:', C.location_2) END, CASE WHEN C.location_3 THEN CONCAT('L3:', C.location_3) END, CASE WHEN C.location_4 THEN CONCAT('L4:', C.location_4) END, CASE WHEN C.location_5 THEN CONCAT('L5:', C.location_5) END ) AS 'locationId', C.phone AS 'phone', C.classified_price AS 'price', C.fulltextsearch_keyword AS 'searchInfo.keyword', C.fulltextsearch_where AS 'searchInfo.location', if(C.status = 'A', 1, 0) AS 'status', C.fulltextsearch_keyword AS 'suggest.what.input', C.title AS 'suggest.what.output', CONCAT(C.friendly_url, '|classified') AS 'suggest.what.payload', 100 - C.level AS 'suggest.what.weight', CI.thumbnail AS 'thumbnail', C.title AS 'title', C.url AS 'url', C.number_views AS 'views' FROM Classified AS C LEFT JOIN( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS thumbnail FROM Image ) AS CI ON CI.id = C.image_id",
+            "index" : "%elastic_index%",
+            "type" : "classified"
+        },
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 500,
+            "sql" : "SELECT D.id AS '_id', L.address2 AS 'address.complement', L.address AS 'address.street', D.amount AS 'amount', LC.categoryId AS 'categoryId', IF(D.end_date = '0000-00-00', NULL, DATE_FORMAT(D.end_date, '%Y-%m-%d')) AS 'date.end', IF(D.start_date = '0000-00-00', NULL, DATE_FORMAT(D.start_date, '%Y-%m-%d')) AS 'date.start', D.description AS 'description', D.friendly_url AS 'friendlyUrl', cast(IFNULL(L.latitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lat', cast(IFNULL(L.longitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lon', L.level AS 'level', L.friendly_url AS 'listing.friendlyUrl', L.title AS 'listing.title', CONCAT_WS(' ', CASE WHEN L.location_1 THEN CONCAT('L1:', L.location_1) END, CASE WHEN L.location_2 THEN CONCAT('L2:', L.location_2) END, CASE WHEN L.location_3 THEN CONCAT('L3:', L.location_3) END, CASE WHEN L.location_4 THEN CONCAT('L4:', L.location_4) END, CASE WHEN L.location_5 THEN CONCAT('L5:', L.location_5) END) AS 'locationId', D.fulltextsearch_keyword AS 'searchInfo.keyword', D.fulltextsearch_where AS 'searchInfo.where', IF(L.status = 'A', TRUE, FALSE) AS 'status', D.fulltextsearch_keyword AS 'suggest.what.input', D.name AS 'suggest.what.output', CONCAT(D.friendly_url, '|deal') AS 'suggest.what.payload', 100 - L.level AS 'suggest.what.weight', DI.thumbnail AS 'thumbnail', D.name AS 'title', D.dealvalue AS 'value.deal', D.realvalue AS 'value.real', D.number_views AS 'views' FROM Promotion AS D LEFT JOIN( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS thumbnail FROM Image ) AS DI ON DI.id = D.image_id LEFT JOIN ( SELECT listing_id AS 'itemId', GROUP_CONCAT(DISTINCT CONCAT('L:', category_id) SEPARATOR ' ') AS 'categoryId' FROM Listing_Category GROUP BY listing_id ) AS LC ON LC.itemId = D.listing_id LEFT JOIN Listing AS L ON D.listing_id = L.id",
+            "index" : "%elastic_index%",
+            "type" : "deal"
+        },
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 500,
+            "sql" : "SELECT E.id AS '_id', E.location AS 'address.location', E.address AS 'address.street', E.zip_code AS 'address.zipcode', CONCAT_WS(' ', CASE WHEN E.cat_1_id THEN CONCAT('E:', E.cat_1_id) END, CASE WHEN E.cat_2_id THEN CONCAT('E:', E.cat_2_id) END, CASE WHEN E.cat_3_id THEN CONCAT('E:', E.cat_3_id) END, CASE WHEN E.cat_4_id THEN CONCAT('E:', E.cat_4_id) END, CASE WHEN E.cat_5_id THEN CONCAT('E:', E.cat_5_id) END) AS 'categoryId', IF(E.end_date = '0000-00-00', NULL, DATE_FORMAT(E.end_date, '%Y-%m-%d')) AS 'date.end', IF(E.start_date = '0000-00-00', NULL, DATE_FORMAT(E.start_date, '%Y-%m-%d')) AS 'date.start', IF(E.has_end_time = 'n', NULL, TIME_FORMAT(E.end_time, '%T')) AS 'time.end', IF(E.has_start_time = 'n', NULL, TIME_FORMAT(E.start_time, '%T')) AS 'time.start', E.description AS 'description', E.email AS 'email', E.friendly_url AS 'friendlyUrl', cast(IFNULL(E.latitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lat', cast(IFNULL(E.longitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lon', E.`level` AS 'level', CONCAT_WS(' ', CASE WHEN E.location_1 THEN CONCAT('L1:', E.location_1) END, CASE WHEN E.location_2 THEN CONCAT('L2:', E.location_2) END, CASE WHEN E.location_3 THEN CONCAT('L3:', E.location_3) END, CASE WHEN E.location_4 THEN CONCAT('L4:', E.location_4) END, CASE WHEN E.location_5 THEN CONCAT('L5:', E.location_5) END ) AS 'locationId', E.phone AS 'phone', IF(E.recurring = 'Y', TRUE, FALSE) AS 'recurring.enabled', IF(E.until_date = '0000-00-00', NULL, DATE_FORMAT(E.until_date, '%Y-%m-%d')) AS 'recurring.until', E.fulltextsearch_keyword AS 'searchInfo.keyword', E.fulltextsearch_where AS 'searchInfo.location', IF(E.status = 'A', TRUE, FALSE) AS 'status', E.fulltextsearch_keyword AS 'suggest.what.input', E.title AS 'suggest.what.output', CONCAT(E.friendly_url, '|event') AS 'suggest.what.payload', 100 - E.level AS 'suggest.what.weight', ET.thumbnail AS 'thumbnail', E.title AS 'title', E.url AS 'url', E.number_views AS 'views' FROM Event AS E LEFT JOIN( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS thumbnail FROM Image ) AS ET ON ET.id = E.image_id",
+            "index" : "%elastic_index%",
+            "type" : "event"
+        },
+        {
+            "url" : "jdbc:mysql://%mysql_host%:3306/%mysql_database%",
+            "user" : "%mysql_user%",
+            "password" : "%mysql_pass%",
+            "fetchsize" : 500,
+            "sql" : "SELECT L.id AS '_id', L.address2 AS 'address.complement', L.address AS 'address.street', L.zip_code AS 'address.zipcode', L.avg_review AS 'averageReview', IF(L.backlink = 'y', 1, 0) AS 'backlink', LB.badgeId AS 'badgeId', LC.categoryId AS 'categoryId', IF(L.claim_disable = 'y' OR L.account_id > 0, 0, 1) AS 'claim', D.friendly_url AS 'dealFriendlyUrl', L.description AS 'description', L.email AS 'email', L.fax AS 'fax', L.friendly_url AS 'friendlyUrl', cast(IFNULL(L.latitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lat', cast(IFNULL(L.longitude, 0) AS DECIMAL(10, 7)) AS 'geoLocation.lon', L.`level` AS 'level', CONCAT_WS(' ', CASE WHEN L.location_1 THEN CONCAT('L1:', L.location_1) END, CASE WHEN L.location_2 THEN CONCAT('L2:', L.location_2) END, CASE WHEN L.location_3 THEN CONCAT('L3:', L.location_3) END, CASE WHEN L.location_4 THEN CONCAT('L4:', L.location_4) END, CASE WHEN L.location_5 THEN CONCAT('L5:', L.location_5) END) AS 'locationId', L.phone AS 'phone', L.price AS 'price', LRC.reviewCount AS 'reviewCount', L.fulltextsearch_keyword AS 'searchInfo.keyword', L.fulltextsearch_where AS 'searchInfo.location', IF(L.status = 'A', 1, 0) AS 'status', L.fulltextsearch_keyword AS 'suggest.what.input', L.title AS 'suggest.what.output', CONCAT(L.friendly_url, '|listing') AS 'suggest.what.payload', 100 - L.level AS 'suggest.what.weight', LI.thumbnail AS 'thumbnail', L.title AS 'title', L.url AS 'url', L.number_views AS 'views' FROM `Listing` AS L LEFT JOIN( SELECT listing_id AS 'itemId', GROUP_CONCAT(DISTINCT CONCAT('L:', category_id) SEPARATOR ' ') AS 'categoryId' FROM Listing_Category GROUP BY listing_id ) AS LC ON LC.itemId = L.id LEFT JOIN ( SELECT listing_id AS 'itemId', GROUP_CONCAT(editor_choice_id SEPARATOR ' ') AS 'badgeId' FROM Listing_Choice GROUP BY listing_id ) AS LB ON LB.itemId = L.id LEFT JOIN ( SELECT id, CONCAT(`prefix`, 'photo_', id, '.', LOWER(`type`)) AS thumbnail FROM Image ) AS LI ON LI.id = L.image_id LEFT JOIN ( SELECT item_id AS id, COUNT(*) AS reviewCount FROM Review WHERE item_type = 'listing' AND approved = 1 GROUP BY item_id ) AS LRC ON LRC.id = L.id LEFT JOIN Promotion AS D ON D.id = L.promotion_id",
+            "index" : "%elastic_index%",
+            "type" : "listing"
+        }
+    ]
+}

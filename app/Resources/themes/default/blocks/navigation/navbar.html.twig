@@ -1,0 +1,75 @@
+<!-- Header and navbar with Responsive features -->
+<header class="navbar navbar-static-top">
+    {{ loginNavBar() }}
+    <div id="navbarMenu" class="navbar-default">
+        <div class="header-brand">
+            <div class="container">
+
+                <nav class="navbar">
+
+                    <div class="navbar-brand">
+                        {# eDirectory Logo -#}
+                        <a href="{{ path('web_homepage') }}" target="_parent" title="{{ title }}">
+                            <img class="brand-logo" alt="{{ title }}"
+                                 src="{{ utility_getLogoImage()|imagine_filter('logo') }}">
+                        </a>
+                        {# End Logo -#}
+                    </div>
+
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#main-navbar">
+                            <span class="sr-only">{{ "Main navigation"|trans }} </span>
+                            <span class="navbar-label">{{ "Menu"|trans }} </span>
+                        </button>
+                        {% if searchButton %}
+                            <button type="button" class="navbar-toggle search-toggle" data-toggle="collapse"
+                                    data-target="#search-responsive">
+                                <span class="sr-only">{{ "Open Search"|trans }} </span>
+                                <span class="fa fa-search"></span>
+                            </button>
+                        {% endif %}
+                    </div>
+
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        {{ navigationHeader() }}
+
+                        {# colocar em outra view #}
+                        <ul class="nav navbar-nav navbar-login">
+
+                            {% set user = getUser() %}
+                            {% if user %}
+                                {# @var user \ArcaSolutions\WebBundle\Entity\Accountprofilecontact #}
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-expanded="false">
+                                        {{ 'Welcome'|trans }} {{ user.firstName }} {{ user.lastName }}
+                                        <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/profile/">{{ 'Profile'|trans }}</a></li>
+                                        <li><a href="{{ path("web_faq") }}">{{ 'Faq'|trans }}</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="/profile/edit.php">{{ 'Account Preferences'|trans }}</a></li>
+                                        <li><a href="/profile/logout.php">{{ 'Log Off'|trans }}</a></li>
+                                    </ul>
+                                </li>
+                            {% else %}
+                                <li><a href="/profile/add.php">{{ 'Sign Up'|trans }}</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/profile/login.php">{{ 'Login'|trans }}</a></li>
+                            {% endif %}
+
+                            <li><a href="/sponsors">{{ 'Sponsor Area'|trans }}</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>

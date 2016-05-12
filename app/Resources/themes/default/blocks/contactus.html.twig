@@ -1,0 +1,52 @@
+{% set flags = 0 %}
+
+{% set flags = 0 +
+( address  ? 1   : 0 ) +
+( city     ? 2   : 0 ) +
+( state    ? 4   : 0 ) +
+( zipcode  ? 8   : 0 ) +
+( country  ? 16  : 0 ) +
+( phone    ? 32  : 0 ) +
+( facebook ? 64  : 0 ) +
+( linkedin ? 128 : 0 ) +
+( twitter  ? 256 : 0 ) +
+( instagram ? 512 : 0 ) +
+( googleplus ? 1024 : 0 ) +
+( pinterest  ? 2048 : 0 ) %}
+
+{% if flags b-and 63 %}
+    <div class="col-sm-3 col-xs-6">
+        <h5>{{ "Contact Us"|trans }} </h5>
+
+        <address class="contact-address">
+            {% if flags b-and 31 %}
+                <span class="fa fa-map-marker"></span>
+                {% if flags b-and 1                     -%}{{ address }}<br>{%- endif %}
+                {% if flags b-and 2                     -%}{{ city }}       {%- endif %}
+                {% if flags b-and 3 and flags b-and 4   -%},                {%- endif %}
+                {% if flags b-and 4                     -%}{{ state }}      {%- endif %}
+                {% if flags b-and 8                     -%}{{ zipcode }}    {%- endif %}
+                {% if flags b-and 15 and flags b-and 16 -%}<br>             {%- endif %}
+                {% if flags b-and 16                    -%}{{ country }}    {%- endif %}
+                <br>
+            {% endif %}
+            {% if flags b-and 32 %}
+                <span class="fa fa-phone"></span>
+                <span>{{ phone }}</span>
+            {% endif %}
+        </address>
+    </div>
+{% endif %}
+{% if flags b-and 4032 %}
+    <div class="col-sm-3 col-xs-6">
+        <h5>{{ "Follow Us"|trans }} </h5>
+        <ul class="list-unstyled">
+            {% if flags b-and 64 -%}<li><a target="_blank" href="{{ facebook }}" class="social-links"><span class="fa fa-facebook"></span> Facebook </a></li>{%- endif %}
+            {% if flags b-and 128 -%}<li><a target="_blank" href="{{ linkedin }}" class="social-links"><span class="fa fa-linkedin"></span> Linkedin </a></li>{%- endif %}
+            {% if flags b-and 256 -%}<li><a target="_blank" href="http://twitter.com/{{ twitter }}" class="social-links"><span class="fa fa-twitter"></span> Twitter </a></li>{%- endif %}
+            {% if flags b-and 512 -%}<li><a target="_blank" href="{{ instagram }}" class="social-links"><span class="fa fa-instagram"></span> Instagram </a></li>{%- endif %}
+            {% if flags b-and 1024 -%}<li><a target="_blank" href="{{ googleplus }}" class="social-links"><span class="fa fa-google"></span> Google Plus </a></li>{%- endif %}
+            {% if flags b-and 2048 -%}<li><a target="_blank" href="{{ pinterest }}" class="social-links"><span class="fa fa-pinterest"></span> Pinterest </a></li>{%- endif %}
+        </ul>
+    </div>
+{% endif %}

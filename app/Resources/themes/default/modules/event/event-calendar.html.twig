@@ -1,0 +1,30 @@
+<div class="theme-box theme-box-success">
+    <div class="theme-box-title">{{ "Browse By Date"|trans }}  <a href="{{ path('event_homepage') }}" class="view-more">{{ "See All"|trans }} </a></div>
+    <table class="table table-calendar" data-month="{{ month_number }}" data-year="{{ year }}">
+        <thead>
+            <tr>
+                <td class="text-left arrow"><span class="fa fa-angle-left"></span></td>
+                <td class="text-center" colspan="5">{{ month_name|capitalize }} {{ year }}</td>
+                <td class="text-right arrow"><span class="fa fa-angle-right"></span></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for name in days_name -%}
+                    <th>{{ name|capitalize }}</th>
+                {% endfor -%}
+            </tr>
+            {% for week in calendar -%}
+                <tr>
+                {% for day in week -%}
+                    <td>
+                        <a href="{{ day.route }}">{{ day.number }}</a>
+                    </td>
+                {% endfor -%}
+                </tr>
+            {% endfor -%}
+        </tbody>
+    </table>
+</div>
+
+{{ addJSFile('assets/js/modules/event/calendar/event.calendar.js') }}

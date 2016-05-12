@@ -1,0 +1,16 @@
+INSERT INTO  `EventLevel_Field` (`theme`, `level`, `field`) VALUES 
+('default', 10, 'summary_description'), 
+('default', 30, 'summary_description'),
+('default', 10, 'email'),
+('default', 10, 'url'),
+('default', 10, 'contact_name'),
+('default', 10, 'start_time'), 
+('default', 30, 'start_time'),
+('default', 10, 'end_time'), 
+('default', 30, 'end_time'),
+('default', 10, 'long_description'),
+('default', 10, 'main_image'), 
+('default', 30, 'main_image'),
+('default', 10, 'phone'), 
+('default', 30, 'phone'), 
+('default', 50, 'phone');

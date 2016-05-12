@@ -1,0 +1,89 @@
+{#      Description:                                                    -#}
+{# This macro renders cover image                                       -#}
+
+{# coverImage object                                                       -#}
+{#      Image -#}
+
+{% macro coverImage(coverImage) %}
+    {# gets from profile -#}
+    {# @var coverImage \ArcaSolutions\ImageBundle\Entity\Image #}
+    {% if coverImage.id != 0 -%}
+        <span class="cover-bg-image" style="
+            background-image:url({{ asset(imagePath(coverImage), 'domain_images') }});">
+        </span>
+    {% else -%}
+        {{ include("::blocks/background-image.html.twig") }}
+    {% endif %}
+{% endmacro %}
+
+{#      Description:                                                    -#}
+{# This macro renders event phrase used in event detail                 -#}
+
+{# item object                                                       -#}
+{#      Event -#}
+{% macro EventSidebarPhrase(item, level) %}
+    {% if item %}
+
+        {% set format_date = getDateFormat() %}
+
+        {% if format_date == 'm/d/Y' %}
+            {% set format_date = 'MMMM d, y' %}
+            {% set format_enddate = 'ccc - MMMM d, yyyy' %}
+        {% else %}
+            {% set format_date = 'd MMMM, y' %}
+            {% set format_enddate = 'ccc - d MMMM, yyyy' %}
+        {% endif %}
+
+        {# @var item \ArcaSolutions\EventBundle\Entity\Event #}
+        <div class="info">
+            <small>{{ 'When'|trans }}</small>
+            <br>
+
+            {% if 'Y' == item.recurring -%}
+                {# recurrent -#}
+                <br>
+                <span> {{ 'Every'|trans }} {{ recurringPhrase(item) }}</span><br>
+                {% if (item.hasStartTime == 'y' or item.hasEndTime == 'y') and level.hasEventTime %}
+                    <em>
+                        {{ item.startTime|date(getTimeFormat()) }}
+                        -
+                        {% if item.hasEndTime == 'y' %}
+                            {{ item.endTime|date(getTimeFormat()) }}
+                        {% endif %}
+                    </em>
+                {% endif %}
+
+                {% if 'N' == item.repeatEvent %}
+                    <small>{{ 'Until'|trans }}:</small>
+                {% endif %}
+
+            {% else -%}
+                {# not recurrent -#}
+                <mark class="text-uppercase">{{ item.startDate|localized_date('ccc') }}</mark>
+
+                <span>{{ item.startDate|localized_date(format_date)|capitalize }}</span>
+
+                {% if item.hasStartTime == 'y' and level.hasEventTime %}
+                    <em>{{ item.startTime|date(getTimeFormat()) }}</em>
+                {% else -%}
+                    <br>
+                {% endif -%}
+
+                <small>{{ 'To'|trans }}:</small>
+
+            {% endif -%}
+
+            {% if 'N' == item.repeatEvent -%}
+                {% set date_end = 'Y' == item.recurring ? item.untilDate : item.endDate -%}
+                <small>
+                    <span>
+                        {{ date_end|localized_date(format_enddate) }}
+                    </span>
+                    {% if item.hasEndTime == 'y' and level.hasEventTime -%}
+                        - {{ item.endTime|date(getTimeFormat()) }}
+                    {% endif -%}
+                </small>
+            {% endif -%}
+        </div>
+    {% endif -%}
+{% endmacro %}

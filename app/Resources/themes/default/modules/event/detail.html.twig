@@ -1,0 +1,261 @@
+{% extends '::base.html.twig' -%}
+
+{# use it to shows address -#}
+{% import "::blocks/utility/summary.html.twig" as Utility -%}
+{% import "::blocks/utility/detail.html.twig" as UtilityDetail -%}
+
+{% block SEO %}
+    {{ generateEventSEO( item ) }}
+{% endblock -%}
+
+{% block topbanner -%} {# No banners for this page -#} {% endblock -%}
+
+{# enables autocomplete in phpstorm -#}
+{# @var item \ArcaSolutions\EventBundle\Entity\Event #}
+{# @var level \ArcaSolutions\EventBundle\Entity\Internal\EventLevelFeatures #}
+
+{% block subheader -%}
+    <div class="top-search {{ item.coverImage.id != 0 ? 'top-coverimage' : 'top-mainimage' }}">
+        {# General Background Image -#}
+        {{ UtilityDetail.coverImage(item.coverImage) }}
+
+        <div class="well well-translucid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 text-center-sm">
+                        <span class="search-title">{{ 'Events'|trans }}</span>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-12">
+                        <div id="search-responsive" class="search-collapse collapse">
+                            <div class="well well-translucid form-inline text-center">
+                                {{ addJSTwigParameter("searchBoxModule", "event") }}
+                                {{ include("::blocks/search/search-fields-date.html.twig", { 'dateFilter' : dateFilter }) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock -%}
+
+{% block body -%}
+    <!-- Main Content Begin -->
+    <main>
+        <div class="container well well-light">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <!-- Detail Begin -->
+                    <article class="detail">
+                        <h1>{{ item.title }}</h1>
+
+                        <ul class="breadcrumb">
+                            {% for category in categories if 'y' == category.enabled -%}
+                                {% if isSample -%}
+                                    {% set link = 'javascript:void(0);' -%}
+                                {% else -%}
+                                    {% set link = path('global_search_1',{a0: category.friendlyUrl}) -%}
+                                {% endif -%}
+                                <li>
+                                    <a href="{{ link }}">
+                                        <span>{{ category.title }}</span>
+                                    </a>
+                                </li>
+                            {% endfor -%}
+                        </ul>
+                        <!-- Descriptions and Images -->
+                        <section id="overview">
+
+                            <!-- If there is a Main Image and NO cover image -->
+                            {% if gallery is not empty and 'y' == gallery[0].imageDefault and item.coverImage.id == 0 -%}
+                                {% if isSample -%}
+                                    {% set url = gallery[0].image.url -%}
+                                    {% set url_filtered = url -%}
+                                {% else -%}
+                                    {% set url = asset(imagePath(gallery[0].image), 'domain_images') -%}
+                                    {% set url_filtered = url | imagine_filter('main_image') -%}
+                                {% endif -%}
+                                <div class="main-image">
+                                    <a href="{{ url }}"
+                                       class="image-link" title="{{ gallery[0].imageCaption }}">
+                                        <img src="{{ url_filtered }}"
+                                             alt="{{ gallery[0].imageCaption }}" class="img-responsive center-block">
+                                    </a>
+                                </div>
+                            {% endif -%}
+
+                            {% if level.hasLongDescription and item.longDescription -%}
+                                <h3>{{ 'About'|trans }}</h3>
+                                <p class="pre-line">{{ item.longDescription }}</p>
+                            {% endif -%}
+
+                            {% if gallery is not empty -%}
+                                <div class="image-gallery">
+                                    <div class="row text-center-sm">
+                                        {% if 'y' == gallery[0].imageDefault and item.coverImage.id != 0 -%}
+                                            {% if isSample -%}
+                                                {% set url = gallery[0].image.url -%}
+                                                {% set url_filtered = url -%}
+                                            {% else -%}
+                                                {% set url = asset(imagePath(gallery[0].image), 'domain_images') -%}
+                                                {% set url_filtered = url | imagine_filter('small') -%}
+                                            {% endif -%}
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="{{ url }}"
+                                                   class="image-link" title="{{ gallery[0].imageCaption }}">
+                                                    <img src="{{ url_filtered }}"
+                                                         alt="{{ gallery[0].imageCaption }}"
+                                                         class="img-responsive center-block">
+                                                </a>
+                                            </div>
+                                        {% endif -%}
+
+                                        {% for photo in gallery if 'n' == photo.imageDefault -%}
+                                            {% if isSample -%}
+                                                {% set url = photo.image.url -%}
+                                                {% set url_filtered = url -%}
+                                            {% else -%}
+                                                {% set url = asset(imagePath(photo.image), 'domain_images') -%}
+                                                {% set url_filtered = url | imagine_filter('small') -%}
+                                            {% endif -%}
+                                            <div class="col-md-3 col-sm-6">
+                                                <a href="{{ url }}"
+                                                   class="image-link" title="{{ photo.imageCaption }}">
+                                                    <img src="{{ url_filtered }}"
+                                                         alt="{{ photo.imageCaption }}"
+                                                         class="img-responsive center-block">
+                                                </a>
+                                            </div>
+                                        {% endfor -%}
+                                    </div>
+                                </div>
+                            {% endif -%}
+
+                            {% if level.hasVideo and item.videoSnippet -%}
+                                <div class="video-snipped">
+                                    {% if item.videoDescription -%}
+                                        <h3>{{ item.videoDescription }}</h3>
+                                    {% endif -%}
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        {% if isSample -%}
+                                            <img src="{{ asset("assets/images/preview-video.png") }}">
+                                        {% else -%}
+                                            {{ item.videoSnippet|raw }}
+                                        {% endif -%}
+                                    </div>
+                                </div>
+                            {% endif -%}
+                        </section>
+
+                        <!-- Contact Info and Address -->
+                        {% if
+                        (level.hasContactName and item.contactName) or
+                        (level.hasPhone and item.phone is not empty) or
+                        (level.hasURL and item.url is not empty) or
+                        (level.hasEmail and item.email is not empty)
+                        %}
+                        <section id="contact">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <h4>{{ 'Contact'|trans }}</h4>
+                                </div>
+                                <div class="col-sm-10">
+                                    <div class="contactinfo-detail">
+                                        {% if level.hasContactName and item.contactName %}
+                                        <p>
+                                            {{ item.contactName }}
+                                        </p>
+                                        {% endif %}
+
+                                        {% if level.hasPhone and item.phone is not empty -%}
+                                        <p>
+                                            {{ 'Phone'|trans }}:
+                                            <a href="tel:{{ item.phone|spaceless }}">{{ item.phone }}</a>
+                                        </p>
+                                        {% endif -%}
+
+                                        {% if level.hasURL and item.url is not empty -%}
+                                        <p>
+                                            {{ 'Website'|trans }}:
+                                                <a target="_blank" href="{{ item.url }}">{{ item.url }}</a>
+                                        </p>
+                                        {% endif -%}
+
+                                        {% if level.hasEmail and item.email is not empty -%}
+                                            <p>
+                                                {% if isSample -%}
+                                                    <a href="javascript:void(0);" rel="nofollow">
+                                                        {{ 'Send e-mail'|trans }}
+                                                    </a>
+                                                {% else -%}
+                                                    <a class="sendEmailButton" data-action="{{ path('event_sendmail',{id: item.id}) }}" rel="nofollow">
+                                                        {{ 'Send e-mail'|trans }}
+                                                    </a>
+                                                {% endif -%}
+                                            </p>
+                                        {% endif -%}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        {% endif %}
+                    </article>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+
+                    <div class="details-sidebar">
+                        {# Event Information -#}
+                        <div class="well">
+
+                            {{ UtilityDetail.EventSidebarPhrase(item, level) }}
+
+                            {{ bookmarkButton(item, 'event') }}
+                            <br>
+
+                            {% include "::blocks/sociallikes.html.twig" %}
+                        </div>
+
+                        {# Location -#}
+                        <div class="well">
+                            <div class="info">
+                                <small>{{ 'Where'|trans }}</small>
+
+                                <p>{{ item.location }}</p>
+                                {{ Utility.address( null, null, item.address, item.address2, item.zipCode, locationsIDs, locationsObjs) }}
+
+                            </div>
+                            <p class="text-center">{{ getDirectionsLink(item) -}}</p>
+                        </div>
+
+                        {% import "::blocks/utility/banners.html.twig" as banners %}
+                        {{ banners.detail("event") }}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        {% if map is not null -%}
+            <div class="map-location">
+                {{ google_map(map) }}
+            </div>
+        {% endif -%}
+    </main>
+
+    {% if not isSample -%}
+
+        {% include '::blocks/modals/modal-bootstrap-template.html.twig' with {id: 'modalLogin'} -%}
+
+    {% endif -%}
+
+    {# Adding requirements -#}
+    {{ addJSFile('assets/js/lib/jquery.magnific-popup.min.js') }}
+    {{ addJSTwig("::js/detailpopup.js.twig") }}
+
+    {% if not isSample -%}
+        {{ addJSFile("assets/js/utility/modal.js") }}
+        {{ addJSFile("assets/js/modal/send.email.js") }}
+    {% endif -%}
+
+{% endblock -%}

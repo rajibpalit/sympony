@@ -1,0 +1,184 @@
+{% extends "::base.html.twig" -%}
+
+{% block nav -%}
+    {% include '::blocks/navigation/navbar.html.twig' with { "searchButton" : false } -%}
+{% endblock -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentHomePage(true) ) }}
+{% endblock -%}
+
+{% block subheader -%}
+    <!-- Slider Carousel Begin-->
+    <section class="block block-bg-image">
+
+        <div class="visible-xs">
+            {{ include("::blocks/background-image.html.twig") }}
+        </div>
+
+
+        <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+
+            {{ slider() }}
+
+            {# Main Search -#}
+            <div class="search-header" id="mainSearch">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-offset-1 col-sm-10">
+                            <div class="hero-text">
+                                <h1>{{ getCustomText("searchBoxTitle") }} </h1>
+
+                                <p>{{ getCustomText("searchBoxSubtitle") }} </p>
+                            </div>
+                            <div class="well well-translucid form-inline text-center">
+                                <form id="headerSearchForm">
+                                    <div class="form-group">
+                                        <label class="sr-only"
+                                               for="searchKeyword">{{ "Keyword for search"|trans }}</label>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon" aria-hidden="true">
+                                                <span id="searchKeywordIcon" class="fa fa-search"></span>
+                                            </span>
+                                            <input data-prefill="0" id="searchKeyword" type="text"
+                                                   class="form-control input-lg"
+                                                   placeholder="{{ "Search anything..."|trans }} ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="searchLocation">{{ "where"|trans }} </label>
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon" aria-hidden="true">
+                                                <span id="searchLocationIcon" class="fa fa-map-marker"></span>
+                                            </span>
+
+                                            <input data-prefill="0" id="searchLocation" type="text"
+                                                   class="form-control input-md"
+                                                   placeholder="{{ "Location"|trans }} ">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block-sm">
+                                        <span class="visible-sm"><i class="fa fa-search"></i></span>
+                                        <span class="hidden-sm">{{ "Search"|trans }} </span>
+                                    </button>
+
+                                    {# Adding requirements -#}
+                                    {{ addJSFile('assets/js/lib/js.cookie.js') }}
+                                    {{ addJSFile("assets/js/lib/typeahead.bundle.min.js") }}
+                                    {{ addJSFile("assets/js/search/utility.js") }}
+                                    {{ addJSFile("assets/js/search/suggest.js") }}
+                                    {{ addJSTwig("::js/blocks/searchbox.js.twig") }}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slider End -->
+    </section>
+{% endblock -%}
+
+{% block body -%}
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+    {# Main Content Begin  -#}
+    <main>
+
+
+        <!-- Featured Listings -->
+        {% set featured_listing = featuredListing(4,'col-md-3 col-sm-6') -%}
+        {% if featured_listing is not empty -%}
+            <section class="block">
+                <div class="container">
+                    {{ customContentHomePage() }}
+                    <h2 class="theme-title">
+                        {{ 'Featured Listings'|trans }}
+                        <a href="{{ path("listing_homepage") }}" class="view-more">{{ 'more listings'|trans }}</a>
+                    </h2>
+
+                    <div class="row">
+                        {{ featured_listing|raw }}
+                    </div>
+                </div>
+            </section>
+        {% endif -%}
+
+        <!-- Browse By -->
+        <section class="block">
+            {{ browseByCategoryListing(12) }}
+        </section>
+
+        {{ banners.middle() }}
+
+        <!-- Upcoming Events -->
+        {{ upcomingEvents(6) }}
+
+        <!-- Recent Articles -->
+        {% set recent_article = recentArticle(3, 'col-sm-4') -%}
+        {% if recent_article is not empty -%}
+            <section class="block">
+                <div class="container">
+                    <h2 class="theme-title">
+                        {{ 'Recent Articles'|trans }}
+                        <a href="{{ path("article_homepage") }}" class="view-more">{{ 'more articles'|trans }}</a>
+                    </h2>
+
+                    <div class="row">
+                        {{ recent_article|raw }}
+                    </div>
+                </div>
+            </section>
+        {% endif -%}
+
+
+        {#  Newsletter Block -#}
+        {{ newsletter() }}
+
+        <!-- Popular Deals -->
+        {% set popular = popularDeal(4,'col-sm-6','horizontal') -%}
+        {% if popular is not empty -%}
+            <section class="block">
+                <div class="container">
+                    <br>
+                    <h2 class="theme-title">
+                        {{ 'Popular Deals'|trans }}
+                        <a href="{{ path("deal_homepage") }}" class="view-more">{{ 'more deals'|trans }}</a>
+                    </h2>
+
+                    <div class="row">
+                        {{ popular|raw }}
+                    </div>
+                </div>
+            </section>
+        {% endif -%}
+
+
+        <!-- Browse By -->
+        {{ browseByLocationListing(65) }}
+
+        <!-- Featured Classifieds -->
+        {% set featured_classified = featuredClassified(6,'col-sm-4','horizontal') -%}
+        {% if featured_classified is not empty -%}
+            <section class="block">
+                <div class="container">
+                    <h2 class="theme-title">
+                        {{ 'Featured Classifieds'|trans }}
+                        <a href="{{ path("classified_homepage") }}" class="view-more">{{ 'more classifieds'|trans }}</a>
+                    </h2>
+
+                    <div class="row">
+                        {{ featured_classified|raw }}
+                    </div>
+
+                </div>
+            </section>
+        {% endif -%}
+
+        <div class="block"><div class="container">{{ customContentHomePageBottom() }}</div></div>
+
+    </main>
+{% endblock -%}

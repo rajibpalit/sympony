@@ -1,0 +1,129 @@
+{% extends '::base.html.twig' -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContentEventHome(true), "%module% Homepage"|trans({"%module%" : "Event"|trans}) ) }}
+{% endblock -%}
+
+{% block topbanner -%}
+    {{ banners.top("event") }}
+{% endblock -%}
+
+{% block subheader -%}
+
+    {% set contentTop =  customContentEventHome(true) %}
+    {# Top Search -#}
+    <section class="top-search ">
+
+        {# General Background Image -#}
+        {{ include("::blocks/background-image.html.twig") }}
+
+        <div class="well well-translucid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-12 text-center-sm">
+                        <br>
+
+                        <h1>{{ contentTop.title }} </h1>
+                    </div>
+                    <div class="col-lg-9 col-md-8 col-sm-12">
+                        <div id="search-responsive" class="search-collapse collapse">
+                            <div class="well well-translucid form-inline text-center">
+                                {{ addJSTwigParameter("searchBoxModule", "event") }}
+                                {{ include("::blocks/search/search-fields-date.html.twig", { 'dateFilter' : dateFilter }) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock -%}
+
+{% block body -%}
+
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+
+    <main>
+        {# Upcoming -#}
+        {% set featuredEventVertical = featuredEvent(1, 'col-sm-5', 'vertical') %}
+        {% set featuredEventHorizontal = featuredEvent(3, 'col-sm-7', 'horizontal-xs') %}
+        {% if featuredEventVertical or featuredEventHorizontal %}
+            <section class="block">
+                <div class="container">
+                    {% set contentTop =  customContentEventHome(true) %}
+                    {{ contentTop.content|raw }}
+                    <br>
+
+                    <h2 class="theme-title">
+                        {{ 'Featured Events'|trans }}
+                    </h2>
+
+                    <div class="row">
+                        {{ featuredEventVertical|raw }}
+                        {{ featuredEventHorizontal|raw }}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+
+        {# Browse by Categories -#}
+        <section class="block">
+            {{ browseByCategoryEvent(6) }}
+        </section>
+
+        {# Special -#}
+        {% set specialsEventBlock = specialsEvent(4, 'col-sm-3') %}
+        {% if specialsEventBlock %}
+            <section class="block">
+                <div class="container">
+                    <h2 class="theme-title">
+                        {{ 'Special Events'|trans }}
+                    </h2>
+
+                    <div class="row">
+                        {{ specialsEventBlock|raw }}
+                    </div>
+                    {{ customContentEventHomeBottom() }}
+                </div>
+            </section>
+        {% endif %}
+
+        <!-- Upcoming Block form EVENTS Homepage -->
+        {# dateFilter \ArcaSolutions\SearchBundle\Entity\Filters\DateFilter #}
+
+        {# thisWeek \ArcaSolutions\SearchBundle\Entity\FilterMenuTreeNode -#}
+        {% set anyDate = dateFilter.fromTodayFilterOption -%}
+
+        {% set carousel = upcomingEventsCarousel(25) %}
+        {% if carousel %}
+        <section class="block">
+            <div class="container">
+                <h2 class="theme-title">
+                    {{ 'Upcoming Events'|trans }}
+                    <a href="{{ anyDate.searchPageUrl }}" class="view-more">{{ 'more events'|trans }}</a>
+                </h2>
+                {{ carousel|raw }}
+            </div>
+        </section>
+        {% endif %}
+
+        {{ banners.middle("event") }}
+
+        {# Location -#}
+        {% set location = browseByLocationEvent() %}
+        {% if location %}
+        <section class="block-background-map">
+            {{ location|raw }}
+        </section>
+        {% endif %}
+
+
+    </main>
+{% endblock -%}
+
+{% block bottombanners -%}
+    {% import "::blocks/utility/banners.html.twig" as banners %}
+    {{ banners.bottom("event") }}
+{% endblock -%}

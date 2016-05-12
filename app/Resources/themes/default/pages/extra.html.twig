@@ -1,0 +1,23 @@
+{# content \ArcaSolutions\WebBundle\Entity\Content #}
+{% extends "::base.html.twig" -%}
+
+{% block SEO %}
+    {{ generateSEOFromContent( customContent(content, true) ) }}
+{% endblock -%}
+
+{% block subheader -%}
+    {# Page Title and Custom Content -#}
+    <div class="block-container first block-bg-image">
+
+        {{ include("::blocks/background-image.html.twig") }}
+
+    </div>
+{% endblock -%}
+
+{% block body -%}
+    <main>
+        <div class="container well well-light">
+            {{ customContent(content, false) }}
+        </div>
+    </main>
+{% endblock -%}

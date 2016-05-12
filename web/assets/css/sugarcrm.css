@@ -1,0 +1,65 @@
+/**
+* eDirectory - Sugar CRM
+*
+* @package			layout
+* @filesource		sugarcrm.css
+* @author			Arca Solutions | Basecode
+* @copyright		Copyright (c) 2015, Arca Solutions Inc.
+* @version			eDirectory 11
+*
+*/
+
+.sugarCRMScreen
+{ background: #ECECEC; font: normal 14px "Helvetica Neue", "Open Sans", Tahoma, sans-serif; height: auto; margin: 0; padding: 0; }
+
+.sugarLogo
+{ margin: 33px auto 8px; text-align: center; }
+
+.sugarLogo img
+{ margin-bottom: 30px; }
+
+.importSugarTitle
+{ background: #FDFEFE; border: 1px solid #DFDFDF; margin: 0 auto 20px; width: 352px; }
+
+.importSugarTitle
+{ -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+
+.sugarLogo p
+{  line-height: 2; margin: 0; width: 100%; text-align: center; font-size: 1.1em; padding: 20px 0; }
+
+.sugarLogo p span
+{ padding: 0 5px; }
+
+.sugarCRMForm
+{ margin-bottom: 40px; text-align: center; }
+
+.sugarCRMScreen .sugarCRMTable p.errorMessage
+{ font: normal 12px Arial, Helvetica, sans-serif; margin: 0 auto; }
+
+.sugarCRMTable select { width:100%;}
+
+.sugarCRMButton
+{ padding-bottom: 20px; }
+
+.sugarCRMScreen .sugarCRMTable
+{ background: #FDFEFE; border: 1px solid #DFDFDF; margin: 0 auto 20px; width: 352px;}
+
+.sugarCRMScreen .sugarCRMTable td
+{  padding: 20px; }
+
+.sugarCRMScreen .sugarCRMTable .standardSugarButton input
+{ border: none; height: 40px; width: 100%; background-color: #3498db; color: white; font-size: 1em; margin: 0 auto; cursor:pointer;}
+
+
+.sugarCRMFooter .sugarVersion
+{   color: #8B8B8B; font-size: 14px; text-align: center; padding: 40px;
+}
+
+.sugarCRMFooter .wrapper
+{ color: #303030; margin: 0 auto; text-align: center; width: 500px; }
+
+.sugarCRMFooter .wrapper p
+{ font-size: 11px; line-height: 18px; margin: 20px 0 10px; }
+
+.sugarCRMFooter .wrapper h1
+{ font: normal 18px Arial, Helvetica, sans-serif; margin: 0; }
